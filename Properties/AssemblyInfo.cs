@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("BalanceChecker")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Check balance via Huawei e1550 GSM modem")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("BalanceChecker")]
