@@ -42,5 +42,14 @@
     <Setting Name="Database" Type="System.String" Scope="User">
       <Value Profile="(Default)">switch</Value>
     </Setting>
+    <Setting Name="ServiceStopTime" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="SipGsmServiceName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SipGsmService</Value>
+    </Setting>
+    <Setting Name="EnableLogging" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

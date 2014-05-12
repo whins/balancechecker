@@ -11,14 +11,13 @@ namespace BalanceChecker
 	{
 		public static void Write(string text)
 		{
-			if (string.IsNullOrEmpty(text))
+			if (Settings.Default.EnableLogging && !string.IsNullOrEmpty(text))
 			{
-				return;
-			}
-			using (StreamWriter w = File.AppendText(Settings.Default.LogFilePath))
-			{
-				w.WriteLine("{0} :: {1} ", DateTime.Now.ToString(), text);
-			}
+				using (StreamWriter w = File.AppendText(Settings.Default.LogFilePath))
+				{
+					w.WriteLine("{0} :: {1} ", DateTime.Now.ToString(), text);
+				}
+			}			
 		}
 	}
 }

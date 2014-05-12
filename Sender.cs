@@ -10,15 +10,13 @@ namespace BalanceChecker
 	class Sender
 	{
 		SerialPort port;
-		public delegate void DReseivedHandler(float amount);
-		public event DReseivedHandler OnReceive;
 		public Sender(string portName)
 		{
 			port = new SerialPort();
 			port.PortName = portName;
 			port.WriteTimeout = Settings.Default.SerialPortTimeout;
 			port.ReadTimeout = Settings.Default.SerialPortTimeout;
-			port.DataReceived += port_DataReceived;
+
 			try
 			{
 				port.Open();
@@ -40,11 +38,6 @@ namespace BalanceChecker
 		{
 			var hexString = PduBitPacker.ConvertBytesToHex(PduBitPacker.PackBytes(Encoding.ASCII.GetBytes(code)));
 			port.Write("AT+CUSD=1," + hexString + ",15\r");
-		}
-
-		private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
-		{
-			
 		}
 	}
 }

@@ -150,5 +150,41 @@ namespace BalanceChecker {
                 this["Database"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int ServiceStopTime {
+            get {
+                return ((int)(this["ServiceStopTime"]));
+            }
+            set {
+                this["ServiceStopTime"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SipGsmService")]
+        public string SipGsmServiceName {
+            get {
+                return ((string)(this["SipGsmServiceName"]));
+            }
+            set {
+                this["SipGsmServiceName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool EnableLogging {
+            get {
+                return ((bool)(this["EnableLogging"]));
+            }
+            set {
+                this["EnableLogging"] = value;
+            }
+        }
     }
 }

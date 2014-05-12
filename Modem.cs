@@ -85,7 +85,7 @@ namespace BalanceChecker
 					responce = f.Groups[1].ToString().Trim();
 				}
 			}
-			catch (Exception ex)
+			catch
 			{
 				return null;
 			}
