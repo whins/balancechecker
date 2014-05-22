@@ -51,6 +51,7 @@ namespace BalanceChecker
 			var f = _lineSplitter.Match(result);
 			var hexString = f.Groups[1].ToString().Trim();
 			result = Encoding.ASCII.GetString(PduBitPacker.UnpackBytes(PduBitPacker.ConvertHexToBytes(hexString)));
+			Log.Write(result);
 			foreach (var amountRegExItem in Settings.Default.AmountRegExList)
 			{
 				_lineSplitter = new Regex(amountRegExItem, RegexOptions.Singleline);
