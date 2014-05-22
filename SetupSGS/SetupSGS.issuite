@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Setup SuiteId="{54C01D8E-D42E-485F-84A5-E297B3FF0531}" xmlns="installshield/2014/bootstrap">
+	<PathVariables xmlns="installshield/2014/bootstrap/project">
+		<PathVariable Name="ISProjectDataFolder" Type="PreDefined"/>
+		<PathVariable Name="ISProjectFolder" Type="PreDefined"/>
+	</PathVariables>
+	<Releases ActiveRelease="Debug" xmlns="installshield/2014/bootstrap/project">
+		<Release>
+			<Build>
+				<Name>Debug</Name>
+				<BuildLocation>&lt;ISProjectDataFolder&gt;</BuildLocation>
+				<UILangs>1049</UILangs>
+				<DefaultLang>1049</DefaultLang>
+				<UpdateUrl>http://</UpdateUrl>
+				<CachePackagesLocally>Yes</CachePackagesLocally>
+			</Build>
+			<Signing>
+				<SignatureURL>http://</SignatureURL>
+			</Signing>
+		</Release>
+		<Release>
+			<Build>
+				<Name>Release</Name>
+				<BuildLocation>&lt;ISProjectDataFolder&gt;</BuildLocation>
+				<UILangs>1049</UILangs>
+				<DefaultLang>1049</DefaultLang>
+				<UpdateUrl>http://</UpdateUrl>
+				<CachePackagesLocally>Yes</CachePackagesLocally>
+			</Build>
+			<Signing>
+				<SignatureURL>http://</SignatureURL>
+			</Signing>
+		</Release>
+	</Releases>
+	<Properties>
+		<SetProperty Name="ProductName" Value="SetupSGS"/>
+	</Properties>
+	<UserInterface xmlns="installshield/2014/bootstrap/ui">
+		<Resources>
+			<FontSet Name="BodyFonts">
+				<Font Name="Microsoft JhengHei UI" Size="10" Language="1028"/>
+				<Font Name="SimSun" Size="10" Language="1028"/>
+				<Font Name="Meiryo UI" Size="10" Language="1041"/>
+				<Font Name="MS Mincho" Size="10" Language="1041"/>
+				<Font Name="Malgun Gothic" Size="10" Language="1042"/>
+				<Font Name="Dotum" Size="10" Language="1042"/>
+				<Font Name="Microsoft YaHei UI" Size="10" Language="2052"/>
+				<Font Name="SimSun" Size="10" Language="2052"/>
+				<Font Name="Calibri" Size="10"/>
+				<Font Name="Verdana" Size="8"/>
+				<Font Name="Arial" Size="8"/>
+			</FontSet>
+			<Class Name="Header" Pen="0x000000">
+				<Class.FontSet BasedOn="BodyFonts" Size="180" Weight="400"/>
+			</Class>
+			<Class Name="Body" Pen="0x101010">
+				<Class.FontSet BasedOn="BodyFonts" Weight="400"/>
+			</Class>
+			<Class Name="BodyItalics" Pen="0x383838">
+				<Class.FontSet BasedOn="BodyFonts" Weight="500" Italic="true"/>
+			</Class>
+			<Class Name="BodyBold" Pen="0x101010">
+				<Class.FontSet BasedOn="BodyFonts" Weight="600"/>
+			</Class>
+			<Class Name="BodyCombo" Pen="0x383838" Background="0x3e3e3e">
+				<Class.FontSet BasedOn="BodyFonts"/>
+			</Class>
+			<Class Name="BodyList" Pen="0x101010">
+				<Class.FontSet BasedOn="BodyFonts" Size="140"/>
+			</Class>
+			<SolidBrush Name="Header" Color="0xFFE7D6"/>
+			<SolidBrush Name="DialogBackground" Color="0xFFE7D6"/>
+			<GradientBrush Name="Body" Type="Vertical">
+				<Vertex X="0" Y="0" Color="0xFFDFCC"/>
+				<Vertex X="100" Y="100" Color="0xFFBE99"/>
+				<Rectangle UpperLeft="0" LowerRight="1"/>
+			</GradientBrush>
+			<GradientBrush Name="Footer" Type="vertical">
+				<Vertex X="0" Y="0" Color="0xFFBE99"/>
+				<Vertex X="100" Y="100" Color="0xFFE7D6"/>
+				<Rectangle UpperLeft="0" LowerRight="1"/>
+			</GradientBrush>
+		</Resources>
+		<Wizard Format="Glass" Caption="IDS_PRODUCTNAME_INSTALLSHIELD" Resize="0">
+			<Wizard.Header Background="Header" Class="Header" Image="ISLogoSmall.png"/>
+			<Wizard.View Margin="false" Height="225" Width="400" Background="Body" Transition="true"/>
+			<Wizard.Navigation Spacing="group" Direction="RTL" Margin="10" Class="Body" Background="Footer"/>
+			<Page Name="InstallationLanguage" Caption="IDS_INSTALLATION_LANGUAGE_CAPTION">
+				<Page.Visible>
+					<Any>
+						<Property Name="ISShowLanguageSelection" Convert="String" Compare="Equal" CompareTo="true"/>
+					</Any>
+				</Page.Visible>
+				<Label Name="IDC_LABEL1" Position="21,10,358,10" Text="IDS_INSTALLATION_LANGUAGE_DIRECTIONS" Class="Body" Anchor="SIZE_X"/>
+				<ComboBox Name="IDC_LANGUAGE" Position="21,20,358,200" Property="ISSelectedLanguage" Class="Body" Anchor="SIZE_X" Style="CBS_DROPDOWNLIST" Items="ISLanguageList"/>
+				<Next/>
+			</Page>
+			<Page Name="InstallationRemoval" Caption="IDS_WELCOME_UNINSTALL_CAPTION">
+				<Page.Visible>
+					<Any>
+						<Mode Value="remove"/>
+					</Any>
+				</Page.Visible>
+				<Image Name="IDB_BMP" Position="21,23,40,40" Resource="Remove.png"/>
+				<Label Name="IDC_LABEL1" Position="67,23,323,34" Text="IDS_WELCOME_UNINSTALL_DIRECTIONS" Class="Body" Anchor="SIZE_X"/>
+				<Install Text="IDS_REMOVE_BUTTON">
+					<Install.Click>
+						<SetProperty Name="ISProgressCaption" Value="IDS_PROGRESS_CAPTION_UNINSTALLING"/>
+						<SetProperty Name="ISProgressSummary" Value="IDS_PROGRESS_TITLE_UNINSTALLING"/>
+						<Install Page="InstallationProgress"/>
+					</Install.Click>
+				</Install>
+			</Page>
+			<Page Name="InstallationWelcome" Caption="">
+				<Page.Header Image=""/>
+				<Page.Visible>
+					<Any>
+						<Mode Value="install"/>
+					</Any>
+				</Page.Visible>
+				<Image Name="IDC_IMAGE1" Position="13,0,67,61" Resource="ISLogoBig.png" Style="SS_REALSIZECONTROL" Anchor=""/>
+				<Label Name="IDC_LABEL1" Position="86,28,304,40" Text="IDS_INSTALL_WELCOME_CAPTION" Class="Header" Anchor="SIZE_X"/>
+				<Label Name="IDC_LABEL2" Position="86,93,289,22" Text="IDS_WELCOME_INSTALL_DIRECTIONS" Class="Body" Anchor="SIZE_X|MOVE_Y"/>
+				<Label Name="IDC_LABEL3" Position="86,124,289,20" Text="IDS_WELCOME_INSTALL_COPYRIGHT" Class="BodyItalics" Anchor="SIZE_X|MOVE_Y"/>
+				<Next>
+					<Next.Click>
+						<SetProperty Name="ISProgressCaption" Value="IDS_PROGRESS_CAPTION_INSTALLING"/>
+						<SetProperty Name="ISProgressSummary" Value="IDS_PROGRESS_TITLE_INSTALLING"/>
+					</Next.Click>
+				</Next>
+			</Page>
+			<Page Name="LicenseAgreement" Caption="IDS_LICENSEAGREEMENT_CAPTION">
+				<Page.Visible>
+					<Any>
+						<Mode Value="install"/>
+					</Any>
+				</Page.Visible>
+				<Label Name="IDC_LABEL1" Position="10,10,380,10" Text="IDS_LICENSEAGREEMENT_DIRECTIONS" Class="Body" Anchor="SIZE_X"/>
+				<RichTextBox Name="IDC_EULA" Position="10,28,380,172" Resource="EULA.rtf" Anchor="SIZE_X|SIZE_Y">
+					<RichTextBox.ScrolledToEnd>
+						<SetProperty Name="ISEULAScrolledToEnd" Value="true"/>
+					</RichTextBox.ScrolledToEnd>
+				</RichTextBox>
+				<RadioButton Name="IDC_RADIO_1" Property="ISAcceptEula==true" Position="10,203,330,10" Text="IDS_LICENSEAGREEMENT_ACCEPT" Anchor="SIZE_X|MOVE_Y" Class="Body"/>
+				<RadioButton Name="IDC_RADIO_2" Property="ISAcceptEula==false" Position="10,215,330,10" Text="IDS_LICENSEAGREEMENT_REJECT" Anchor="SIZE_X|MOVE_Y" Class="Body"/>
+				<Button Name="IDC_PRINT" Position="340,201,50,14" Text="IDS_PRINT_BUTTON" Class="Body" Anchor="MOVE_X|MOVE_Y">
+					<Button.Click>
+						<Print Resource="EULA.rtf"/>
+					</Button.Click>
+				</Button>
+				<Next>
+					<Next.Enabled>
+						<Any>
+							<Property Name="ISAcceptEula" Convert="String" Compare="Equal" CompareTo="true"/>
+						</Any>
+					</Next.Enabled>
+				</Next>
+				<Back/>
+			</Page>
+			<Page Name="MaintenanceWelcome" Caption="IDS_WELCOME_MAINTENANCE_CAPTION">
+				<Page.Visible>
+					<All>
+						<Mode Value="maintenance"/>
+						<Property Name="ISUpdateAvailable" CompareTo="1" Convert="DWORD" Compare="NotEqual"/>
+					</All>
+				</Page.Visible>
+				<CommandLink Name="IDC_MODIFY" Position="10,23,380,52" Text="IDS_WELCOME_MAINTENANCE_MODIFY" Resource="Custom.png" Class="Header" Anchor="SIZE_X">
+					<CommandLink.Note Text="IDS_WELCOME_MAINTENANCE_MODIFY_NOTE" Class="BodyItalics"/>
+					<CommandLink.Click>
+						<SetProperty Name="IsInstallMode" Value="modify"/>
+						<SetProperty Name="ISProgressCaption" Value="IDS_PROGRESS_CAPTION_INSTALLING"/>
+						<SetProperty Name="ISProgressSummary" Value="IDS_PROGRESS_TITLE_INSTALLING"/>
+						<SetActivePage Page="InstallationFeatures"/>
+					</CommandLink.Click>
+				</CommandLink>
+				<CommandLink Name="IDC_REPAIR" Position="10,90,380,52" Text="IDS_WELCOME_MAINTENANCE_REPAIR" Resource="Repair.png" Class="Header" Anchor="SIZE_X">
+					<CommandLink.Note Text="IDS_WELCOME_MAINTENANCE_REPAIR_NOTE" Class="BodyItalics"/>
+					<CommandLink.Click>
+						<SetProperty Name="IsInstallMode" Value="repair"/>
+						<SetProperty Name="ISProgressCaption" Value="IDS_PROGRESS_CAPTION_INSTALLING"/>
+						<SetProperty Name="ISProgressSummary" Value="IDS_PROGRESS_TITLE_INSTALLING"/>
+						<Install Page="InstallationProgress"/>
+					</CommandLink.Click>
+				</CommandLink>
+				<CommandLink Name="IDC_REMOVE" Position="10,157,380,52" Text="IDS_WELCOME_MAINTENANCE_REMOVE" Resource="Remove.png" Class="Header" Anchor="SIZE_X">
+					<CommandLink.Note Text="IDS_WELCOME_MAINTENANCE_REMOVE_NOTE" Class="BodyItalics"/>
+					<CommandLink.Click>
+						<SetProperty Name="IsInstallMode" Value="remove"/>
+						<SetProperty Name="ISProgressCaption" Value="IDS_PROGRESS_CAPTION_UNINSTALLING"/>
+						<SetProperty Name="ISProgressSummary" Value="IDS_PROGRESS_TITLE_UNINSTALLING"/>
+						<Install Page="InstallationProgress"/>
+					</CommandLink.Click>
+				</CommandLink>
+			</Page>
+			<Page Name="MaintenanceUpdateWelcome" Caption="IDS_WELCOME_MAINTENANCE_CAPTION">
+				<Page.Visible>
+					<All>
+						<Mode Value="maintenance"/>
+						<Property Name="ISUpdateAvailable" CompareTo="1" Convert="DWORD" Compare="Equal"/>
+					</All>
+				</Page.Visible>
+				<CommandLink Name="IDC_UPDATE" Position="10,23,380,48" Text="IDS_WELCOME_MAINTENANCE_UPDATE" Resource="Custom.png" Class="Header" Anchor="SIZE_X">
+					<CommandLink.Note Text="IDS_WELCOME_MAINTENANCE_UPDATE_NOTE" Class="BodyItalics"/>
+					<CommandLink.Click>
+						<SetProperty Name="IsInstallMode" Value="update"/>
+						<SetProperty Name="ISProgressCaption" Value="IDS_PROGRESS_CAPTION_UPDATING"/>
+						<SetProperty Name="ISProgressSummary" Value="IDS_PROGRESS_TITLE_UPDATING"/>
+						<Install Page="InstallationProgress"/>
+					</CommandLink.Click>
+				</CommandLink>
+				<CommandLink Name="IDC_MODIFY" Position="10,73,380,48" Text="IDS_WELCOME_MAINTENANCE_MODIFY" Resource="Custom.png" Class="Header" Anchor="SIZE_X">
+					<CommandLink.Note Text="IDS_WELCOME_MAINTENANCE_MODIFY_NOTE" Class="BodyItalics"/>
+					<CommandLink.Click>
+						<SetProperty Name="IsInstallMode" Value="modify"/>
+						<SetProperty Name="ISProgressCaption" Value="IDS_PROGRESS_CAPTION_INSTALLING"/>
+						<SetProperty Name="ISProgressSummary" Value="IDS_PROGRESS_TITLE_INSTALLING"/>
+						<SetActivePage Page="InstallationFeatures"/>
+					</CommandLink.Click>
+				</CommandLink>
+				<CommandLink Name="IDC_REPAIR" Position="10,123,380,48" Text="IDS_WELCOME_MAINTENANCE_REPAIR" Resource="Repair.png" Class="Header" Anchor="SIZE_X">
+					<CommandLink.Note Text="IDS_WELCOME_MAINTENANCE_REPAIR_NOTE" Class="BodyItalics"/>
+					<CommandLink.Click>
+						<SetProperty Name="IsInstallMode" Value="repair"/>
+						<SetProperty Name="ISProgressCaption" Value="IDS_PROGRESS_CAPTION_INSTALLING"/>
+						<SetProperty Name="ISProgressSummary" Value="IDS_PROGRESS_TITLE_INSTALLING"/>
+						<Install Page="InstallationProgress"/>
+					</CommandLink.Click>
+				</CommandLink>
+				<CommandLink Name="IDC_REMOVE" Position="10,173,380,48" Text="IDS_WELCOME_MAINTENANCE_REMOVE" Resource="Remove.png" Class="Header" Anchor="SIZE_X">
+					<CommandLink.Note Text="IDS_WELCOME_MAINTENANCE_REMOVE_NOTE" Class="BodyItalics"/>
+					<CommandLink.Click>
+						<SetProperty Name="IsInstallMode" Value="remove"/>
+						<SetProperty Name="ISProgressCaption" Value="IDS_PROGRESS_CAPTION_UNINSTALLING"/>
+						<SetProperty Name="ISProgressSummary" Value="IDS_PROGRESS_TITLE_UNINSTALLING"/>
+						<Install Page="InstallationProgress"/>
+					</CommandLink.Click>
+				</CommandLink>
+			</Page>
+			<Page Name="BrowseStageFolder" Caption="IDS_WELCOME_STAGE_CAPTION">
+				<Page.Visible>
+					<Any>
+						<Mode Value="stage"/>
+					</Any>
+				</Page.Visible>
+				<Label Name="IDC_LABEL1" Position="10,10,380,33" Text="IDS_WELCOME_STAGE_DIRECTIONS" Class="Body" Anchor="SIZE_X"/>
+				<Image Name="IDC_IMAGE1" Position="26,45,24,28" Resource="Folder.png" Anchor="" Style="SS_REALSIZEIMAGE"/>
+				<Label Name="IDC_LABEL2" Position="53,45,280,10" Text="IDS_WELCOME_STAGE_NOTE" Class="Body" Anchor="SIZE_X"/>
+				<Label Name="IDC_LABEL3" Position="53,63,280,10" Class="Body" Anchor="SIZE_X" Property="ISRootStagePath"/>
+				<Button Name="IDC_FOLDER_DLG" Position="338,42,50,14" Text="IDS_CHANGE_BUTTON" Class="Body" Anchor="MOVE_X">
+					<Button.Click>
+						<BrowseFolder Property="ISRootStagePath" Caption="IDS_WELCOME_STAGE_BROWSE_CAPTION"/>
+					</Button.Click>
+				</Button>
+				<Install>
+					<Install.Click>
+						<Install Page="InstallationProgress"/>
+					</Install.Click>
+				</Install>
+			</Page>
+			<Page Name="InstallationType" Caption="IDS_INSTALLTYPE_CAPTION">
+				<Page.Visible>
+					<Any>
+						<Mode Value="install"/>
+					</Any>
+				</Page.Visible>
+				<CommandLink Name="IDC_COMPLETE" Position="10,23,380,52" Text="IDS_INSTALLTYPE_COMPLETE" Resource="Typical.png" Class="Header" Anchor="SIZE_X">
+					<CommandLink.Note Text="IDS_INSTALLTYPE_COMPLETE_NOTE" Class="BodyItalics"/>
+					<CommandLink.Click>
+						<Install Page="InstallationProgress"/>
+					</CommandLink.Click>
+				</CommandLink>
+				<CommandLink Name="IDC_CUSTOM" Position="10,90,380,52" Text="IDS_INSTALLTYPE_CUSTOM" Resource="Custom.png" Class="Header" Anchor="SIZE_X">
+					<CommandLink.Note Text="IDS_INSTALLTYPE_CUSTOM_NOTE" Class="BodyItalics"/>
+					<CommandLink.Click>
+						<SetActivePage Page="InstallationFeatures"/>
+					</CommandLink.Click>
+				</CommandLink>
+				<Back/>
+			</Page>
+			<Page Name="InstallationFeatures" Caption="IDS_CUSTOMSETUP_CAPTION">
+				<Label Name="IDC_LABEL1" Position="21,10,358,10" Text="IDS_CUSTOMSETUP_DIRECTIONS" Class="Body" Anchor="SIZE_X"/>
+				<FeatureSelectionTree Name="IDC_TV_1" Position="21,21,358,189" Class="BodyList" Background="transparent" Item.Height="24" Color.Focus="0xFFBE99" Color.NoFocus="0xFFE7D6"/>
+				<Install/>
+				<Back/>
+			</Page>
+			<Page Name="InstallationProgress" Caption="[ISProgressCaption]">
+				<Label Name="IDC_LABEL1" Position="67,50,312,10" Text="[ISProgressSummary]" Class="Body" Anchor="SIZE_X"/>
+				<Label Name="IDC_INSTALL_STATUS" Position="67,60,312,10" Property="ISInstallStatus" Class="BodyBold" Anchor="SIZE_X"/>
+				<Label Name="IDC_PARCEL_STATUS" Position="67,70,312,10" Property="ISParcelStatus" Class="Body" Anchor="SIZE_X" Style="SS_PATHELLIPSIS"/>
+				<ProgressBar Name="IDC_ALL_PROGRESS" Position="67,80,312,13" Property="ISInstallProgress" Style="WS_CLIPSIBLINGS" Anchor="SIZE_X">
+					<ProgressBar.Visible>
+						<Any>
+							<Property Name="ISInstallMode" Convert="String" Compare="NotEqual" CompareTo="update"/>
+						</Any>
+					</ProgressBar.Visible>
+				</ProgressBar>
+				<ProgressBar Name="IDC_UPDATE_PROGRESS" Position="67,80,312,13" Property="ISParcelProgress" Style="WS_CLIPSIBLINGS" Anchor="SIZE_X">
+					<ProgressBar.Visible>
+						<Any>
+							<Property Name="ISInstallMode" Convert="String" Compare="Equal" CompareTo="update"/>
+						</Any>
+					</ProgressBar.Visible>
+				</ProgressBar>
+				<Image Name="Image" Position="21,50,40,40" Resource="Application.png"/>
+			</Page>
+			<Page Name="InstallationComplete" Caption="">
+				<Page.Header Image=""/>
+				<Image Name="IDC_IMAGE1" Position="13,0,67,61" Resource="ISLogoBig.png" Style="SS_REALSIZECONTROL" Anchor=""/>
+				<Label Name="IDC_LABEL1" Position="86,45,289,20" Text="IDS_COMPLETE_DIRECTIONS" Class="Header" Anchor="SIZE_X"/>
+				<Label Name="IDC_LABEL2" Position="86,73,289,20" Property="ISInstallStatus" Class="Body" Anchor="SIZE_X|MOVE_Y"/>
+				<Finish/>
+				<Cancel>
+					<Cancel.Visible>
+						<Not/>
+					</Cancel.Visible>
+				</Cancel>
+			</Page>
+		</Wizard>
+		<Dialogs>
+			<Dialog Name="ISDownloadProgress" Caption="IDS_PRODUCTNAME_INSTALLSHIELD" Height="83" Width="315" Background="DialogBackground">
+				<Label Name="IDC_LABEL1" Position="20,10,275,20" Text="IDS_DOWNLOADING_UPDATE" Class="Body" Anchor="SIZE_X"/>
+				<Label Name="IDC_PARCEL_STATUS" Position="20,30,275,10" Property="ISParcelStatus" Class="BodyBold" Anchor="SIZE_X"/>
+				<ProgressBar Name="IDC_PARCEL_PROGRESS" Position="20,40,275,13" Property="ISParcelProgress" Style="WS_CLIPSIBLINGS" Anchor="SIZE_X"/>
+				<Button Name="IDCANCEL" Position="245,64,50,14" Text="IDS_CANCEL_BUTTON" Class="Body"/>
+			</Dialog>
+			<Dialog Name="ISPromptForSourceMedia" Caption="IDS_PRODUCTNAME_INSTALLSHIELD" Height="130" Width="350" Background="DialogBackground">
+				<Label Name="IDC_LABEL1" Position="20,17,275,22" Text="IDS_SUITEERROR_MEDIAFILEMISSING" Class="Body"/>
+				<Image Name="IDC_IMAGE1" Position="20,56,24,28" Resource="Folder.png" Style="SS_REALSIZEIMAGE"/>
+				<Label Name="IDC_LABEL2" Position="47,56,230,10" Text="IDS_SUITEERROR_MEDIAFILEMISSING_SOURCEPATH" Class="Body"/>
+				<Label Name="IDC_LABEL3" Position="47,74,230,10" Property="ISSourceMediaFile" Class="Body"/>
+				<Button Name="IDC_FOLDER_DLG" Position="284,56,50,14" Text="IDS_CHANGE_BUTTON" Class="Body">
+					<Button.Click>
+						<BrowseFile Property="ISSourceMediaFile" Caption="IDS_SUITEERROR_MEDIAFILEMISSING_SOURCEPATH"/>
+					</Button.Click>
+				</Button>
+				<Button Name="IDOK" Position="219,110,50,14" Text="IDS_OK_BUTTON" Class="Body"/>
+				<Button Name="IDCANCEL" Position="284,110,50,14" Text="IDS_CANCEL_BUTTON" Class="Body"/>
+			</Dialog>
+			<Dialog Name="ISFilesInUse" Caption="IDS_PRODUCTNAME_INSTALLSHIELD" Height="160" Width="350" Background="DialogBackground">
+				<Label Name="IDC_LABEL1" Position="20,10,310,22" Text="IDS_FILESINUSE_DIRECTIONS" Class="Body"/>
+				<ListBox Name="IDC_LIST" Position="20,35,310,100" Style="WS_CAPTION|LBS_NOSEL" Class="Body" Items="ISFilesInUseList"/>
+				<Button Name="IDRETRY" Position="154,140,50,14" Text="IDS_FILESINUSE_RETRY" Class="Body"/>
+				<Button Name="IDIGNORE" Position="219,140,50,14" Text="IDS_FILESINUSE_IGNORE" Class="Body"/>
+				<Button Name="IDCANCEL" Position="284,140,50,14" Text="IDS_FILESINUSE_EXIT" Class="Body"/>
+			</Dialog>
+			<Dialog Name="ISRMFilesInUse" Caption="IDS_PRODUCTNAME_INSTALLSHIELD" Height="190" Width="350" Background="DialogBackground">
+				<Label Name="IDC_LABEL1" Position="20,10,310,20" Text="IDS_RMFILESINUSE_DIRECTIONS" Class="Body"/>
+				<ListBox Name="IDC_LIST" Position="20,35,310,100" Style="WS_CAPTION|LBS_NOSEL" Class="Body" Items="ISFilesInUseList"/>
+				<RadioButton Name="IDC_RADIO_1" Property="ISCloseApplications==true" Position="20,135,310,10" Text="IDS_RMFILESINUSE_CLOSERESTART" Class="Body"/>
+				<RadioButton Name="IDC_RADIO_2" Property="ISCloseApplications==false" Position="20,148,310,10" Text="IDS_RMFILESINUSE_REBOOTAFTER" Class="Body"/>
+				<Button Name="IDOK" Position="219,170,50,14" Text="IDS_OK_BUTTON" Class="Body"/>
+				<Button Name="IDCANCEL" Position="284,170,50,14" Text="IDS_CANCEL_BUTTON" Class="Body"/>
+			</Dialog>
+			<Dialog Name="ISUpgradeParcel" Caption="IDS_PRODUCTNAME_INSTALLSHIELD" Height="190" Width="350" Background="DialogBackground">
+				<Label Name="IDC_LABEL1" Position="20,10,310,20" Text="IDS_SUITE_UPGRADE_PARCELS" Class="Body"/>
+				<ListBox Name="IDC_LIST" Position="20,35,310,120" Style="WS_CAPTION|LBS_NOSEL" Class="Body" Items="ISParcelUpgradeList"/>
+				<Button Name="IDOK" Position="219,170,50,14" Text="IDS_OK_BUTTON" Class="Body"/>
+				<Button Name="IDCANCEL" Position="284,170,50,14" Text="IDS_CANCEL_BUTTON" Class="Body"/>
+			</Dialog>
+		</Dialogs>
+	</UserInterface>
+	<Resources>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\Application.png"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\Custom.png"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\Folder.png"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\Remove.png"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\Repair.png"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\Typical.png"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\ISLogoBig.png"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\ISLogoSmall.png"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-150\Application.png" Target="scale-150"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-150\Custom.png" Target="scale-150"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-150\Folder.png" Target="scale-150"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-150\Remove.png" Target="scale-150"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-150\Repair.png" Target="scale-150"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-150\Typical.png" Target="scale-150"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-150\ISLogoBig.png" Target="scale-150"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-150\ISLogoSmall.png" Target="scale-150"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-200\Application.png" Target="scale-200"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-200\Custom.png" Target="scale-200"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-200\Folder.png" Target="scale-200"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-200\Remove.png" Target="scale-200"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-200\Repair.png" Target="scale-200"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-200\Typical.png" Target="scale-200"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-200\ISLogoBig.png" Target="scale-200"/>
+		<Resource Source="&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\scale-200\ISLogoSmall.png" Target="scale-200"/>
+		<Resource Source="&lt;ISProductFolder&gt;\Redist\0409\EULA.rtf"/>
+	</Resources>
+	<ARPInfo>
+		<Version>1.00.0000</Version>
+	</ARPInfo>
+	<Mode>
+		<Install>
+			<When>
+				<Any>
+					<Not>
+						<DetectPrimary Id="*"/>
+					</Not>
+					<SuiteInstalled SuiteId="*" Version="*" Compare="NotEqual"/>
+				</Any>
+			</When>
+		</Install>
+		<Maintenance>
+			<When>
+				<Any>
+					<DetectPrimary Id="*"/>
+				</Any>
+			</When>
+		</Maintenance>
+	</Mode>
+	<LanguageSelection RequireExactMatch="1028,2052" ShowLanguageSelection="yes" RTLLangs="1025,1037" Default="1049">1049</LanguageSelection>
+	<SelectionTree/>
+	<WindowsFeaturesDefinitions>
+		<IIS-WebServerRole>
+			<DependsOn>NetFx3</DependsOn>
+			<ItemAllOS>IIS-WebServerRole;IIS-WebServer;IIS-WebServerManagementTools;IIS-ManagementConsole;IIS-CommonHttpFeatures;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-StaticContent;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-RequestMonitor;IIS-Performance;IIS-HttpCompressionStatic;IIS-Security;IIS-RequestFiltering;IIS-ApplicationDevelopment;IIS-ISAPIExtensions;IIS-ISAPIFilter;IIS-NetFxExtensibility;IIS-ASPNET</ItemAllOS>
+			<Client_0600>WAS-WindowsActivationService;WAS-ProcessModel;WAS-NetFxEnvironment;WAS-ConfigurationAPI;IIS-WebServerRole;IIS-WebServer;IIS-WebServerManagementTools;IIS-ManagementConsole;IIS-CommonHttpFeatures;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-StaticContent;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-RequestMonitor;IIS-Performance;IIS-HttpCompressionStatic;IIS-Security;IIS-RequestFiltering;IIS-ApplicationDevelopment;IIS-ISAPIExtensions;IIS-ISAPIFilter;IIS-NetFxExtensibility;IIS-ASPNET</Client_0600>
+			<Server_0600>WAS-WindowsActivationService;WAS-ProcessModel;WAS-NetFxEnvironment;WAS-ConfigurationAPI;IIS-WebServerRole;IIS-WebServer;IIS-WebServerManagementTools;IIS-ManagementConsole;IIS-CommonHttpFeatures;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-StaticContent;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-RequestMonitor;IIS-Performance;IIS-HttpCompressionStatic;IIS-Security;IIS-RequestFiltering;IIS-ApplicationDevelopment;IIS-ISAPIExtensions;IIS-ISAPIFilter;IIS-NetFxExtensibility;IIS-ASPNET</Server_0600>
+			<ServerCore_0600>WAS-WindowsActivationService;WAS-ProcessModel;IIS-WebServerRole;IIS-WebServer;IIS-CommonHttpFeatures;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-StaticContent;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-RequestMonitor;IIS-Performance;IIS-HttpCompressionStatic;IIS-Security;IIS-RequestFiltering;IIS-ApplicationDevelopment;IIS-ISAPIExtensions;IIS-ISAPIFilter</ServerCore_0600>
+			<ServerCore_0601>IIS-WebServerRole;IIS-WebServer;IIS-CommonHttpFeatures;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-StaticContent;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-RequestMonitor;IIS-Performance;IIS-HttpCompressionStatic;IIS-Security;IIS-RequestFiltering;IIS-ApplicationDevelopment;IIS-ISAPIExtensions;IIS-ISAPIFilter;IIS-NetFxExtensibility;IIS-ASPNET</ServerCore_0601>
+			<Client_0602>IIS-WebServerRole;IIS-WebServer;IIS-WebServerManagementTools;IIS-ManagementConsole;IIS-CommonHttpFeatures;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-StaticContent;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-RequestMonitor;IIS-Performance;IIS-HttpCompressionStatic;IIS-Security;IIS-RequestFiltering;IIS-ApplicationDevelopment;IIS-ISAPIExtensions;IIS-ISAPIFilter;NetFx4Extended-ASPNET45;IIS-NetFxExtensibility;IIS-ASPNET</Client_0602>
+			<Server_0602>IIS-WebServerRole;IIS-WebServer;IIS-WebServerManagementTools;IIS-ManagementConsole;IIS-CommonHttpFeatures;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-StaticContent;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-RequestMonitor;IIS-Performance;IIS-HttpCompressionStatic;IIS-Security;IIS-RequestFiltering;IIS-ApplicationDevelopment;IIS-ISAPIExtensions;IIS-ISAPIFilter;NetFx4Extended-ASPNET45;IIS-NetFxExtensibility;IIS-ASPNET</Server_0602>
+			<ServerCore_0602>IIS-WebServerRole;IIS-WebServer;IIS-CommonHttpFeatures;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-StaticContent;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-RequestMonitor;IIS-Performance;IIS-HttpCompressionStatic;IIS-Security;IIS-RequestFiltering;IIS-ApplicationDevelopment;IIS-ISAPIExtensions;IIS-ISAPIFilter;NetFx4Extended-ASPNET45;IIS-NetFxExtensibility;IIS-ASPNET</ServerCore_0602>
+			<Client_0603>IIS-WebServerRole;IIS-WebServer;IIS-WebServerManagementTools;IIS-ManagementConsole;IIS-CommonHttpFeatures;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-StaticContent;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-RequestMonitor;IIS-Performance;IIS-HttpCompressionStatic;IIS-Security;IIS-RequestFiltering;IIS-ApplicationDevelopment;IIS-ISAPIExtensions;IIS-ISAPIFilter;NetFx4Extended-ASPNET45;IIS-NetFxExtensibility;IIS-ASPNET</Client_0603>
+			<Server_0603>IIS-WebServerRole;IIS-WebServer;IIS-WebServerManagementTools;IIS-ManagementConsole;IIS-CommonHttpFeatures;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-StaticContent;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-RequestMonitor;IIS-Performance;IIS-HttpCompressionStatic;IIS-Security;IIS-RequestFiltering;IIS-ApplicationDevelopment;IIS-ISAPIExtensions;IIS-ISAPIFilter;NetFx4Extended-ASPNET45;IIS-NetFxExtensibility;IIS-ASPNET</Server_0603>
+			<ServerCore_0603>IIS-WebServerRole;IIS-WebServer;IIS-CommonHttpFeatures;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-StaticContent;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-RequestMonitor;IIS-Performance;IIS-HttpCompressionStatic;IIS-Security;IIS-RequestFiltering;IIS-ApplicationDevelopment;IIS-ISAPIExtensions;IIS-ISAPIFilter;NetFx4Extended-ASPNET45;IIS-NetFxExtensibility;IIS-ASPNET</ServerCore_0603>
+		</IIS-WebServerRole>
+		<NetFx3>
+			<Client_0600>NetFx3</Client_0600>
+			<Server_0600>NetFx3</Server_0600>
+			<ServerCore_0600/>
+			<Client_0601>NetFx3</Client_0601>
+			<Server_0601>NetFx3</Server_0601>
+			<ServerCore_0601/>
+			<Client_0602>NetFx3</Client_0602>
+			<Server_0602>NetFx3ServerFeatures;NetFx3</Server_0602>
+			<ServerCore_0602>NetFx3ServerFeatures;NetFx3</ServerCore_0602>
+			<Client_0603>NetFx3</Client_0603>
+			<Server_0603>NetFx3ServerFeatures;NetFx3</Server_0603>
+			<ServerCore_0603>NetFx3ServerFeatures;NetFx3</ServerCore_0603>
+		</NetFx3>
+		<PowerShell>
+			<Client_0600/>
+			<Server_0600>MicrosoftWindowsPowerShell</Server_0600>
+			<ServerCore_0600/>
+			<Client_0601/>
+			<Server_0601/>
+			<ServerCore_0601>NetFx2-ServerCore;MicrosoftWindowsPowerShell</ServerCore_0601>
+			<Client_0602/>
+			<Server_0602>MicrosoftWindowsPowerShellRoot;MicrosoftWindowsPowerShell;MicrosoftWindowsPowerShellISE;MicrosoftWindowsPowerShellV2</Server_0602>
+			<ServerCore_0602>MicrosoftWindowsPowerShellRoot;MicrosoftWindowsPowerShell;MicrosoftWindowsPowerShellV2</ServerCore_0602>
+			<Client_0603/>
+			<Server_0603>MicrosoftWindowsPowerShellRoot;MicrosoftWindowsPowerShell;MicrosoftWindowsPowerShellISE;MicrosoftWindowsPowerShellV2</Server_0603>
+			<ServerCore_0603>MicrosoftWindowsPowerShellRoot;MicrosoftWindowsPowerShell;MicrosoftWindowsPowerShellV2</ServerCore_0603>
+		</PowerShell>
+	</WindowsFeaturesDefinitions>
+	<Parcels/>
+	<Languages>
+		<Language lcid="1049">
+			<IDS_BACK_BUTTON TimeStamp="-1297962450">&lt; &amp;Назад</IDS_BACK_BUTTON>
+			<IDS_BROWSEFOLDER_CAPTION TimeStamp="-1297962450">Папка назначения</IDS_BROWSEFOLDER_CAPTION>
+			<IDS_BROWSEFOLDER_CHANGEFOLDER TimeStamp="-1297962450">Нажмите кнопку "Далее", чтобы установить в эту папку. Нажмите кнопку "Изменить", чтобы выполнить установку в другую папку.</IDS_BROWSEFOLDER_CHANGEFOLDER>
+			<IDS_BROWSEFOLDER_INSTALLTO TimeStamp="-1297962450">Установка [ProductName] в:</IDS_BROWSEFOLDER_INSTALLTO>
+			<IDS_CANCEL_BUTTON TimeStamp="-1297962450">Отмена</IDS_CANCEL_BUTTON>
+			<IDS_CHANGE_BUTTON TimeStamp="-1297962450">&amp;Изменить...</IDS_CHANGE_BUTTON>
+			<IDS_COMPLETE_DIRECTIONS TimeStamp="-1297962450">Программа InstallShield Wizard завершена</IDS_COMPLETE_DIRECTIONS>
+			<IDS_CUSTOMERINFO_CAPTION TimeStamp="-1297962450">Сведения о пользователе</IDS_CUSTOMERINFO_CAPTION>
+			<IDS_CUSTOMERINFO_ORGANIZATION TimeStamp="-1297962450">&amp;Организация:</IDS_CUSTOMERINFO_ORGANIZATION>
+			<IDS_CUSTOMERINFO_SERIALNUMBER TimeStamp="-1297962450">&amp;Серийный номер:</IDS_CUSTOMERINFO_SERIALNUMBER>
+			<IDS_CUSTOMERINFO_USERNAME TimeStamp="-1297962450">&amp;Пользователь:</IDS_CUSTOMERINFO_USERNAME>
+			<IDS_CUSTOMSETUP_CAPTION TimeStamp="-1297962450">Выборочная установка</IDS_CUSTOMSETUP_CAPTION>
+			<IDS_CUSTOMSETUP_CAPTION_TIER TimeStamp="-1297962450">Выбор уровня</IDS_CUSTOMSETUP_CAPTION_TIER>
+			<IDS_CUSTOMSETUP_DIRECTIONS TimeStamp="-1297962450">Выберите компоненты программы, которые необходимо установить.</IDS_CUSTOMSETUP_DIRECTIONS>
+			<IDS_CUSTOMSETUP_DIRECTIONS_TIER TimeStamp="-1297962450">Выберите уровни программы для установки.</IDS_CUSTOMSETUP_DIRECTIONS_TIER>
+			<IDS_CUSTOMSETUP_FEATUREDESCRIPTION TimeStamp="-1297962450">Описание компонента</IDS_CUSTOMSETUP_FEATUREDESCRIPTION>
+			<IDS_CUSTOMSETUP_FEATURESIZE TimeStamp="-1297962450">Размер компонента</IDS_CUSTOMSETUP_FEATURESIZE>
+			<IDS_DOWNLOADING_UPDATE TimeStamp="-1297962450">InstallShield Wizard загружает обновление для продукта [ProductName]:</IDS_DOWNLOADING_UPDATE>
+			<IDS_ERROR_OPENREAD TimeStamp="-1297962450">Ошибка при открытии файла для чтения: [3] GetLastError: [2].</IDS_ERROR_OPENREAD>
+			<IDS_FILE TimeStamp="-1297962450">Файл: [1]</IDS_FILE>
+			<IDS_FILESINUSE_DIRECTIONS TimeStamp="-1297962450">Следующие приложения используют файлы, которые должна обновить данная программа установки. Закройте эти приложения и для продолжения нажмите кнопку "Повторить".</IDS_FILESINUSE_DIRECTIONS>
+			<IDS_FILESINUSE_EXIT TimeStamp="-1297962450">&amp;Выход</IDS_FILESINUSE_EXIT>
+			<IDS_FILESINUSE_IGNORE TimeStamp="-1297962450">&amp;Пропустить</IDS_FILESINUSE_IGNORE>
+			<IDS_FILESINUSE_RETRY TimeStamp="-1297962450">По&amp;вторить</IDS_FILESINUSE_RETRY>
+			<IDS_FINISH_BUTTON TimeStamp="-1297962450">&amp;Готово</IDS_FINISH_BUTTON>
+			<IDS_INSTALLATION_LANGUAGE_CAPTION TimeStamp="-1297962450">Выбор языка</IDS_INSTALLATION_LANGUAGE_CAPTION>
+			<IDS_INSTALLATION_LANGUAGE_DIRECTIONS TimeStamp="-1297962450">Выберите нужный язык из списка.</IDS_INSTALLATION_LANGUAGE_DIRECTIONS>
+			<IDS_INSTALLATION_PASSWORD TimeStamp="-1297962450">Введите пароль</IDS_INSTALLATION_PASSWORD>
+			<IDS_INSTALLTYPE_CAPTION TimeStamp="-1297962450">Вид установки</IDS_INSTALLTYPE_CAPTION>
+			<IDS_INSTALLTYPE_COMPLETE TimeStamp="-1297962450">&amp;Полная</IDS_INSTALLTYPE_COMPLETE>
+			<IDS_INSTALLTYPE_COMPLETE_NOTE TimeStamp="-1297962450">Будут установлены все компоненты программы. (Требуется больше всего места на диске.)</IDS_INSTALLTYPE_COMPLETE_NOTE>
+			<IDS_INSTALLTYPE_CUSTOM TimeStamp="-1297962450">&amp;Выборочная</IDS_INSTALLTYPE_CUSTOM>
+			<IDS_INSTALLTYPE_CUSTOM_NOTE TimeStamp="-1297962450">Выбор необходимых компонентов программы и папки, в которой они будут установлены. Рассчитана на опытных пользователей.</IDS_INSTALLTYPE_CUSTOM_NOTE>
+			<IDS_INSTALL_BUTTON TimeStamp="-1297962450">&amp;Установить</IDS_INSTALL_BUTTON>
+			<IDS_INSTALL_SUCCESS TimeStamp="-1297962450">Программа InstallShield Wizard успешно установила [ProductName]. Нажмите кнопку "Готово" для выхода из программы.</IDS_INSTALL_SUCCESS>
+			<IDS_INSTALL_WELCOME_CAPTION TimeStamp="-1297962450">Вас приветствует программа InstallShield Wizard для [ProductName]</IDS_INSTALL_WELCOME_CAPTION>
+			<IDS_LANGUAGE_1025 TimeStamp="-1297962450">Арабский</IDS_LANGUAGE_1025>
+			<IDS_LANGUAGE_1026 TimeStamp="-1297962450">Болгарский</IDS_LANGUAGE_1026>
+			<IDS_LANGUAGE_1027 TimeStamp="-1297962450">Каталанский</IDS_LANGUAGE_1027>
+			<IDS_LANGUAGE_1028 TimeStamp="-1297962450">Китайский (Традиционный)</IDS_LANGUAGE_1028>
+			<IDS_LANGUAGE_1029 TimeStamp="-1297962450">Чешский</IDS_LANGUAGE_1029>
+			<IDS_LANGUAGE_1030 TimeStamp="-1297962450">Датский</IDS_LANGUAGE_1030>
+			<IDS_LANGUAGE_1031 TimeStamp="-1297962450">Немецкий</IDS_LANGUAGE_1031>
+			<IDS_LANGUAGE_1032 TimeStamp="-1297962450">Греческий</IDS_LANGUAGE_1032>
+			<IDS_LANGUAGE_1033 TimeStamp="-1297962450">Английский</IDS_LANGUAGE_1033>
+			<IDS_LANGUAGE_1034 TimeStamp="-1297962450">Испанский</IDS_LANGUAGE_1034>
+			<IDS_LANGUAGE_1035 TimeStamp="-1297962450">Финский</IDS_LANGUAGE_1035>
+			<IDS_LANGUAGE_1036 TimeStamp="-1297962450">Французский (стандартный)</IDS_LANGUAGE_1036>
+			<IDS_LANGUAGE_1037 TimeStamp="-1297962450">Иврит</IDS_LANGUAGE_1037>
+			<IDS_LANGUAGE_1038 TimeStamp="-1297962450">Венгерский</IDS_LANGUAGE_1038>
+			<IDS_LANGUAGE_1040 TimeStamp="-1297962450">Итальянский</IDS_LANGUAGE_1040>
+			<IDS_LANGUAGE_1041 TimeStamp="-1297962450">Японский</IDS_LANGUAGE_1041>
+			<IDS_LANGUAGE_1042 TimeStamp="-1297962450">Корейский</IDS_LANGUAGE_1042>
+			<IDS_LANGUAGE_1043 TimeStamp="-1297962450">Голландский</IDS_LANGUAGE_1043>
+			<IDS_LANGUAGE_1044 TimeStamp="-1297962450">Норвежский</IDS_LANGUAGE_1044>
+			<IDS_LANGUAGE_1045 TimeStamp="-1297962450">Польский</IDS_LANGUAGE_1045>
+			<IDS_LANGUAGE_1046 TimeStamp="-1297962450">Португальский (Бразильский)</IDS_LANGUAGE_1046>
+			<IDS_LANGUAGE_1048 TimeStamp="-1297962450">Румынский</IDS_LANGUAGE_1048>
+			<IDS_LANGUAGE_1049 TimeStamp="-1297962450">Русский</IDS_LANGUAGE_1049>
+			<IDS_LANGUAGE_1050 TimeStamp="-1297962450">Хорватский</IDS_LANGUAGE_1050>
+			<IDS_LANGUAGE_1051 TimeStamp="-1297962450">Словацкий</IDS_LANGUAGE_1051>
+			<IDS_LANGUAGE_1053 TimeStamp="-1297962450">Шведский</IDS_LANGUAGE_1053>
+			<IDS_LANGUAGE_1054 TimeStamp="-1297962450">Тайский</IDS_LANGUAGE_1054>
+			<IDS_LANGUAGE_1055 TimeStamp="-1297962450">Турецкий</IDS_LANGUAGE_1055>
+			<IDS_LANGUAGE_1057 TimeStamp="-1297962450">Индонезийский</IDS_LANGUAGE_1057>
+			<IDS_LANGUAGE_1060 TimeStamp="-1297962450">Словенский</IDS_LANGUAGE_1060>
+			<IDS_LANGUAGE_1069 TimeStamp="-1297962450">Баскский</IDS_LANGUAGE_1069>
+			<IDS_LANGUAGE_2052 TimeStamp="-1297962450">Китайский (Упрощенный)</IDS_LANGUAGE_2052>
+			<IDS_LANGUAGE_2070 TimeStamp="-1297962450">Португальский (стандартный)</IDS_LANGUAGE_2070>
+			<IDS_LANGUAGE_3084 TimeStamp="-1297962450">Французский (Канадский)</IDS_LANGUAGE_3084>
+			<IDS_LANGUAGE_3098 TimeStamp="-1297962450">Сербский (кириллица)</IDS_LANGUAGE_3098>
+			<IDS_LICENSEAGREEMENT_ACCEPT TimeStamp="-1297962450">Я &amp;принимаю условия лицензионного соглашения</IDS_LICENSEAGREEMENT_ACCEPT>
+			<IDS_LICENSEAGREEMENT_CAPTION TimeStamp="-1297962450">Лицензионное соглашение</IDS_LICENSEAGREEMENT_CAPTION>
+			<IDS_LICENSEAGREEMENT_DIRECTIONS TimeStamp="-1297962450">Пожалуйста, внимательно прочтите следующее лицензионное соглашение.</IDS_LICENSEAGREEMENT_DIRECTIONS>
+			<IDS_LICENSEAGREEMENT_REJECT TimeStamp="-1297962450">Я не п&amp;ринимаю условия лицензионного соглашения</IDS_LICENSEAGREEMENT_REJECT>
+			<IDS_NEXT_BUTTON TimeStamp="-1297962450">&amp;Далее &gt;</IDS_NEXT_BUTTON>
+			<IDS_OK_BUTTON TimeStamp="-1297962450">OK</IDS_OK_BUTTON>
+			<IDS_PRINT_BUTTON TimeStamp="-1297962450">&amp;Печать</IDS_PRINT_BUTTON>
+			<IDS_PRODUCTNAME_INSTALLSHIELD TimeStamp="-1297962450">[ProductName] - InstallShield Wizard</IDS_PRODUCTNAME_INSTALLSHIELD>
+			<IDS_PROGRESS_CAPTION_INSTALLING TimeStamp="-1297962450">Установка [ProductName]</IDS_PROGRESS_CAPTION_INSTALLING>
+			<IDS_PROGRESS_CAPTION_UNINSTALLING TimeStamp="-1297962450">Удаление [ProductName]</IDS_PROGRESS_CAPTION_UNINSTALLING>
+			<IDS_PROGRESS_TITLE_INSTALLING TimeStamp="-1297962450">Устанавливаются выбранные компоненты программы.</IDS_PROGRESS_TITLE_INSTALLING>
+			<IDS_PROGRESS_TITLE_UNINSTALLING TimeStamp="-1297962450">Удаление выбранных компонентов программы.</IDS_PROGRESS_TITLE_UNINSTALLING>
+			<IDS_REMOVE_BUTTON TimeStamp="-1297962450">&amp;Удалить</IDS_REMOVE_BUTTON>
+			<IDS_RMFILESINUSE_CLOSERESTART TimeStamp="-1297962450">Автоматически закрыть и попробовать перезапустить приложения.</IDS_RMFILESINUSE_CLOSERESTART>
+			<IDS_RMFILESINUSE_DIRECTIONS TimeStamp="-1297962450">Следующие приложения используют файлы, которые должна обновить данная программа установки.</IDS_RMFILESINUSE_DIRECTIONS>
+			<IDS_RMFILESINUSE_REBOOTAFTER TimeStamp="-1297962450">Не закрывать приложения. (Потребуется перезагрузка.)</IDS_RMFILESINUSE_REBOOTAFTER>
+			<IDS_STAGEDOWNLOAD_FAILRETRY TimeStamp="-1297962450">Возникла ошибка при загрузке файла %s.  Какие действия необходимо выполнить?</IDS_STAGEDOWNLOAD_FAILRETRY>
+			<IDS_SUITEERROR_ABORTCONDITION TimeStamp="-1297962450">Для запуска установки требуются следующие компоненты:&amp;#xA;</IDS_SUITEERROR_ABORTCONDITION>
+			<IDS_SUITEERROR_FAILEDLAUNCHTEMP TimeStamp="-1297962450">Не удалось запустить установку во временной папке. Обратитесь за помощью к поставщику.</IDS_SUITEERROR_FAILEDLAUNCHTEMP>
+			<IDS_SUITEERROR_INVALIDCMDLINE TimeStamp="-1297962450">Неверная командная строка установки. Продолжение установки невозможно.</IDS_SUITEERROR_INVALIDCMDLINE>
+			<IDS_SUITEERROR_INVALIDSTAGEPATH TimeStamp="-1297962450">Не удалось создать папку назначения, заданную для размещения.</IDS_SUITEERROR_INVALIDSTAGEPATH>
+			<IDS_SUITEERROR_MD5CHECKFAILED TimeStamp="-1297962450">Не выполнена проверка MD5 для текущего размещаемого файла. Возможно, файл поврежден.</IDS_SUITEERROR_MD5CHECKFAILED>
+			<IDS_SUITEERROR_MEDIAFILEMISSING TimeStamp="-1297962450">Попытка установить пакет, для которого отсутствует необходимый файл. Для продолжения установки укажите другой путь к этому файлу.</IDS_SUITEERROR_MEDIAFILEMISSING>
+			<IDS_SUITEERROR_MEDIAFILEMISSING_SOURCEPATH TimeStamp="-1297962450">Укажите путь к этому файлу:</IDS_SUITEERROR_MEDIAFILEMISSING_SOURCEPATH>
+			<IDS_SUITEERROR_NORUNNINGUI TimeStamp="-1297962450">Библиотека DLL UI не была загружена или инициализирована, возможно, из-за отсутствия ресурса UI. Обратитесь за помощью к поставщику.</IDS_SUITEERROR_NORUNNINGUI>
+			<IDS_SUITEERROR_NOSETUPXML TimeStamp="-1297962450">В текущей пакетной установке не найден файл setup.xml. Обратитесь за помощью к поставщику.</IDS_SUITEERROR_NOSETUPXML>
+			<IDS_SUITEERROR_PASSWORDINVALID TimeStamp="-1297962450">Пароль установки неверен или не был введен. Продолжение установки невозможно.</IDS_SUITEERROR_PASSWORDINVALID>
+			<IDS_SUITEERROR_RESCOPY TimeStamp="-1297962450">Не удалось скопировать или загрузить файл, необходимый для запуска данной установки. Обратитесь за помощью к поставщику.</IDS_SUITEERROR_RESCOPY>
+			<IDS_SUITEERROR_RESEXTRACT TimeStamp="-1297962450">Не удалось извлечь файл, необходимый для запуска данной установки. Обратитесь за помощью к поставщику.</IDS_SUITEERROR_RESEXTRACT>
+			<IDS_SUITEERROR_STAGEDOWNLOADFAIL TimeStamp="-1297962450">Произошла неизвестная ошибка при попытке кэшировать файл с удаленного сервера или из локальной папки. Обратитесь за помощью к поставщику.</IDS_SUITEERROR_STAGEDOWNLOADFAIL>
+			<IDS_SUITEERROR_STAGEEXTRACT TimeStamp="-1297962450">Не удалось извлечь файл при размещении. Файл отсутствует в потоке, или его не удалось записать на компьютер назначения.</IDS_SUITEERROR_STAGEEXTRACT>
+			<IDS_SUITEERROR_STATEINFOINIT TimeStamp="-1297962450">Не удалось прочитать или инициализировать информацию о состоянии установки; отсутствует атрибут SuiteId элемента установки setup.xml. Обратитесь за помощью к поставщику.</IDS_SUITEERROR_STATEINFOINIT>
+			<IDS_SUITEERROR_TXFAILED TimeStamp="-1297962450">Не удалось связаться с текущим обработчиком внепроцессных транзакций. Обратитесь за помощью к поставщику.</IDS_SUITEERROR_TXFAILED>
+			<IDS_SUITE_ASKREBOOT TimeStamp="-1297962450">Перед продолжением настройки [2] программа Windows Installer должна перезагрузить систему.  Нажмите кнопку "Да", чтобы перезагрузить компьютер сейчас, либо кнопку "Нет", чтобы выполнить перезагрузку позже вручную.</IDS_SUITE_ASKREBOOT>
+			<IDS_SUITE_BETA TimeStamp="-1297962450">Эта установка создана с помощью БЕТА-ВЕРСИИ %s</IDS_SUITE_BETA>
+			<IDS_SUITE_CONFIRMCANCEL TimeStamp="-1297962450">Отменить установку [ProductName]?</IDS_SUITE_CONFIRMCANCEL>
+			<IDS_SUITE_EVAL TimeStamp="-1297962450">Эта установка создана с помощью ОЗНАКОМИТЕЛЬНОЙ ВЕРСИИ %s</IDS_SUITE_EVAL>
+			<IDS_SUITE_INITIALIZING TimeStamp="-1297962450">Инициализация</IDS_SUITE_INITIALIZING>
+			<IDS_SUITE_INSTALLING TimeStamp="-1297962450">Установка</IDS_SUITE_INSTALLING>
+			<IDS_SUITE_INSTALLING_PARCEL TimeStamp="-1297962450">Установка пакета [1]</IDS_SUITE_INSTALLING_PARCEL>
+			<IDS_SUITE_INTERRUPTED TimeStamp="-1297962450">Выполнение программы было прервано до завершения установки [ProductName].</IDS_SUITE_INTERRUPTED>
+			<IDS_SUITE_MINOR_DOWNGRADE TimeStamp="-1297962450">Более поздняя версия '[ProductName]' уже установлена на этом компьютере. Продолжение установки невозможно.</IDS_SUITE_MINOR_DOWNGRADE>
+			<IDS_SUITE_MODIFYING_PARCEL TimeStamp="-1297962450">Изменение пакета [1]</IDS_SUITE_MODIFYING_PARCEL>
+			<IDS_SUITE_PACKAGEFAIL TimeStamp="-1297962450">Установка %s выполнена с ошибками. Продолжить установку?</IDS_SUITE_PACKAGEFAIL>
+			<IDS_SUITE_PARCEL_ERROR TimeStamp="-1297962450">Ошибка пакета [1]:
+[2]</IDS_SUITE_PARCEL_ERROR>
+			<IDS_SUITE_PARCEL_OPERATION_COMPLETE TimeStamp="-1297962450">Операция с пакетом [1] завершена</IDS_SUITE_PARCEL_OPERATION_COMPLETE>
+			<IDS_SUITE_PREPARING_FOR_OPERATION TimeStamp="-1297962450">Подготовка к операции</IDS_SUITE_PREPARING_FOR_OPERATION>
+			<IDS_SUITE_REBOOTING TimeStamp="-1297962450">Перезагрузка</IDS_SUITE_REBOOTING>
+			<IDS_SUITE_REGISTERING_SUITE TimeStamp="-1297962450">Регистрация комплекта</IDS_SUITE_REGISTERING_SUITE>
+			<IDS_SUITE_REMOVING_PARCEL TimeStamp="-1297962450">Удаление пакета [1]</IDS_SUITE_REMOVING_PARCEL>
+			<IDS_SUITE_REPAIRING_PARCEL TimeStamp="-1297962450">Восстановление пакета [1]</IDS_SUITE_REPAIRING_PARCEL>
+			<IDS_SUITE_STAGING TimeStamp="-1297962450">Размещение</IDS_SUITE_STAGING>
+			<IDS_SUITE_UNREGISTERING_SUITE TimeStamp="-1297962450">Отмена регистрации комплекта</IDS_SUITE_UNREGISTERING_SUITE>
+			<IDS_SUITE_UPGRADE_PARCELS TimeStamp="-1297962450">При установке будут обновлены следующие пакеты. Продолжить?</IDS_SUITE_UPGRADE_PARCELS>
+			<IDS_UITEXT_Bytes TimeStamp="-1297962450">байт</IDS_UITEXT_Bytes>
+			<IDS_UITEXT_GB TimeStamp="-1297962450">Гб</IDS_UITEXT_GB>
+			<IDS_UITEXT_KB TimeStamp="-1297962450">Кб</IDS_UITEXT_KB>
+			<IDS_UITEXT_MB TimeStamp="-1297962450">Мб</IDS_UITEXT_MB>
+			<IDS_UNINSTALL_SUCCESS TimeStamp="-1297962450">Программа установки InstallShield успешно удалила [ProductName]. Нажмите кнопку "Готово" для выхода из программы установки.</IDS_UNINSTALL_SUCCESS>
+			<IDS_WELCOME_INSTALL_COPYRIGHT TimeStamp="-1297962450">ПРЕДУПРЕЖДЕНИЕ: Данная программа защищена законами об авторских правах и международными соглашениями.</IDS_WELCOME_INSTALL_COPYRIGHT>
+			<IDS_WELCOME_INSTALL_DIRECTIONS TimeStamp="-1297962450">Программа InstallShield(R) Wizard выполнит установку [ProductName] на компьютер. Для продолжения нажмите кнопку "Далее".</IDS_WELCOME_INSTALL_DIRECTIONS>
+			<IDS_WELCOME_MAINTENANCE_CAPTION TimeStamp="-1297962450">Обслуживание программ</IDS_WELCOME_MAINTENANCE_CAPTION>
+			<IDS_WELCOME_MAINTENANCE_MODIFY TimeStamp="-1297962450">&amp;Изменить</IDS_WELCOME_MAINTENANCE_MODIFY>
+			<IDS_WELCOME_MAINTENANCE_MODIFY_NOTE TimeStamp="-1297962450">Изменение устанавливаемых компонентов программы. Появится диалоговое окно "Выборочная установка", в котором можно изменить способ установки компонентов.</IDS_WELCOME_MAINTENANCE_MODIFY_NOTE>
+			<IDS_WELCOME_MAINTENANCE_REMOVE TimeStamp="-1297962450">&amp;Удалить</IDS_WELCOME_MAINTENANCE_REMOVE>
+			<IDS_WELCOME_MAINTENANCE_REMOVE_NOTE TimeStamp="-1297962450">Удаление [ProductName] из компьютера.</IDS_WELCOME_MAINTENANCE_REMOVE_NOTE>
+			<IDS_WELCOME_MAINTENANCE_REPAIR TimeStamp="-1297962450">Ис&amp;править</IDS_WELCOME_MAINTENANCE_REPAIR>
+			<IDS_WELCOME_MAINTENANCE_REPAIR_NOTE TimeStamp="-1297962450">Исправление ошибок в программе. При выборе данного параметра исправляются отсутствующие или поврежденные файлы, ярлыки и записи реестра.</IDS_WELCOME_MAINTENANCE_REPAIR_NOTE>
+			<IDS_WELCOME_STAGE_BROWSE_CAPTION TimeStamp="-1297962450">Перейдите в папку назначения.</IDS_WELCOME_STAGE_BROWSE_CAPTION>
+			<IDS_WELCOME_STAGE_CAPTION TimeStamp="-1297962450">Изменение текущей папки назначения</IDS_WELCOME_STAGE_CAPTION>
+			<IDS_WELCOME_STAGE_DIRECTIONS TimeStamp="-1297962450">Введите имя сетевой папки или нажмите кнопку "Изменить" для перехода в требуемую папку.  Нажмите кнопку "Установить", чтобы создать образ диска [ProductName] на сервере в указанной сетевой папке, или нажмите кнопку "Отмена" для выхода из программы.</IDS_WELCOME_STAGE_DIRECTIONS>
+			<IDS_WELCOME_STAGE_NOTE TimeStamp="-1297962450">&amp;Поиск в папке:</IDS_WELCOME_STAGE_NOTE>
+			<IDS_WELCOME_UNINSTALL_CAPTION TimeStamp="-1297962450">Удаление программы</IDS_WELCOME_UNINSTALL_CAPTION>
+			<IDS_WELCOME_UNINSTALL_DIRECTIONS TimeStamp="-1297962450">Нажмите кнопку "Удалить", чтобы удалить [ProductName] из компьютера. После удаления данная программа будет недоступна.</IDS_WELCOME_UNINSTALL_DIRECTIONS>
+			<IDS_INSTALLING_WINDOWS_FEATURES TimeStamp="-1297962450">Установка функций/ролей Windows...</IDS_INSTALLING_WINDOWS_FEATURES>
+			<IDS_WELCOME_MAINTENANCE_UPDATE TimeStamp="-1297962450">&amp;Обновление</IDS_WELCOME_MAINTENANCE_UPDATE>
+			<IDS_WELCOME_MAINTENANCE_UPDATE_NOTE TimeStamp="-1297962450">[ProductName] [ISUpdateVersion] доступен для использования. Загрузите и установите последнее обновление.</IDS_WELCOME_MAINTENANCE_UPDATE_NOTE>
+			<IDS_PROGRESS_CAPTION_UPDATING TimeStamp="-1297962450">Идет обновление [ProductName]</IDS_PROGRESS_CAPTION_UPDATING>
+			<IDS_PROGRESS_TITLE_UPDATING TimeStamp="-1297962450">Идет загрузка [ProductName] [ISUpdateVersion].</IDS_PROGRESS_TITLE_UPDATING>
+			<IDS_WEBDEPLOY_CAPTION TimeStamp="-1297962450">Сервер [ProductName]</IDS_WEBDEPLOY_CAPTION>
+			<IDS_WEBDEPLOY_USERNAME TimeStamp="-1297962450">Имя пользователя:</IDS_WEBDEPLOY_USERNAME>
+			<IDS_WEBDEPLOY_SERVER TimeStamp="-1297962450">Сервер:</IDS_WEBDEPLOY_SERVER>
+			<IDS_WEBDEPLOY_PASSWORD TimeStamp="-1297962450">Пароль:</IDS_WEBDEPLOY_PASSWORD>
+			<IDS_WEBDEPLOY_SITE TimeStamp="-1297962450">Название сайта:</IDS_WEBDEPLOY_SITE>
+			<IDS_WEBDEPLOY_LOADCAPTION TimeStamp="-1297962450">Загрузить профиль издателя</IDS_WEBDEPLOY_LOADCAPTION>
+			<IDS_WEBDEPLOY_LOADFILTER TimeStamp="-1297962450">Профиль издателя (*.publishsettings)|*.publishsettings|Все файлы (*.*)|*.*|</IDS_WEBDEPLOY_LOADFILTER>
+			<IDS_WEBDEPLOY_LOAD_BUTTON TimeStamp="-1297962450">Установить настройки облачного сервера</IDS_WEBDEPLOY_LOAD_BUTTON>
+			<IDS_WEBDEPLOY_LOADPROFILE_FAIL TimeStamp="-1297962450">Установка настроек издателя не была осуществлена</IDS_WEBDEPLOY_LOADPROFILE_FAIL>
+			<IDS_WEBDEPLOY_LOCAL TimeStamp="-1297962450">Местный IIS-сервер</IDS_WEBDEPLOY_LOCAL>
+			<IDS_WEBDEPLOY_REMOTE TimeStamp="-1297962450">Удаленный сервер</IDS_WEBDEPLOY_REMOTE>
+			<IDS_WEBDEPLOY_PUBPROF TimeStamp="-1297962450">Облачный сервер</IDS_WEBDEPLOY_PUBPROF>
+			<IDS_WEBDEPLOY_SERVERLOC TimeStamp="-1297962450">Выберите сервер, на который будет установлен [ProductName].</IDS_WEBDEPLOY_SERVERLOC>
+		</Language>
+	</Languages>
+	<Actions/>
+	<Events/>
+	<AbortConditions>
+		<Message Text="IDS_SUITE_MINOR_DOWNGRADE">
+			<When>
+				<Any>
+					<Not>
+						<ParcelRef Id="*"/>
+					</Not>
+					<SuiteInstalled SuiteId="*" Version="*" Compare="GreaterThan"/>
+				</Any>
+			</When>
+		</Message>
+	</AbortConditions>
+	<InstallScript xmlns="installshield/2014/bootstrap/project">
+		<ScriptFiles/>
+		<CompilerOptions>
+			<CompileBeforeBuild Value="1"/>
+			<Debug Value="0"/>
+			<IncludePath Value=""/>
+			<MaxErrors Value="50"/>
+			<MaxWarnings Value="50"/>
+			<OutputPath Value="&lt;ISProjectDataFolder&gt;\Script Files"/>
+			<PreProcessor Value="_ISCRIPT_SUITE_EXTENSION"/>
+			<WarningLevel Value="3"/>
+			<WarningsAsErrors Value="0"/>
+			<LibraryPath Value=""/>
+		</CompilerOptions>
+		<LinkerOptions>
+			<Library Name="isrtsuite.obl"/>
+		</LinkerOptions>
+	</InstallScript>
+</Setup>
