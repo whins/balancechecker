@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<languagefile version="100329" language="Russian" lang="rus">
+	<node name="Gui" descr="Клиентское приложение">
+	
+		<node name="Menu" descr="Пункты меню">
+			<item key="MenuSetting"><![CDATA[Настройка]]></item>
+			<item key="MenuRouting"><![CDATA[Маршрутизация]]></item>
+			<item key="MenuRecording"><![CDATA[Запись]]></item>
+			<item key="MenuIVR"><![CDATA[IVR]]></item>
+			<item key="MenuCallCenter"><![CDATA[Call-центр]]></item>
+			<item key="MenuStat"><![CDATA[Статистика]]></item>
+			<item key="MenuSettingFull"><![CDATA[Настройка установленных модемов]]></item>
+			<item key="MenuSettingFull2"><![CDATA[Срок работы beta-версии закончен]]></item>
+			<item key="MenuRoutingFull"><![CDATA[Маршрутизация]]></item>
+			<item key="MenuRecordingFull"><![CDATA[Запись разговоров]]></item>
+			<item key="MenuIVRFull"><![CDATA[Меню IVR]]></item>
+			<item key="MenuCallCenterFull"><![CDATA[Call-центр]]></item>
+			<item key="MenuStatFull"><![CDATA[Статистика]]></item>
+		</node>
+		
+		<node name="Button" descr="Кнопки">
+			<item key="ButtonClose"><![CDATA[Закрыть]]></item>
+			<item key="ButtonSave"><![CDATA[Сохранить]]></item>
+			<item key="ButtonCancel"><![CDATA[Отмена]]></item>
+			<item key="ButtonContinue"><![CDATA[Продолжить]]></item>
+			<item key="ButtonApply"><![CDATA[Применить]]></item>
+			<item key="ButtonUpdateDevices"><![CDATA[Обновить список модемов]]></item>			
+		</node>
+		
+		<node name="HTML" descr="HTML тексты">
+			<item key="HTML_Confirm"><![CDATA[Опросить список модемов?<br><font style="color:gray">Работа GSM-модемов будет приостановлена</font>]]></item>
+			<item key="HTML_IVR"><![CDATA[Подключите Oktell SIP GSM Gateway к коммуникационной программной платформе Oktell и используйте возможности создания голосовых меню IVR.<br><br>Управление голосовыми сценариями автоматической обработки вызова производится в графическом редакторе. Cистема Oktell позволяет организовывать автоматическое обслуживание абонентов в многоуровневых голосовых сценариях, выдавать абоненту по запросу общую и персонифицированную информацию, создавать сервисы информационного самообслуживания.<br><br><font style="color:#888888"><br>Москва, Телефонные Системы<br>+7 495 921 15 86 <br><a href="http://telsystems.ru" title="Перейти на страницу производителя" style="color:#0077aa">www.telsystems.ru</a><br><a href="mailto:mail@telsystems.ru" title="Написать письмо" style="color:#888888">mail@telsystems.ru</a></font>]]></item>
+			<item key="HTML_Record"><![CDATA[Используйте Oktell SIP GSM Gateway совместно с коммуникационной программной платформой Oktell и получайте возможность записи разговоров.<br><br>Система Oktell позволяет вести сквозную или избирательную запись телефонных разговоров. Все разговоры могут быть прослушаны во встроенном проигрывателе, экспортированы в виде звуковых файлов на сторонний носитель или отправлены по электронной почте на указанный адрес.<br><br><font style="color:#888888"><br>Москва, Телефонные Системы<br>+7 495 921 15 86 <br><a href="http://telsystems.ru" title="Перейти на страницу производителя" style="color:#0077aa">www.telsystems.ru</a><br><a href="mailto:mail@telsystems.ru" title="Написать письмо" style="color:#888888">mail@telsystems.ru</a></font>]]></item>
+			<item key="HTML_Routing"><![CDATA[Используйте Oktell SIP GSM Gateway совместно с коммуникационной программной платформой Oktell и получайте неограниченные возможности интеллектуальной маршрутизации вызовов.<br><br>Алгоритмы маршрутизации входящих и исходящих телефонных вызовов разрабатываются в windows приложении в удобном графическом редакторе. При этом доступно множество параметров, определяющих маршрут звонка: дата и время, состояние абонентов и телефонных линий, информация из баз данных и web источников, информация введенная абонентом в режиме DTMF, время ожидания в очереди и др. Используя коммуникационную программную платформу Oktell, вы получаете все возможности современной и интеллектуальной программной телефонной станции. <br><br><font style="color:#888888"><br>Москва, Телефонные Системы<br>+7 495 921 15 86 <br><a href="http://telsystems.ru" title="Перейти на страницу производителя" style="color:#0077aa">www.telsystems.ru</a><br><a href="mailto:mail@telsystems.ru" title="Написать письмо" style="color:#888888">mail@telsystems.ru</a></font>]]></item>
+			<item key="HTML_Stat"><![CDATA[Получайте статистическую информацию о количестве и продолжительности соединений Oktell SIP GSM Gateway используя коммуникационную программную платформу Oktell <br><br>Конструктор отчетных документов, система настраиваемых контрольных событий и уведомлений, хронологические и оперативные отчеты. Получайте всю необходимую информацию о телефонном обслуживании клиентов в вашей компании, пропущенных вызовах, потерянных звонках и очередях через специальные инструменты коммуникационной платформы Oktell.<br><br><font style="color:#888888"><br>Москва, Телефонные Системы<br>+7 495 921 15 86 <br><a href="http://telsystems.ru" title="Перейти на страницу производителя" style="color:#0077aa">www.telsystems.ru</a><br><a href="mailto:mail@telsystems.ru" title="Написать письмо" style="color:#888888">mail@telsystems.ru</a></font>]]></item>
+			<item key="HTML_Trial"><![CDATA[Спасибо за тестирование Oktell SIP-GSM gateway.<br>Срок работы beta-версии закончен. За это время мы постарались усовершенствовать наш продукт и повысили качество и стабильность его работы.<br><br>Обратитесь на сайт продукта (<a href="http://www.ipunion.ru" title="Перейти на страницу производителя" style="color:#0077aa">http://www.ipunion.ru</a>) для получения дополнительной информации о способах дальнейшего использования. Мы будем рады получить ваши отзывы, предложения и замечания по работе программы, которые вы можете написать в разделе «Поддержка» на сайте продукта.]]></item>
+			<item key="HTML_CallCenter"><![CDATA[Для операторской обработки входящих и исходящих телефонных вызовов, используйте Oktell SIP GSM Gateway совместно с коммуникационной программной платформой Oktell<br><br>Создайте в вашей компании полнофункциональный операторский call-центр. Автоматизируйте работу операторов, поднимите производительность и качество обслуживания клиентов, ведите массовые исходящие кампании по привлечению новых клиентов, снижайте затраты на обслуживание телефонных контактов используя коммуникационную платформу Oktell.<br><br><font style="color:#888888"><br>Москва, Телефонные Системы<br>+7 495 921 15 86 <br><a href="http://telsystems.ru" title="Перейти на страницу производителя" style="color:#0077aa">www.telsystems.ru</a><br><a href="mailto:mail@telsystems.ru" title="Написать письмо" style="color:#888888">mail@telsystems.ru</a></font>]]></item>
+		</node>
+		
+		<node name="DevSet" descr="Настройки">
+			<item key="DevList_RedText"><![CDATA[Модем не отвечает]]></item>
+			<item key="DevList_YellowText"><![CDATA[Модем еще не запущен]]></item>
+			<item key="DevList_GrayText"><![CDATA[Модем не подключен]]></item>
+			<item key="DevList_GreenText"><![CDATA[Модем запущен и работает]]></item>
+			<item key="DevList_BtnSet"><![CDATA[Настроить >]]></item>
+			<item key="DevList_BtnSetDisabled"><![CDATA[Заблокировано]]></item>
+			<item key="DevList_SIPError1"><![CDATA[учетная запись SIP не настроена]]></item>
+			<item key="DevList_SIPError2"><![CDATA[соединение установлено]]></item>
+			<item key="DevList_ModemErrorMain"><![CDATA[GSM-модемы в системе не обнаружены, возможные причины:]]></item>
+			<item key="DevList_ModemError1"><![CDATA[— Модемы не подключены к системе]]></item>
+			<item key="DevList_ModemError2"><![CDATA[— Драйверы модемов не установлены или установленны некорректно]]></item>
+			<item key="DevList_ModemError3"><![CDATA[— Вы подключили модемы, не поддерживаемые программой]]></item>			
+			<item key="DevSet_CopySettings"><![CDATA[Скопировать настройки модема:]]></item>
+			<item key="DevSet_Reg"><![CDATA[С регистрацией на сервере]]></item>
+			<item key="DevSet_NoReg"><![CDATA[Без регистрации]]></item>
+			<item key="DevSet_CidSrcCid"><![CDATA[Передавать номер абонента]]></item>
+			<item key="DevSet_CidSrcSim"><![CDATA[Передавать номер SIM-карты]]></item>
+			<item key="DevSet_CidDstDisplay"><![CDATA[Передавать в поле "DisplayName"]]></item>
+			<item key="DevSet_CidDstFrom"><![CDATA[Передавать в поле "From"]]></item>
+			<item key="DevSet_Mes"><![CDATA[кбит/сек]]></item>
+			<item key="DevSet_Mode_Title"><![CDATA[Режим работы устройства]]></item>
+			<item key="DevSet_Mode_Radio1"><![CDATA[Использовать в качестве «маршрутизатора»]]></item>
+			<item key="DevSet_Mode_Radio2"><![CDATA[Использовать в качестве «шлюза»]]></item>
+			<item key="DevSet_Mode_Label1"><![CDATA[При входящем звонке на GSM-номер, модем будет дожидаться набора дополнительного номера и осуществлять дозвон до него через SIP-провайдера.]]></item>
+			<item key="DevSet_Mode_Label2"><![CDATA[При входящем звонке на GSM-номер, модем будет автоматически пробрасывать звонок на «номер по умолчанию» в сеть SIP-провайдера.]]></item>
+			<item key="DevSet_SIP_Title"><![CDATA[Настройка учетной записи SIP]]></item>
+			<item key="DevSet_SIP_Label1"><![CDATA[Домен SIP:]]></item>
+			<item key="DevSet_SIP_Label2"><![CDATA[IP-адрес или доменное имя SIP-сервера]]></item>
+			<item key="DevSet_SIP_Label3"><![CDATA[Порт:]]></item>
+			<item key="DevSet_SIP_Label4"><![CDATA[Номер телефона:]]></item>
+			<item key="DevSet_SIP_Label5"><![CDATA[(User Name)]]></item>
+			<item key="DevSet_SIP_Label6"><![CDATA[Тип регистрации:]]></item>
+			<item key="DevSet_SIP_Label7"><![CDATA[Логин:]]></item>
+			<item key="DevSet_SIP_Label8"><![CDATA[(Authorization User Name)]]></item>
+			<item key="DevSet_SIP_Label9"><![CDATA[Пароль:]]></item>
+			<item key="DevSet_SIP_Label10"><![CDATA[логин и пароль предоставляются SIP-провайдером]]></item>
+			<item key="DevSet_SIP_Label11"><![CDATA[Локальный порт:]]></item>
+			<item key="DevSet_SIP_Label12"><![CDATA[Outbound-proxy:]]></item>
+			<item key="DevSet_SIP_Label13"><![CDATA[Совпадает с адресом SIP-сервера]]></item>
+			<item key="DevSet_SIP_Label14"><![CDATA[Порт:]]></item>
+			<item key="DevSet_SIP_Label15"><![CDATA[CallerID:]]></item>
+			<item key="DevSet_SIP_Label16"><![CDATA[(отображаемое имя)]]></item>
+			<item key="DevSet_SIP_Label17"><![CDATA[Передавать номер телефона внешнего абонента в качестве CallerID]]></item>
+			<item key="DevSet_SIP_Label18"><![CDATA[Подставлять номер SIM-карты в качестве CallerID]]></item>
+			<item key="DevSet_SIP_Label19"><![CDATA[SIP-номер по умолчанию:]]></item>
+			<item key="DevSet_SIP_Label20"><![CDATA[SIP-номер, на который происходит автоматический дозвон при соединениии в режиме «шлюза» или при не введенном добавочном номере в режиме «маршрутизатора» при звонке GSM — SIP]]></item>
+			<item key="DevSet_SIP_Label21"><![CDATA[GSM-номер по умолчанию:]]></item>
+			<item key="DevSet_SIP_Label22"><![CDATA[GSM-номер, на который происходит автоматический дозвон при соединениии в режиме «шлюза» или при не введенном добавочном номере в режиме «маршрутизатора» при звонке SIP — GSM]]></item>
+			<item key="DevSet_Codecs_Title"><![CDATA[Голосовые кодеки]]></item>
+			<item key="DevSet_Codecs_Label1"><![CDATA[Приоритет 1:]]></item>
+			<item key="DevSet_Codecs_Label2"><![CDATA[Приоритет 2:]]></item>
+			<item key="DevSet_Codecs_Label3"><![CDATA[Приоритет 3:]]></item>
+			<item key="DevSet_Codecs_Label4"><![CDATA[Приоритет 4:]]></item>
+			<item key="DevSet_Other_Title"><![CDATA[Дополнительные настройки]]></item>
+			<item key="DevSet_Other_Label1"><![CDATA[Тип передачи DTMF:]]></item>
+			<item key="DevSet_Other_Label2"><![CDATA[способ передачи DTMF сигналов в SIP]]></item>
+			<item key="DevSet_Other_Label3"><![CDATA[Период перерегистрации:]]></item>
+			<item key="DevSet_Other_Label4"><![CDATA[секунд]]></item>
+			<item key="DevSet_Other_Label5"><![CDATA[Посылать пакеты keep alive:]]></item>
+			<item key="DevSet_Other_Label6"><![CDATA[с интервалом]]></item>
+			<item key="DevSet_Other_Label7"><![CDATA[секунд]]></item>	
+			<item key="DevSet_Other_Commut"><![CDATA[Коммутировать сразу:]]></item>
+			<item key="DevSet_Other_Commut2"><![CDATA[коммутировать не дожидаясь ответа абонента при звонке SIP-GSM]]></item>			
+		</node>
+		
+		<node name="Other" descr="Настройки">
+			<item key="LocalCaption"><![CDATA[Программный SIP-GSM шлюз]]></item>
+			<item key="Confirm_Caption"><![CDATA[Предупреждение]]></item>
+			<item key="Main_Caption"><![CDATA[Настройка Oktell SIP-GSM gateway]]></item>
+		</node>
+		
+	</node>
+	
+	<node name="Error" descr="Ошибки">
+
+		<node name="ModemError" descr="Модем">
+			<item key="EModemError_None"><![CDATA[]]></item>
+			<item key="EModemError_NotSignal"><![CDATA[сеть не доступна]]></item>
+			<item key="EModemError_PinError"><![CDATA[ошибка PIN]]></item>			
+			<item key="EModemError_SimError"><![CDATA[ошибка SIM]]></item>			
+			<item key="UnknownNumber"><![CDATA[номер неизвестен]]></item>
+			<item key="NoResponse"><![CDATA[модем не отвечает]]></item>
+			<item key="SimInvalidOrPin"><![CDATA[SIM не доступна или защищена PIN]]></item>
+			<item key="SimNotExistent"><![CDATA[SIM отсутствует]]></item>
+			<item key="WaitModem"><![CDATA[ожидается ответ модема...]]></item>
+			<item key="UnknownError"><![CDATA[неизвестная ошибка]]></item>
+		</node>
+		
+		<node name="SipError" descr="Sip">
+			<item key="ESipError_None"><![CDATA[]]></item>
+			<item key="ESipError_Initialized"><![CDATA[инициализирован]]></item>
+			<item key="ESipError_NonInitialized"><![CDATA[не инициализирован]]></item>
+			<item key="ESipError_Registered"><![CDATA[зарегистрирован]]></item>
+			<item key="ESipError_Unregistered"><![CDATA[не зарегистрирован]]></item>
+			<item key="ESipError_Error"><![CDATA[ошибка]]></item>
+			<item key="SipRegistered"><![CDATA[Соединение установлено]]></item>
+			<item key="SipUnregistered"><![CDATA[Не зарегистрирован]]></item>
+			<item key="SipNoNeedReg"><![CDATA[Без регистрации]]></item>
+		</node>
+		
+		<node name="Exception" descr="Исключения">
+			<item key="Common"><![CDATA[Пожалуйста, сохраните снимок экрана и отшлите разработчику!]]></item>
+		</node>
+		
+		<item key="WrongVersion"><![CDATA[Версии службы и клиентского приложения различаются. Переустановка программы исправит ошибку. Продолжение работы невозможно.]]></item>
+		<item key="ServiceStopped"><![CDATA[Произошла остановка службы. Приложение будет закрыто.]]></item>
+		<item key="AlreadyLaunched"><![CDATA[Программа уже запущена]]></item>
+		<item key="ServiceUnavailable"><![CDATA[Не удалось подключиться службе SipGsmService. Продолжение работы невозможно.]]></item>
+	</node>
+	
+	<node name="Cli" descr="Клиентское приложение">
+		<node name="Buttons" descr="Тексты стандартных кнопок клиентского приложения">
+			<item key="Proceed"><![CDATA[Продолжить]]></item>
+			<item key="Exit"><![CDATA[Выйти]]></item>
+			<item key="Back"><![CDATA[Назад]]></item>
+			<item key="Yes"><![CDATA[Да]]></item>			
+			<item key="No"><![CDATA[Нет]]></item>
+			<item key="Cancel"><![CDATA[Отмена]]></item>
+			<item key="Skip"><![CDATA[Пропустить]]></item>
+			<item key="Delete"><![CDATA[Удалить]]></item>
+			<item key="FromLocal"><![CDATA[Локальный]]></item>
+			<item key="FromServer"><![CDATA[Серверный]]></item>
+		</node>
+	</node>
+	
+	<node name="Activation" descr="Активация">
+		<node name="Mode" descr="Варианты продуктов Oktell (основные непартнерские)">
+			<item key="OktellFull"><![CDATA[Полная версия Oktell]]></item>
+			<item key="OktellFull_hint"><![CDATA[с регистрационным кодом]]></item>
+			<item key="OktellFull_descr"><![CDATA[Полная версия поставляется с регистрационным сертификатом пользователя системы. Состав лицензии определяется сертификатом и подгружается с интернет-сервера в момент проведения активации. Осуществляется привязка к компьютеру.]]></item>
+			<item key="OktellTrial"><![CDATA[Oktell Trial]]></item>
+			<item key="OktellTrial_hint"><![CDATA[14-дневная версия]]></item>
+			<item key="OktellTrial_descr"><![CDATA[Тестовая версия является полнофункциональной рабочей версией с ограничением по времени эксплуатации в 14 дней с момента активации. Поддерживает работу 1 канала. Предоставляет возможность полноценно использовать все имеющиеся функции.]]></item>
+		</node>
+		<node name="Label" descr="Тексты на субокнах при проведении активации">
+			<item key="FormTitle"><![CDATA[Активация {0}]]></item>		
+			<item key="Header"><![CDATA[Активация]]></item>
+			<item key="HeaderName"><![CDATA[Активация {0}]]></item>
+			<item key="Header2"><![CDATA[Обновление лицензии]]></item>
+			<item key="Header2Name"><![CDATA[Обновление лицензии {0}]]></item>
+			<node name="L01" descr="Окно выбора типа лицензии">
+				<item key="Header"><![CDATA[Выбор варианта лицензирования]]></item>
+			</node>
+			<node name="L02" descr="Окно выбора типа привязки">
+				<item key="Header"><![CDATA[Выбор способа привязки продукта]]></item>
+				<item key="Description"><![CDATA[Данный продукт использует активацию как способ защиты. Активация - это способ привязки программы к компьютеру или специальному электронному ключу защиты (USB).]]></item>
+				<item key="Action"><![CDATA[Выберите устройство, к которому будет произведена привязка:]]></item>
+				<item key="rComp"><![CDATA[Компьютер]]></item>
+				<item key="rDongle"><![CDATA[Ключ защиты]]></item>
+				<item key="rDongle_hint"><![CDATA[поставляется опционально]]></item>
+				<item key="InsertDongle"><![CDATA[Вставьте ключ защиты в USB-порт компьютера с установленной серверной программной частью.]]></item>
+				<item key="CheckDongle"><![CDATA[Опросите ключ защиты, нажав кнопку «Проверить ключ».]]></item>
+				<item key="BtnCheckDongle"><![CDATA[Проверить ключ]]></item>
+				<item key="DongleFound"><![CDATA[Ключ найден.]]></item>
+				<item key="DongleNotFound"><![CDATA[Ключ не обнаружен.]]></item>
+				<item key="DongleId"><![CDATA[Номер ключа: {0}]]></item>
+				<item key="DongleInManual"><![CDATA[Ключ защиты]]></item>
+				<item key="DongleError"><![CDATA[Проверьте правильность установки ключа и его драйверов. Для более полной информации обратитесь в раздел справки «{0}».]]></item>				
+			</node>
+			<node name="L03" descr="Окно выбора операции">
+				<item key="Header"><![CDATA[Выбор операции]]></item>
+				<item key="rActivation"><![CDATA[Новая регистрация]]></item>
+				<item key="rActivation_hint"><![CDATA[необходимо пройти все этапы активации]]></item>
+				<item key="rConfirm"><![CDATA[Обновление текущей лицензии]]></item>
+				<item key="rConfirm_hint"><![CDATA[]]></item>
+				<item key="Confirm_description"><![CDATA[Обновление подразумевает соединение с сервером активаций и получение нового сертификата (файла-лицензии) для текущей действующей регистрации. Пароль для проведения этой операции не требуется. Эта периодическая обязательная процедура может производиться системой автоматически (если настроен доступ сервера в интернет).#\n##\n#Несмотря на то, что лицензия может быть бессрочной, каждый сертификат имеет ограниченный период действия (от одного месяца до одного года в зависимости от типа лицензии и способа привязки программного комплекса), и его обновление необходимо для продолжения работы системы по истечению срока его действия. Ограничение текущего сертификата вы можете посмотреть в разделе «Информации о лицензии».]]></item>
+				<item key="Activation_description"><![CDATA[Повторная активация при текущей действующей лицензии дает возможность сменить регистрационный номер и привязать программный комплекс к другому объекту (серверу или ключу защиты). Требует повторного введения регистрационных данных и пароля. Процедура активации в любом случае производит обновление лицензионного сертификата.]]></item>
+			</node>
+			<node name="L04" descr="Окно выбора способа активации">
+				<item key="Header"><![CDATA[Выбор способа активации]]></item>
+				<item key="Description1"><![CDATA[Для работы программы необходим файл лицензионного сертификата, получаемый через интернет.]]></item>
+				<item key="Description2"><![CDATA[Он может быть получен системой в автоматическом режиме или вручную, если на компьютере с установленным сервером {0} отсутствует подключение к интернет.]]></item>
+				<item key="Action"><![CDATA[Способ получения файла лицензии:]]></item>
+				<item key="rAuto"><![CDATA[Автоматический]]></item>
+				<item key="rAuto_hint"><![CDATA[необходимо подключение к интернет]]></item>
+				<item key="rManual"><![CDATA[Ручной]]></item>
+				<item key="rManual_hint"><![CDATA[файл получается на сайте]]></item>
+			</node>
+			<node name="L05" descr="Окно свойств для автоматической активации">
+				<item key="Header"><![CDATA[Активация в автоматическом режиме]]></item>
+				<item key="WhereToFindReg"><![CDATA[Для активации полной версии продукта требуются регистрационный номер и пароль. Их можно найти в лицензионном договоре, поставляемом вместе с программным комплексом. В случае отсутствия свяжитесь с менеджером или выберите другой тип лицензирования.]]></item>
+				<item key="RegNum"><![CDATA[Регистрационный номер:]]></item>
+				<item key="RegNum_hint1"><![CDATA[7 знаков]]></item>
+				<item key="RegNum_hint2"><![CDATA[например 1234567]]></item>
+				<item key="RegPass"><![CDATA[Пароль для регистрации:]]></item>
+				<item key="RegPass_hint1"><![CDATA[12 знаков]]></item>
+				<item key="RegPass_hint2"><![CDATA[например A49E-B2FF-881E]]></item>
+				<item key="UserName"><![CDATA[Название организации:]]></item>
+				<item key="UserCity"><![CDATA[Город расположения:]]></item>
+				<item key="UserPhone"><![CDATA[Телефон:]]></item>
+				<item key="UserEmail"><![CDATA[Адрес эл.почты:]]></item>
+			</node>	
+			<node name="L06" descr="Окно настройки соединения с интернет">
+				<item key="Header"><![CDATA[Cпособ соединения с интернет]]></item>
+				<item key="rDirect"><![CDATA[Прямое соединение с интернет]]></item>
+				<item key="rProxy"><![CDATA[Соединение через прокси-сервер]]></item>
+				<item key="ProxyHeader"><![CDATA[Настройка прокси-сервера]]></item>
+				<item key="ProxyAddress"><![CDATA[Адрес прокси-сервера:]]></item>
+				<item key="ProxyPort"><![CDATA[Порт:]]></item>
+				<item key="ProxyAuth"><![CDATA[Использовать авторизацию]]></item>
+				<item key="ProxyLogin"><![CDATA[Логин:]]></item>
+				<item key="ProxyPassword"><![CDATA[Пароль:]]></item>				
+			</node>
+			<node name="L07" descr="Окно ожидания соединения с интернет">
+				<item key="Header"><![CDATA[Активация в автоматическом режиме]]></item>
+				<item key="Processing"><![CDATA[Идет процесс получения файла лицензии...]]></item>
+				<item key="Wait"><![CDATA[Пожалуйста, подождите.]]></item>
+			</node>
+			<node name="L08" descr="Окно ошибки автоматической активации из-за проблем связи с сервером">
+				<item key="Header"><![CDATA[Активация в автоматическом режиме]]></item>
+				<item key="ReasonInetSimple"><![CDATA[Отсутствует доступ к интернету.]]></item>
+				<item key="ReasonInet"><![CDATA[Отсутствует доступ к интернету.#\n#Подробно: {0}.]]></item>
+				<item key="ReasonSrv"><![CDATA[Отсутствует доступ к серверу активаций.#\n#Подробно: {0}.]]></item>
+				<item key="PossibleReasons"><![CDATA[Возможные причины:]]></item>
+				<item key="iNoConnection"><![CDATA[Отсутствует соединение с интернетом.]]></item>
+				<item key="iFirewall"><![CDATA[Брандмауэр (firewall) закрывает доступ к интернету.]]></item>
+				<item key="iNoProxy"><![CDATA[Не указан прокси-сервер в случае его использования.]]></item>
+				<item key="iWrongProxyAddress"><![CDATA[Неверно указан адрес прокси-сервера.]]></item>
+				<item key="iWrongProxyPort"><![CDATA[Неверно указан порт прокси-сервера.]]></item>
+				<item key="iWrongProxyAuth"><![CDATA[Неверно указаны авторизационные данные прокси-сервера.]]></item>
+				<item key="iProxyUnreach"><![CDATA[Прокси-сервер недоступен.]]></item>
+				<item key="sFirewall"><![CDATA[Брандмауэр (firewall) блокирует доступ к серверу telsystems.ru.]]></item>
+				<item key="sSrvTempUnavailable"><![CDATA[Сервер активаций временно недоступен, повторите позже.]]></item>
+				<item key="Action"><![CDATA[<br><br><br>Пожалуйста, исправьте ошибки и повторите попытку. В случае невозможности устранения или идентификации проблемы воспользуйтесь <a href="manual">ручным способом активации</a>.]]></item>
+			</node>
+			<node name="L09" descr="Окно ошибки автоматической активации - сервер вернул ошибку">
+				<item key="Header"><![CDATA[Активация в автоматическом режиме]]></item>
+				<item key="SrvError"><![CDATA[{0}.]]></item>
+				<item key="Action"><![CDATA[Если вы уверены в правильности своих действий, обратитесь в службу технической поддержки по реквизитам, указанным на сайте компании «Телефонные системы» (<a href="http://www.telsystems.ru" title="Переход на страницу http://www.telsystems.ru">www.telsystems.ru</a>) или воспользуйтесь веб-сервисом <a href="http://r.telsystems.ru" title="Переход на страницу http://r.telsystems.ru">Reception</a>.]]></item>
+			</node>
+			<node name="L10" descr="Окно свойств для ручной активации">
+				<item key="Header"><![CDATA[Активация в ручном режиме]]></item>
+				<item key="StageDescription1"><![CDATA[Для получения файла-лицензии вам следует зайти на сайт {0} и следовать инструкциям.]]></item>
+				<item key="ActivationCode"><![CDATA[Ваш активационный код:]]></item>
+				<item key="StageDescription2"><![CDATA[На сайте вы получите файл лицензии, который необходимо передать для завершения активации.]]></item>
+				<item key="LicFile"><![CDATA[Выберите полученный на сайте файл лицензии:]]></item>
+				<item key="Proceed"><![CDATA[И нажмите «Продолжить».]]></item>
+				<item key="OpenFileHeader"><![CDATA[Выберите полученный с сайта файл активации]]></item>
+				<item key="OpenFileFilter"><![CDATA[Файл активации Oktell]]></item>
+				<item key="CorrectFile"><![CDATA[Сертификат подключен успешно]]></item>
+				<item key="FileError"><![CDATA[Выбранный файл не содержит лицензии]]></item>				
+			</node>
+			<node name="L11" descr="Окно ошибки ручной активации">
+				<item key="Header"><![CDATA[Активация в ручном режиме]]></item>
+				<item key="Error"><![CDATA[Активация не произведена. Возможно вы ошиблись при вводе регистрационного кода на сайте или указали неверный файл активации.<br><br><br>Попробуйте выбрать файл еще раз.<br>В случае повторения ошибки попробуйте повторно сгенерировать файл активации <a href="http://activate.telsystems.ru" title="Переход на страницу активации">на сайте</a>. Обратите внимание на правильность ввода регистрационного кода.<br><br><br>Если вы уверены в правильности своих действий, обратитесь в службу технической поддержки по реквизитам, указанным на сайте компании «Телефонные системы» (<a href="http://www.telsystems.ru" title="Переход на страницу http://www.telsystems.ru">www.telsystems.ru</a>) или воспользуйтесь веб-сервисом <a href="http://r.telsystems.ru" title="Переход на страницу http://r.telsystems.ru">Reception</a>.]]></item>
+			</node>
+			<node name="L13" descr="Окно успешного завершения">
+				<item key="Header"><![CDATA[Активация успешно завершена]]></item>
+				<item key="RegNum"><![CDATA[Регистрационный номер: {0}]]></item>
+				<item key="Limits"><![CDATA[Ваша лицензия имеет следующие ограничения:]]></item>
+			</node>
+		</node>
+		<node name="Notify" descr="Тексты всплывающих запросов и уведомлений">
+			<item key="Confirm1"><![CDATA[Необходимо обновить лицензионный сертификат.]]></item>
+			<item key="Confirm2"><![CDATA[ #\n#Внимание!#\n#Необходимо обновить лицензионный сертификат (модуль «Администрирование. Общие настройки» раздел «Информация о лицензии»)#\n# ]]></item>
+			<item key="Confirm3"><![CDATA[ #\n#Внимание!#\n#Необходимо обновить лицензионный сертификат (модуль «Администрирование. Общие настройки» раздел «Информация о лицензии»)#\n# ]]></item>
+			<item key="Confirm4"><![CDATA[ #\n#Внимание!#\n#Необходимо обновить лицензионный сертификат (модуль «Администрирование. Общие настройки» раздел «Информация о лицензии»)#\n# ]]></item>
+			<item key="ConfirmLoginMsgAdmin"><![CDATA[Внимание!#\n#Истек срок актуальности лицензионного сертификата. Необходимо обновить файл лицензии для текущей действующей регистрации.#\n##\n#Активируйте автоматический процесс в разделе «Информация о лицензии» модуля «Администрирование. Общие настройки». Для ручного обновления следуйте инструкциям на сайте http://activate.telsystems.ru]]></item>
+			<item key="ConfirmLoginMsgUser"><![CDATA[#\n#Внимание!#\n#Необходимо обновить лицензионный сертификат.]]></item>
+			<item key="ErrorConnectionCliSrv"><![CDATA[Ошибка при обращении к серверу]]></item>			
+		</node>
+		<node name="LicenseInfo" descr="Описатели лицензий">
+			<item key="GeneralProduct"><![CDATA[Основной продукт: {0}]]></item>
+			<item key="Dongle"><![CDATA[Используемый ключ защиты: {0}]]></item>
+			<item key="RegNum"><![CDATA[Регистрационный номер: {0}]]></item>
+			<item key="ACode"><![CDATA[Активационный код: {0}]]></item>
+			<item key="HWBase_Dongle"><![CDATA[Привязка к ключу защиты №{0}]]></item>
+			<item key="HWBase_DongleInstead"><![CDATA[Привязка к компьютеру, но фактически к текущему ключу защиты]]></item>			
+			<item key="HWBase_Computer"><![CDATA[Привязка к компьютеру]]></item>
+			<item key="DateFormat"><![CDATA[dd.MM.yyyy]]></item>
+			<item key="NoLicenseActivated"><![CDATA[Программный комплекс не активирован.]]></item>
+			<item key="UpdatesTill"><![CDATA[Поддерживаемые обновления: до {0}]]></item>
+			<item key="StopPeriod"><![CDATA[Дата следующего подтверждения: {0}]]></item>
+			<item key="RegDeleted"><![CDATA[Регистрация удалена. Обратитесь к менеджеру.]]></item>
+			<item key="RegBlocked"><![CDATA[Регистрация заблокирована. Обратитесь к менеджеру.]]></item>
+			<item key="CompanyName"><![CDATA[Зарегистрировано на «{0}»]]></item>
+			<item key="CompanyCity"><![CDATA[г. {0}]]></item>
+			<item key="CompanyPhone"><![CDATA[тел. {0}]]></item>
+			<item key="CompanyEmail"><![CDATA[{0}]]></item>
+			<item key="License_Period"><![CDATA[(Ограничение по времени: {0} - {1})]]></item>
+			<item key="LicenseBlocked"><![CDATA[Лицензия заблокирована.]]></item>			
+			<item key="LicenseError"><![CDATA[Лицензия имеет ошибочный формат.]]></item>
+			<item key="License_Users"><![CDATA[Количество пользователей: {0}]]></item>
+			<item key="License_ExtLines"><![CDATA[Внешних линий: {0}]]></item>
+			<item key="License_IntLines"><![CDATA[Внутренних линий: {0}]]></item>
+			<item key="License_CC"><![CDATA[Модуль «Call-центр»: {0}]]></item>
+			<item key="License_CC_1"><![CDATA[есть]]></item>
+			<item key="License_CC_0"><![CDATA[нет]]></item>
+			<item key="License_Operators"><![CDATA[Пользователей с правом работы в режиме «Call-центр»: {0}]]></item>
+			<item key="License_Com"><![CDATA[Ядро интеграции: {0}]]></item>
+			<item key="License_Com_1"><![CDATA[есть]]></item>
+			<item key="License_Com_0"><![CDATA[нет]]></item>
+			<item key="License_CurrentLimit"><![CDATA[Текущие ограничения:]]></item>
+			<item key="license_linecount"><![CDATA[Количество каналов:]]></item>
+			<item key="License_AllList"><![CDATA[Список всех лицензий:]]></item>	
+			<node name="LicName" descr="Названия лицензий Oktell (по предопределенным префиксам или кодам)">
+				<item key="General"><![CDATA[Основная]]></item>
+				<item key="Extended"><![CDATA[Дополнительная]]></item>
+				<item key="Temporarily"><![CDATA[Временная]]></item>
+				<item key="Update"><![CDATA[Абонемент обновления]]></item>
+				<item key="Test"><![CDATA[Тестовая]]></item>			
+			</node>		
+		</node>
+		<node name="ServerErrorCode" descr="Тексты ошибок, выдаваемых сервером активаций">
+			<item key="Success"><![CDATA[Операция успешно проведена]]></item>
+			<item key="DbAccessError"><![CDATA[Ошибка доступа к БД (на тестовой функции)]]></item>
+			<item key="ServerError"><![CDATA[Ошибка сервера]]></item>
+			<item key="ContentError"><![CDATA[Невозможно должным образом распаковать контент]]></item>
+			<item key="DataError"><![CDATA[Licenok only]]></item>
+			<item key="SessionError"><![CDATA[Licenok only]]></item>
+			<item key="WrongActivationCodeCrypt"><![CDATA[Неверно указан код активации]]></item>
+			<item key="WrongActivationCodeReg"><![CDATA[Неверно указан код активации]]></item>
+			<item key="ParseException"><![CDATA[Неверно указан регистрационный номер]]></item>
+			<item key="MisCheck"><![CDATA[Указанный код активации не соответствует зарегистрированному. Требуется переактивация]]></item>
+			<item key="NoRegistrationFound"><![CDATA[Указанный регистрационный номер не найден (или ошибка доступа к БД)]]></item>
+			<item key="WrongPassword"><![CDATA[Неверно указан пароль для проведения активации]]></item>
+			<item key="Restricted"><![CDATA[Активация на используемый компьютер запрещена (заблокирована)]]></item>
+			<item key="NoLicTypeForProduct"><![CDATA[Не найдены варианты лицензий для продукта (TRIAL)]]></item>
+			<item key="AmbigousLicTypeForProduct"><![CDATA[Невозможно определить требуемую лицензию для продукта (TRIAL)]]></item>
+			<item key="NoLicenceForProduct"><![CDATA[Среди лицензий указанной регистрации нет ни одной, соответствующей PARTNER продукту]]></item>
+			<item key="HwShouldBeDongle"><![CDATA[Указанная регистрация требует привязки к ключу защиты. Если у вас есть ключ защиты, но вы производите активацию смежного партнерского продукта, то следует модифицировать файл конфигурации сервера, изменив код продукта на базовый. Обратитесь к регистрационным документам или к менеджеру]]></item>
+			<item key="DongleNumMistake"><![CDATA[Указанная регистрация требует привязки к определенному ключу защиты. Обратитесь к регистрационным документам или к менеджеру]]></item>
+			<item key="MissingMode"><![CDATA[В запросе к серверу не указан тип производимой операции (активация/подтверждение)]]></item>
+			<item key="MissingActivationCode"><![CDATA[Не указан код активации]]></item>
+			<item key="MissingSerial"><![CDATA[Не указан регистрационный номер]]></item>
+			<item key="MissingPassword"><![CDATA[Не указан регистрационный пароль]]></item>
+			<item key="MissingCompanyName"><![CDATA[Не указано название организации]]></item>
+			<item key="MissingCompanyEmail"><![CDATA[Не указан адрес электронной почты]]></item>
+			<item key="MissingCompanyCity"><![CDATA[Не указан город расположения]]></item>
+			<item key="MissingCompanyPhone"><![CDATA[Не указан контактный телефон]]></item>
+			<item key="GateError"><![CDATA[Отсутствует доступ к серверу ({0})]]></item>
+			<item key="ResultError"><![CDATA[Невозможно определить тип контента]]></item>			
+		</node>
+		<node name="ConnectionErrorCode" descr="Тексты ошибок, выдаваемых сервером активаций">
+			<item key="Success"><![CDATA[Соединение успешно установлено]]></item>
+			<item key="Aborted"><![CDATA[Прервано пользователем]]></item>
+			<item key="ResolveDomainError"><![CDATA[Невозможно определить ip-адреса хоста]]></item>
+			<item key="ResolveDomainTimeout"><![CDATA[Таймаут операции определения ip-адреса хоста]]></item>
+			<item key="SockConnectTimeout"><![CDATA[Таймаут соединения с сервером]]></item>
+			<item key="SockConnectError"><![CDATA[Ошибка соединения с сервером (ошибка сокета)]]></item>
+			<item key="SendTimeout"><![CDATA[Таймаут отправки данных]]></item>
+			<item key="SendError"><![CDATA[Ошибка отправки данных]]></item>
+			<item key="ReceiveTimeout"><![CDATA[Таймаут получения данных с прокси сервера]]></item>
+			<item key="ReceiveError"><![CDATA[Ошибка чтения данных]]></item>
+			<item key="SockWasClosed"><![CDATA[Соединение разорвано удаленной стороной]]></item>
+			<item key="HostConnectionError"><![CDATA[Ошибка HTTP-соединения с хостом]]></item>
+			<item key="ProxyConnectionError"><![CDATA[Ошибка соединения с прокси (метод CONNECT)]]></item>
+			<item key="ProxyAuthError"><![CDATA[Ошибка авторизации на прокси]]></item>
+			<item key="ProxySendTimeout"><![CDATA[Таймаут отправки данных на прокси]]></item>
+			<item key="ProxySendError"><![CDATA[Ошибка отправки данных на прокси]]></item>
+			<item key="ProxyReceiveTimeout"><![CDATA[Таймаут получения данных с прокси]]></item>
+			<item key="ProxyReceiveError"><![CDATA[Ошибка получения данных с прокси]]></item>
+			<item key="ProxySocks_NonSocks5"><![CDATA[Ответ не проходит по формату SOCKS5]]></item>
+			<item key="ProxySocks_NotSupportMethods"><![CDATA[Прокси SOCKS не поддерживает перечисленные методы авторизации]]></item>
+			<item key="ProxySocks5_ErrorProxy"><![CDATA[Ошибка SOCKS5 прокси-сервера 1]]></item>
+			<item key="ProxySocks5_ErrorRulesRestricted"><![CDATA[Ошибка SOCKS5 прокси-сервера 2]]></item>
+			<item key="ProxySocks5_ErrorNetNotAvailable"><![CDATA[Ошибка SOCKS5 прокси-сервера 3]]></item>
+			<item key="ProxySocks5_ErrorHostNotAvailable"><![CDATA[Ошибка SOCKS5 прокси-сервера 4]]></item>
+			<item key="ProxySocks5_ErrorConnectionRestricted"><![CDATA[Ошибка SOCKS5 прокси-сервера 5]]></item>
+			<item key="ProxySocks5_ErrorTTLTimeout"><![CDATA[Ошибка SOCKS5 прокси-сервера 6]]></item>
+			<item key="ProxySocks5_ErrorCommandNotAvailable"><![CDATA[Ошибка SOCKS5 прокси-сервера 7]]></item>
+			<item key="ProxySocks5_ErrorAddressTypeNotAvailable"><![CDATA[Ошибка SOCKS5 прокси-сервера 8]]></item>
+			<item key="ProxySocks5_ErrorOther"><![CDATA[Ошибка SOCKS5 прокси-сервера 9]]></item>
+			<item key="HostResponseError"><![CDATA[Сервер вернул ответ-ошибку]]></item>
+			<item key="HostContentError"><![CDATA[Сервер вернул ошибочный контент]]></item>
+		</node>				
+	</node>
+	
+</languagefile>

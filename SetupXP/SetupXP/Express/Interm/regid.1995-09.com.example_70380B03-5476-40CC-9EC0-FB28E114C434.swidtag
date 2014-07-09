@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<swid:software_identification_tag xsi:schemaLocation="http://standards.iso.org/iso/19770/-2/2009/schema.xsd http://standards.iso.org/iso/19770/-2/2009/schema.xsd" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:swid="http://standards.iso.org/iso/19770/-2/2009/schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fs="http://www.flexerasoftware.com/swid/2011/arp">
+	<!-- Mandatory elements -->
+	<swid:entitlement_required_indicator id="entitlement_required_indicator">false</swid:entitlement_required_indicator>
+	<swid:product_title id="product_title">BalanceChecker</swid:product_title>
+	<swid:product_version>
+		<swid:name id="version_name">2.00.0000</swid:name>
+		<swid:numeric>
+			<swid:major id="version_major">2</swid:major>
+			<swid:minor id="version_minor">0</swid:minor>
+			<swid:build id="version_build">0</swid:build>
+			<swid:review id="version_review">0</swid:review>
+		</swid:numeric>
+	</swid:product_version>
+	<swid:software_creator>
+		<swid:name id="creator_name">ITS</swid:name>
+		<swid:regid id="creator_regid">regid.1995-09.com.example</swid:regid>
+	</swid:software_creator>
+	<swid:software_licensor>
+		<swid:name id="licensor_name">ITS</swid:name>
+		<swid:regid id="licensor_regid">regid.1995-09.com.example</swid:regid>
+	</swid:software_licensor>
+	<swid:software_id>
+		<swid:unique_id id="unique_id">70380B03-5476-40CC-9EC0-FB28E114C434</swid:unique_id>
+		<swid:tag_creator_regid id="tag_creator_regid">regid.1995-09.com.example</swid:tag_creator_regid>
+	</swid:software_id>
+	<swid:tag_creator>
+		<swid:name id="tag_name">ITS</swid:name>
+		<swid:regid id="tag_regid">regid.1995-09.com.example</swid:regid>
+	</swid:tag_creator>
+	<!--Extended Information -->
+	<swid:extended_information xsi:schemaLocation="http://www.flexerasoftware.com/swid/2011/arp http://www.flexerasoftware.com/swid/2011/arp">
+		<fs:original_arp_guid id="original_arp_guid">{FADBEF31-9F9B-4726-8396-9A1A4A369801}</fs:original_arp_guid>
+		<fs:original_arp_publisher id="original_arp_publisher">ITS</fs:original_arp_publisher>
+		<fs:original_arp_display_name id="original_arp_display_name">BalanceChecker</fs:original_arp_display_name>
+		<fs:original_arp_display_version id="original_arp_display_version">2.00.0000</fs:original_arp_display_version>
+		<fs:current_arp_guid/>
+		<fs:current_arp_publisher/>
+		<fs:current_arp_display_name/>
+		<fs:current_arp_display_version/>
+	</swid:extended_information>
+</swid:software_identification_tag>

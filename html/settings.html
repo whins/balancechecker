@@ -1,0 +1,35 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Balance Checker Settings</title>
+</head>
+<style>
+	input {
+		border-radius: 7px;
+	}
+</style>
+
+<body>
+	<h3>Balance Checker Settings</h3>
+	<form method=post action=/settings>
+		<table style="width:300px;">
+			<tr><td>USSDSendTimeout</td><td><input type="number" name=USSDSendTimeout value={0}></td></tr>
+			<tr><td>SerialPortTimeout</td><td><input type="number" name=SerialPortTimeout value={1}></td></tr>
+			<tr><td>LogFilePath</td><td><input type="text" name=LogFilePath value={2}></td></tr>
+			<tr><td>Server</td><td><input type="text" name=Server value={3}></td></tr>
+			<tr><td>UserId</td><td><input type="text" name=UserId value={4}></td></tr>
+			<tr><td>Port</td><td><input type="number" name=Port value={5}></td></tr>
+			<tr><td>Password</td><td><input type="text" name=Password value={6}></td></tr>
+			<tr><td>Database</td><td><input type="text" name=Database value={7}></td></tr>
+			<tr><td>ServiceStopTime</td><td><input type="number" name=ServiceStopTime value={8}></td></tr>
+			<tr><td>SipGsmServiceName</td><td><input type="number" name=SipGsmServiceName value={9}></td></tr>
+			<tr><td>EnableLogging</td><td><input type="checkbox" name=EnableLogging checked={10}></td></tr>
+			<tr><td>CheckerInterval</td><td><input type="number" name=CheckerInterval value={11}></td></tr>
+			<tr><td>HTTPPort</td><td><input type="text" name=HTTPPort value={12}></td></tr>
+			<tr><td>UseHTTP</td><td><input type="checkbox" name=UseHTTP checked={13}></td></tr>
+			<tr><td>UseTimer</td><td><input type="checkbox" name=UseTimer checked={14}></td></tr>
+		</table>
+		<input type=submit name=btnSave value=Save>
+	</form>
+</body>
+</html>

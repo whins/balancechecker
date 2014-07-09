@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<languagefile version="100329" language="" lang="">
+	<node name="Activation" descr="">
+		<node name="ConnectionErrorCode" descr=" ,   ">
+			<item key="Aborted" ver=""><![CDATA[Interrupted by user]]></item>
+			<item key="HostConnectionError" ver=""><![CDATA[HTTP-connection error]]></item>
+			<item key="HostContentError" ver=""><![CDATA[Content error]]></item>
+			<item key="HostResponseError" ver=""><![CDATA[Server error]]></item>
+			<item key="ProxyAuthError" ver=""><![CDATA[Authorization proxy error]]></item>
+			<item key="ProxyConnectionError" ver=""><![CDATA[Proxy error (CONNECT)]]></item>
+			<item key="ProxyReceiveError" ver=""><![CDATA[Proxy error]]></item>
+			<item key="ProxyReceiveTimeout" ver=""><![CDATA[Proxy timeout]]></item>
+			<item key="ProxySendError" ver=""><![CDATA[Connaction error]]></item>
+			<item key="ProxySendTimeout" ver=""><![CDATA[Timeout]]></item>
+			<item key="ProxySocks_NonSocks5" ver=""><![CDATA[SOCKS5 Error]]></item>
+			<item key="ProxySocks_NotSupportMethods" ver=""><![CDATA[SOCKS proxy does not support these authentication methods]]></item>
+			<item key="ProxySocks5_ErrorAddressTypeNotAvailable" ver=""><![CDATA[Error 8 proxy SOCKS5]]></item>
+			<item key="ProxySocks5_ErrorCommandNotAvailable" ver=""><![CDATA[Error 7 proxy SOCKS5]]></item>
+			<item key="ProxySocks5_ErrorConnectionRestricted" ver=""><![CDATA[Error 5 proxy SOCKS5]]></item>
+			<item key="ProxySocks5_ErrorHostNotAvailable" ver=""><![CDATA[Error 4 proxy SOCKS5]]></item>
+			<item key="ProxySocks5_ErrorNetNotAvailable" ver=""><![CDATA[Error 3 proxy SOCKS5]]></item>
+			<item key="ProxySocks5_ErrorOther" ver=""><![CDATA[Error 9 proxy SOCKS5]]></item>
+			<item key="ProxySocks5_ErrorProxy" ver=""><![CDATA[Error 1 proxy SOCKS5]]></item>
+			<item key="ProxySocks5_ErrorRulesRestricted" ver=""><![CDATA[Error 2 proxy SOCKS5]]></item>
+			<item key="ProxySocks5_ErrorTTLTimeout" ver=""><![CDATA[Error 6 proxy SOCKS5]]></item>
+			<item key="ReceiveError" ver=""><![CDATA[Error reading data]]></item>
+			<item key="ReceiveTimeout" ver=""><![CDATA[Proxy timeout]]></item>
+			<item key="ResolveDomainError" ver=""><![CDATA[Unable to determine the IP address of the host]]></item>
+			<item key="ResolveDomainTimeout" ver=""><![CDATA[Timeout determine ip of the server]]></item>
+			<item key="SendError" ver=""><![CDATA[Connection error]]></item>
+			<item key="SendTimeout" ver=""><![CDATA[Timeout]]></item>
+			<item key="SockConnectError" ver=""><![CDATA[Server error (socket)]]></item>
+			<item key="SockConnectTimeout" ver=""><![CDATA[Connection timeout]]></item>
+			<item key="SockWasClosed" ver=""><![CDATA[Connection closed by remote side]]></item>
+			<item key="Success" ver=""><![CDATA[Connected successfully]]></item>
+		</node>
+		<node name="Label" descr="     ">
+			<item key="FormTitle" ver=""><![CDATA[Activation {0}]]></item>
+			<item key="Header" ver=""><![CDATA[Activation]]></item>
+			<item key="Header2" ver=""><![CDATA[Upgrade license]]></item>
+			<item key="Header2Name" ver=""><![CDATA[Upgrade license {0}]]></item>
+			<item key="HeaderName" ver=""><![CDATA[Activation {0}]]></item>
+			<node name="L01" descr="   ">
+				<item key="Header" ver=""><![CDATA[Choice of licensing]]></item>
+			</node>
+			<node name="L02" descr="   ">
+				<item key="Action" ver=""><![CDATA[Select the device which will be made activation binding]]></item>
+				<item key="BtnCheckDongle" ver=""><![CDATA[Check key]]></item>
+				<item key="CheckDongle" ver=""><![CDATA[Check Dongle]]></item>
+				<item key="Description" ver=""><![CDATA[This product uses the activation as a means of protection. Activation - a way of linking the program to a computer or a special dongle (USB).]]></item>
+				<item key="DongleError" ver=""><![CDATA[Check the key and its drivers. For more information, contact the Help topic «{0}».]]></item>
+				<item key="DongleFound" ver=""><![CDATA[Dongle found]]></item>
+				<item key="DongleId" ver=""><![CDATA[Dongle code: {0}]]></item>
+				<item key="DongleInManual" ver=""><![CDATA[Dongle]]></item>
+				<item key="DongleNotFound" ver=""><![CDATA[Dongle not found.]]></item>
+				<item key="Header" ver=""><![CDATA[Select methid of activation]]></item>
+				<item key="InsertDongle" ver=""><![CDATA[Insert the dongle in the USB-port on the computer with the installed server software part.]]></item>
+				<item key="rComp" ver=""><![CDATA[Computer]]></item>
+				<item key="rDongle" ver=""><![CDATA[Dongle]]></item>
+				<item key="rDongle_hint" ver=""><![CDATA[optionally]]></item>
+			</node>
+			<node name="L03" descr="  ">
+				<item key="Activation_description" ver=""><![CDATA[Reactivate with your current valid license gives opportunity to change the registration number and map software system to another object (server or a dongle). Requires re-introduction of registration details and password. Activation procedure in any case, upgrade the license certificate.]]></item>
+				<item key="Confirm_description" ver=""><![CDATA[Upgrading involves a connection to the activation server and obtain a new certificate (the file-license) for the current of the registration. Password for this operation is not required. This periodical binding procedure can be performed automatically by the system (if the server is configured access to the Internet). Despite the fact that the license may be perpetual, each certificate has a limited period (from one month to one year depending license type and method of linking software), and its renewal is essential for the continuation of the system to its expiration. Limitation of the current certificate, you can see in the section "License Information".]]></item>
+				<item key="Header" ver=""><![CDATA[Select operation]]></item>
+				<item key="rActivation" ver=""><![CDATA[New registration]]></item>
+				<item key="rActivation_hint" ver=""><![CDATA[must pass all the stages of activation]]></item>
+				<item key="rConfirm" ver=""><![CDATA[Update the current license]]></item>
+				<item key="rConfirm_hint" ver=""><![CDATA[]]></item>
+			</node>
+			<node name="L04" descr="   ">
+				<item key="Action" ver=""><![CDATA[Process for obtaining a license file:]]></item>
+				<item key="Description1" ver=""><![CDATA[The program needs a file the license certificate, obtained through the Internet.]]></item>
+				<item key="Description2" ver=""><![CDATA[It can be obtained by the system automatically or manually if the computer is running {0} is not connected to the Internet.]]></item>
+				<item key="Header" ver=""><![CDATA[Select method of activation]]></item>
+				<item key="rAuto" ver=""><![CDATA[Auto]]></item>
+				<item key="rAuto_hint" ver=""><![CDATA[you must be connected to the Internet]]></item>
+				<item key="rManual" ver=""><![CDATA[Manual]]></item>
+				<item key="rManual_hint" ver=""><![CDATA[the file gets on the site]]></item>
+			</node>
+			<node name="L05" descr="    ">
+				<item key="Header" ver=""><![CDATA[Auto activation]]></item>
+				<item key="RegNum" ver=""><![CDATA[Registration code:]]></item>
+				<item key="RegNum_hint1" ver=""><![CDATA[7 symbols]]></item>
+				<item key="RegNum_hint2" ver=""><![CDATA[ex. 1234567]]></item>
+				<item key="RegPass" ver=""><![CDATA[Activation password:]]></item>
+				<item key="RegPass_hint1" ver=""><![CDATA[12 symbols]]></item>
+				<item key="RegPass_hint2" ver=""><![CDATA[ex. A49E-B2FF-881E]]></item>
+				<item key="UserCity" ver=""><![CDATA[City:]]></item>
+				<item key="UserEmail" ver=""><![CDATA[E-mail:]]></item>
+				<item key="UserName" ver=""><![CDATA[Company:]]></item>
+				<item key="UserPhone" ver=""><![CDATA[Phone:]]></item>
+				<item key="WhereToFindReg" ver=""><![CDATA[To activate the full version of the product requires a registration number and password. They can be found in the license agreement that came with the software. In the absence of contact with the manager, or select a different type of licensing.]]></item>
+			</node>
+			<node name="L06" descr="    ">
+				<item key="Header" ver=""><![CDATA[Type of Internet connection]]></item>
+				<item key="ProxyAddress" ver=""><![CDATA[Proxy address:]]></item>
+				<item key="ProxyAuth" ver=""><![CDATA[Use authorization]]></item>
+				<item key="ProxyHeader" ver=""><![CDATA[Proxy Server]]></item>
+				<item key="ProxyLogin" ver=""><![CDATA[Login:]]></item>
+				<item key="ProxyPassword" ver=""><![CDATA[Password:]]></item>
+				<item key="ProxyPort" ver=""><![CDATA[Port:]]></item>
+				<item key="rDirect" ver=""><![CDATA[Direct Internet connaction]]></item>
+				<item key="rProxy" ver=""><![CDATA[User proxy-server]]></item>
+			</node>
+			<node name="L07" descr="    ">
+				<item key="Header" ver=""><![CDATA[Auto activation]]></item>
+				<item key="Processing" ver=""><![CDATA[The process of obtaining the license file ...]]></item>
+				<item key="Wait" ver=""><![CDATA[Please wait.]]></item>
+			</node>
+			<node name="L08" descr="    -    ">
+				<item key="Action" ver=""><![CDATA[<br><br><br>Please correct the errors and try again. In case of failure to remove or identify the problem, use the manual way of activation.]]></item>
+				<item key="Header" ver=""><![CDATA[Auto activation]]></item>
+				<item key="iFirewall" ver=""><![CDATA[Firewall is blocking access to the server telsystems.ru.]]></item>
+				<item key="iNoConnection" ver=""><![CDATA[Connection error]]></item>
+				<item key="iNoProxy" ver=""><![CDATA[Do not specify a proxy server in the case of its use.]]></item>
+				<item key="iProxyUnreach" ver=""><![CDATA[A proxy server is unavailable.]]></item>
+				<item key="iWrongProxyAddress" ver=""><![CDATA[Invalid proxy]]></item>
+				<item key="iWrongProxyAuth" ver=""><![CDATA[Invalid authorization data proxy server.]]></item>
+				<item key="iWrongProxyPort" ver=""><![CDATA[Invalid proxy port.]]></item>
+				<item key="PossibleReasons" ver=""><![CDATA[Possible reasons:]]></item>
+				<item key="ReasonInet" ver=""><![CDATA[There is no access to the Internet.#\n# Details: {0}.]]></item>
+				<item key="ReasonInetSimple" ver=""><![CDATA[There is no access to the Internet.]]></item>
+				<item key="ReasonSrv" ver=""><![CDATA[No access to the activation server.#\n# Details: {0}.]]></item>
+				<item key="sFirewall" ver=""><![CDATA[Firewall is blocking access to the server telsystems.ru.]]></item>
+				<item key="sSrvTempUnavailable" ver=""><![CDATA[The activation server is temporarily unavailable, try again later.]]></item>
+			</node>
+			<node name="L09" descr="    -   ">
+				<item key="Action" ver=""><![CDATA[If you are unsure of their actions, please contact technical support on the details indicated on the website of "Telephone system".]]></item>
+				<item key="Header" ver=""><![CDATA[Auto activation]]></item>
+				<item key="SrvError" ver=""><![CDATA[{0}. ]]></item>
+			</node>
+			<node name="L10" descr="    ">
+				<item key="ActivationCode" ver=""><![CDATA[Activation code:]]></item>
+				<item key="CorrectFile" ver=""><![CDATA[Certificate connected successfully]]></item>
+				<item key="FileError" ver=""><![CDATA[Incorrect license file]]></item>
+				<item key="Header" ver=""><![CDATA[Manual activation:]]></item>
+				<item key="LicFile" ver=""><![CDATA[Select the license file]]></item>
+				<item key="OpenFileFilter" ver=""><![CDATA[Activation file Oktell:]]></item>
+				<item key="OpenFileHeader" ver=""><![CDATA[Select the license file]]></item>
+				<item key="Proceed" ver=""><![CDATA[And press 'Continue']]></item>
+				<item key="StageDescription1" ver=""><![CDATA[For file-license, you should go to the site {0}, and follow the instructions.]]></item>
+				<item key="StageDescription2" ver=""><![CDATA[On this site you will receive a license file that you want to convey to complete the activation.]]></item>
+			</node>
+			<node name="L11" descr="   ">
+				<item key="Error" ver=""><![CDATA[Activation is not made. Maybe you made a mistake when entering the registration code on the site or have entered an invalid activation file. <br><br><br>Try the file again. <br> In the case of repeated mistakes, try to re-generate the activation file. Pay attention to proper enter the registration code. <br><br><br>If you are unsure of their actions, please contact technical support on the details indicated on the website of "Telephone system".]]></item>
+				<item key="Header" ver=""><![CDATA[Activation manually]]></item>
+			</node>
+			<node name="L13" descr="  ">
+				<item key="Header" ver=""><![CDATA[Activation successfully]]></item>
+				<item key="Limits" ver=""><![CDATA[Your license has the following limitations:]]></item>
+				<item key="RegNum" ver=""><![CDATA[Registration number: {0}]]></item>
+			</node>
+		</node>
+		<node name="LicenseInfo" descr=" ">
+			<item key="ACode" ver=""><![CDATA[Avtiovation code]]></item>
+			<item key="CompanyCity" ver=""><![CDATA[city {0}]]></item>
+			<item key="CompanyEmail" ver=""><![CDATA[{0} ]]></item>
+			<item key="CompanyName" ver=""><![CDATA[Registered «{0}»]]></item>
+			<item key="CompanyPhone" ver=""><![CDATA[tel. {0}]]></item>
+			<item key="DateFormat" ver=""><![CDATA[dd,MM.yyyy]]></item>
+			<item key="Dongle" ver=""><![CDATA[Using USB key: {0}]]></item>
+			<item key="GeneralProduct" ver=""><![CDATA[Main software]]></item>
+			<item key="HWBase_Computer" ver=""><![CDATA[Bind to computer]]></item>
+			<item key="HWBase_Dongle" ver=""><![CDATA[Bind to USB key №{0}]]></item>
+			<item key="HWBase_DongleInstead" ver=""><![CDATA[Bind to the dongle]]></item>
+			<item key="License_AllList" ver=""><![CDATA[License list:]]></item>
+			<item key="License_CC" ver=""><![CDATA[Call-centre: {0}]]></item>
+			<item key="License_CC_0" ver=""><![CDATA[no]]></item>
+			<item key="License_CC_1" ver=""><![CDATA[yes]]></item>
+			<item key="License_Com" ver=""><![CDATA[Integration: {0}]]></item>
+			<item key="License_Com_0" ver=""><![CDATA[no]]></item>
+			<item key="License_Com_1" ver=""><![CDATA[yes]]></item>
+			<item key="License_CurrentLimit" ver=""><![CDATA[Restrictions:]]></item>
+			<item key="license_linecount" ver=""><![CDATA[Line count: {0}]]></item>
+			<item key="License_ExtLines" ver=""><![CDATA[External lines: {0}]]></item>
+			<item key="License_IntLines" ver=""><![CDATA[Internal lines: {0}]]></item>
+			<item key="License_Operators" ver=""><![CDATA[Call-center users: {0}]]></item>
+			<item key="License_Period" ver=""><![CDATA[({0} - {1})]]></item>
+			<item key="License_Users" ver=""><![CDATA[Users: {0}]]></item>
+			<item key="LicenseBlocked" ver=""><![CDATA[License blocked.]]></item>
+			<item key="LicenseError" ver=""><![CDATA[License incorrect]]></item>
+			<node name="LicName" descr="  Oktell (    )">
+				<item key="Extended" ver=""><![CDATA[Additional]]></item>
+				<item key="General" ver=""><![CDATA[Main]]></item>
+				<item key="Temporarily" ver=""><![CDATA[Temporary]]></item>
+				<item key="Test" ver=""><![CDATA[Test]]></item>
+				<item key="Update" ver=""><![CDATA[Subscription]]></item>
+			</node>
+			<item key="NoLicenseActivated" ver=""><![CDATA[Not activated.]]></item>
+			<item key="RegBlocked" ver=""><![CDATA[Registration blocked.]]></item>
+			<item key="RegDeleted" ver=""><![CDATA[Registration deleted.]]></item>
+			<item key="RegNum" ver=""><![CDATA[Registration code:]]></item>
+			<item key="StopPeriod" ver=""><![CDATA[Date of confirmation: {0}]]></item>
+			<item key="UpdatesTill" ver=""><![CDATA[Update till: {0}]]></item>
+		</node>
+		<node name="Mode" descr="  Oktell ( )">
+			<item key="OktellFull" ver=""><![CDATA[Oktell full version]]></item>
+			<item key="OktellFull_descr" ver=""><![CDATA[Full version comes with a registration certificate user. The composition is determined by the license certificate and loaded with web server at the time of activation. To bind to the computer.]]></item>
+			<item key="OktellFull_hint" ver=""><![CDATA[registration code ]]></item>
+			<item key="OktellTrial" ver=""><![CDATA[Oktell Trial ]]></item>
+			<item key="OktellTrial_descr" ver=""><![CDATA[Trial version is fully functional working version with limited operating time of 14 days from the date of activation. Supports 1 channel. Provides an opportunity to fully use all the available functions.]]></item>
+			<item key="OktellTrial_hint" ver=""><![CDATA[14-days trial]]></item>
+		</node>
+		<node name="Notify" descr="    ">
+			<item key="Confirm1" ver=""><![CDATA[Update the license certificate.]]></item>
+			<item key="Confirm2" ver=""><![CDATA[Attention. You must update the license certificate (module "Administration. General Settings" section of "License Information")]]></item>
+			<item key="Confirm3" ver=""><![CDATA[Attention. You must update the license certificate (module "Administration. General Settings" section of "License Information")]]></item>
+			<item key="Confirm4" ver=""><![CDATA[Attention. You must update the license certificate (module "Administration. General Settings" section of "License Information")]]></item>
+			<item key="ConfirmLoginMsgAdmin" ver=""><![CDATA[Attention! Expired license certificate. You must update the license file for the current existing registration.                                                              Enable automatic process in the section "License Information" module "Administration. General Preferences. To manually update your software http://activate.telsystems.ru]]></item>
+			<item key="ConfirmLoginMsgUser" ver=""><![CDATA[Attention.Update the license.]]></item>
+			<item key="ErrorConnectionCliSrv" ver=""><![CDATA[Connection error]]></item>
+		</node>
+		<node name="ServerErrorCode" descr=" ,   ">
+			<item key="AmbigousLicTypeForProduct" ver=""><![CDATA[Unable to determine the required license for the product (TRIAL)]]></item>
+			<item key="ContentError" ver=""><![CDATA[Unable to properly extract content]]></item>
+			<item key="DataError" ver=""><![CDATA[Licenok only ]]></item>
+			<item key="DbAccessError" ver=""><![CDATA[Error accessing the database (on the test function)]]></item>
+			<item key="DongleNumMistake" ver=""><![CDATA[This registration requires binding to a specific dongle. Refer to the registration documents or the manager]]></item>
+			<item key="GateError" ver=""><![CDATA[There is no access to the server ({0})]]></item>
+			<item key="HwShouldBeDongle" ver=""><![CDATA[This registration requires binding to the dongle. If you have a dongle, but you have to activate an adjacent partner product, you should modify the server configuration files, changing the product code on the base. Refer to the registration documents or the manager]]></item>
+			<item key="MisCheck" ver=""><![CDATA[The specified activation code does not match registered. Requires reactivation]]></item>
+			<item key="MissingActivationCode" ver=""><![CDATA[Not specified activation code]]></item>
+			<item key="MissingCompanyCity" ver=""><![CDATA[Not specified city]]></item>
+			<item key="MissingCompanyEmail" ver=""><![CDATA[Not specified e-mail]]></item>
+			<item key="MissingCompanyName" ver=""><![CDATA[Not specified company]]></item>
+			<item key="MissingCompanyPhone" ver=""><![CDATA[Not specified phone]]></item>
+			<item key="MissingMode" ver=""><![CDATA[The request to the server is not the type produced by operations (activation/confirmation)]]></item>
+			<item key="MissingPassword" ver=""><![CDATA[Not specified password]]></item>
+			<item key="MissingSerial" ver=""><![CDATA[Not specified registration code]]></item>
+			<item key="NoLicenceForProduct" ver=""><![CDATA[Among the licenses such registration there is no corresponding product PARTNER]]></item>
+			<item key="NoLicTypeForProduct" ver=""><![CDATA[Not found licensing options for the product (TRIAL)]]></item>
+			<item key="NoRegistrationFound" ver=""><![CDATA[The registration number is not found (or error accessing the database)]]></item>
+			<item key="ParseException" ver=""><![CDATA[Incorrect activation code]]></item>
+			<item key="Restricted" ver=""><![CDATA[Activation blocked]]></item>
+			<item key="ResultError" ver=""><![CDATA[Wrong type of content]]></item>
+			<item key="ServerError" ver=""><![CDATA[Server error]]></item>
+			<item key="SessionError" ver=""><![CDATA[Licenok only ]]></item>
+			<item key="Success" ver=""><![CDATA[Successfully]]></item>
+			<item key="WrongActivationCodeCrypt" ver=""><![CDATA[Incorrect activation code]]></item>
+			<item key="WrongActivationCodeReg" ver=""><![CDATA[Incorrect activation code]]></item>
+			<item key="WrongPassword" ver=""><![CDATA[Incorrect activation password]]></item>
+		</node>
+	</node>
+	<node name="Cli" descr=" ">
+		<node name="Buttons" descr="    ">
+			<item key="Back" ver=""><![CDATA[Back]]></item>
+			<item key="Cancel" ver=""><![CDATA[Cancel]]></item>
+			<item key="Delete" ver=""><![CDATA[Delete]]></item>
+			<item key="Exit" ver=""><![CDATA[Exit]]></item>
+			<item key="FromLocal" ver=""><![CDATA[Local]]></item>
+			<item key="FromServer" ver=""><![CDATA[Server]]></item>
+			<item key="No" ver=""><![CDATA[No]]></item>
+			<item key="Proceed" ver=""><![CDATA[Proceed]]></item>
+			<item key="Skip" ver=""><![CDATA[Skip]]></item>
+			<item key="Yes" ver=""><![CDATA[Yes]]></item>
+		</node>
+	</node>
+	<node name="Error" descr="Ошибки">
+		<item key="AlreadyLaunched" ver=""><![CDATA[Program is already running]]></item>
+		<node name="Exception" descr="Исключения">
+			<item key="Common" ver=""><![CDATA[Please, make a screenshot and send to support]]></item>
+		</node>
+		<node name="ModemError" descr="Модем">
+			<item key="EModemError_None" ver=""><![CDATA[]]></item>
+			<item key="EModemError_NotSignal" ver=""><![CDATA[network error]]></item>
+			<item key="EModemError_PinError" ver=""><![CDATA[PIN error]]></item>
+			<item key="EModemError_SimError" ver=""><![CDATA[SIM error]]></item>
+			<item key="NoResponse" ver=""><![CDATA[modem not responding]]></item>
+			<item key="SimInvalidOrPin" ver=""><![CDATA[SIP       PIN ]]></item>
+			<item key="SimNotExistent" ver=""><![CDATA[SIM ]]></item>
+			<item key="UnknownError" ver=""><![CDATA[unknown error]]></item>
+			<item key="UnknownNumber" ver=""><![CDATA[unknown number]]></item>
+			<item key="WaitModem" ver=""><![CDATA[waiting for modem...]]></item>
+		</node>
+		<item key="ServiceStopped" ver=""><![CDATA[Stop the service sipgsm. Application will be closed.]]></item>
+		<item key="ServiceUnavailable" ver=""><![CDATA[Could not connect to the service sipgsm.]]></item>
+		<node name="SipError" descr="Sip">
+			<item key="ESipError_Error" ver=""><![CDATA[error]]></item>
+			<item key="ESipError_Initialized" ver=""><![CDATA[initialized]]></item>
+			<item key="ESipError_None" ver=""><![CDATA[]]></item>
+			<item key="ESipError_NonInitialized" ver=""><![CDATA[uninitialized]]></item>
+			<item key="ESipError_Registered" ver=""><![CDATA[registered]]></item>
+			<item key="ESipError_Unregistered" ver=""><![CDATA[not registered]]></item>
+			<item key="SipNoNeedReg" ver=""><![CDATA[Without registration]]></item>
+			<item key="SipRegistered" ver=""><![CDATA[Connected successfully]]></item>
+			<item key="SipUnregistered" ver=""><![CDATA[Not registered]]></item>
+		</node>
+		<item key="WrongVersion" ver=""><![CDATA[Version of the service and client applications are different. Reinstalling the program corrects the mistake.]]></item>
+	</node>
+	<node name="Gui" descr="Клиентское приложение">
+		<node name="Button" descr="Кнопки">
+			<item key="ButtonApply" ver=""><![CDATA[Apply]]></item>
+			<item key="ButtonCancel" ver=""><![CDATA[Cancel]]></item>
+			<item key="ButtonClose" ver=""><![CDATA[Close]]></item>
+			<item key="ButtonContinue" ver=""><![CDATA[Continue]]></item>
+			<item key="ButtonSave" ver=""><![CDATA[Save]]></item>
+			<item key="ButtonUpdateDevices" ver=""><![CDATA[Refresh modems]]></item>
+		</node>
+		<node name="DevSet" descr="Настройки">
+			<item key="DevList_BtnSet" ver=""><![CDATA[Settings >]]></item>
+			<item key="DevList_BtnSetDisabled" ver=""><![CDATA[Blocked]]></item>
+			<item key="DevList_GrayText" ver=""><![CDATA[Modem is not connected]]></item>
+			<item key="DevList_GreenText" ver=""><![CDATA[Modem is up and running]]></item>
+			<item key="DevList_ModemError1" ver=""><![CDATA[- Modems are not connected]]></item>
+			<item key="DevList_ModemError2" ver=""><![CDATA[- Modem driver is not installed]]></item>
+			<item key="DevList_ModemError3" ver=""><![CDATA[- Modems are not supported]]></item>
+			<item key="DevList_ModemErrorMain" ver=""><![CDATA[Can't find GSM modem]]></item>
+			<item key="DevList_RedText" ver=""><![CDATA[Modem not responding]]></item>
+			<item key="DevList_SIPError1" ver=""><![CDATA[SIP account not set]]></item>
+			<item key="DevList_SIPError2" ver=""><![CDATA[connected]]></item>
+			<item key="DevList_YellowText" ver=""><![CDATA[Modem is not running]]></item>
+			<item key="DevSet_CidDstDisplay"><![CDATA[Send in "DisplayName"]]></item>
+			<item key="DevSet_CidDstFrom"><![CDATA[Send in "From"]]></item>
+			<item key="DevSet_CidSrcCid"><![CDATA[Send CallerID]]></item>
+			<item key="DevSet_CidSrcSim"><![CDATA[Send SIM number]]></item>			
+			<item key="DevSet_Codecs_Label1" ver=""><![CDATA[Priority 1:]]></item>
+			<item key="DevSet_Codecs_Label2" ver=""><![CDATA[Priority 2:]]></item>
+			<item key="DevSet_Codecs_Label3" ver=""><![CDATA[Priority 3:]]></item>
+			<item key="DevSet_Codecs_Label4" ver=""><![CDATA[Priority 4:]]></item>
+			<item key="DevSet_Codecs_Title" ver=""><![CDATA[Codecs]]></item>
+			<item key="DevSet_CopySettings" ver=""><![CDATA[Copy settings]]></item>
+			<item key="DevSet_Mes" ver=""><![CDATA[kbit/s]]></item>
+			<item key="DevSet_Mode_Label1" ver=""><![CDATA[When an incoming call on the number, the modem will wait for the additional numbers and to dial it through the sip network]]></item>
+			<item key="DevSet_Mode_Label2" ver=""><![CDATA[When an incoming call on the number, the modem will automatically transfer the call to the default number in the sip network]]></item>
+			<item key="DevSet_Mode_Radio1" ver=""><![CDATA[Use as a "router"]]></item>
+			<item key="DevSet_Mode_Radio2" ver=""><![CDATA[Use as a "gateway:]]></item>
+			<item key="DevSet_Mode_Title" ver=""><![CDATA[Mode]]></item>
+			<item key="DevSet_NoReg" ver=""><![CDATA[Without registration]]></item>
+			<item key="DevSet_Other_Commut" ver=""><![CDATA[Alerted mode:]]></item>
+			<item key="DevSet_Other_Commut2" ver=""><![CDATA[connect immediately without waiting for an answer SIP-GSM]]></item>
+			<item key="DevSet_Other_Label1" ver=""><![CDATA[DTMF type]]></item>
+			<item key="DevSet_Other_Label2" ver=""><![CDATA[DTMF type]]></item>
+			<item key="DevSet_Other_Label3" ver=""><![CDATA[Time-out]]></item>
+			<item key="DevSet_Other_Label4" ver=""><![CDATA[seconds]]></item>
+			<item key="DevSet_Other_Label5" ver=""><![CDATA[Send keep-alive]]></item>
+			<item key="DevSet_Other_Label6" ver=""><![CDATA[interval]]></item>
+			<item key="DevSet_Other_Label7" ver=""><![CDATA[seconds]]></item>
+			<item key="DevSet_Other_Title" ver=""><![CDATA[Additional settings]]></item>
+			<item key="DevSet_Reg" ver=""><![CDATA[Register]]></item>
+			<item key="DevSet_SIP_Label1" ver=""><![CDATA[SIP server:]]></item>
+			<item key="DevSet_SIP_Label10" ver=""><![CDATA[login and password provided by the server]]></item>
+			<item key="DevSet_SIP_Label11" ver=""><![CDATA[Local port:]]></item>
+			<item key="DevSet_SIP_Label12" ver=""><![CDATA[Outbound-proxy: ]]></item>
+			<item key="DevSet_SIP_Label13" ver=""><![CDATA[As a SIP server]]></item>
+			<item key="DevSet_SIP_Label14" ver=""><![CDATA[Port:]]></item>
+			<item key="DevSet_SIP_Label15" ver=""><![CDATA[CallerID]]></item>
+			<item key="DevSet_SIP_Label16" ver=""><![CDATA[(display name)]]></item>
+			<item key="DevSet_SIP_Label17" ver=""><![CDATA[Send CallerID]]></item>
+			<item key="DevSet_SIP_Label18" ver=""><![CDATA[Indicate the number of SIM as sip CallerID]]></item>
+			<item key="DevSet_SIP_Label19" ver=""><![CDATA[Default SIP-number]]></item>
+			<item key="DevSet_SIP_Label2" ver=""><![CDATA[SIP server name or IP]]></item>
+			<item key="DevSet_SIP_Label20" ver=""><![CDATA[SIP-number, which is automatically dial in connections "gateway" or when no introduction of additional room in the mode "router" when calling to GSM - SIP]]></item>
+			<item key="DevSet_SIP_Label21" ver=""><![CDATA[Default GSM number]]></item>
+			<item key="DevSet_SIP_Label22" ver=""><![CDATA[GSM-number, which is automatically dial in connections "gateway" or when no introduction of additional room in the mode "router" when calling SIP - GSM]]></item>
+			<item key="DevSet_SIP_Label3" ver=""><![CDATA[Port:]]></item>
+			<item key="DevSet_SIP_Label4" ver=""><![CDATA[Phonу number:]]></item>
+			<item key="DevSet_SIP_Label5" ver=""><![CDATA[(User Name) ]]></item>
+			<item key="DevSet_SIP_Label6" ver=""><![CDATA[Registration type:]]></item>
+			<item key="DevSet_SIP_Label7" ver=""><![CDATA[Login:]]></item>
+			<item key="DevSet_SIP_Label8" ver=""><![CDATA[(User ID) ]]></item>
+			<item key="DevSet_SIP_Label9" ver=""><![CDATA[Password:]]></item>
+			<item key="DevSet_SIP_Title" ver=""><![CDATA[Settings SIP account]]></item>
+		</node>
+		<node name="HTML" descr="HTML тексты">
+			<item key="HTML_CallCenter" ver=""><![CDATA[For operator handling incoming and outgoing telephone calls, use Oktell SIP GSM Gateway with communication software platform Oktell <br> <br> Create your company's full-featured carrier-call-center. Automate the work of operators, lift productivity and quality of customer service, keep a massive outbound campaign to attract new customers, reduces maintenance costs of telephone communication using communication platform Oktell.]]></item>
+			<item key="HTML_Confirm" ver=""><![CDATA[Query modems? The modems will be stoped]]></item>
+			<item key="HTML_IVR" ver=""><![CDATA[Connect Oktell SIP GSM Gateway to the communications software platform Oktell, and use a voice response IVR. <br> <br> Management scenarios automatic processing of voice calls made in a graphics editor. System Oktell allows to organize the automatic service subscribers in multi-level voice scenarios, a subscriber request to extradite the general and personalized information services to create self-service information. <br> <br> <font Style="color:#888888"> <br> Moscow, Telephone Systems <br> +7 495 921 15 86 <br> <a href="http://www.sipgsm.com"  style="color:#0077aa"> www.sipgsm.com </ a > <br> <a href="mailto:mail@telsystems.ru" title="Napisat pismo" style="color:#888888"> mail@telsystems.ru]]></item>
+			<item key="HTML_Record" ver=""><![CDATA[Use Oktell SIP GSM Gateway with communication software platform Oktell and get the ability to record conversations. <br> <br> Oktell system allows cross-cutting or selective recording of telephone conversations. All conversations can be listened to in an embedded player, exported as audio files on a third-party carrier or sent by e-mail to that address.]]></item>
+			<item key="HTML_Routing" ver=""><![CDATA[Use Oktell SIP GSM Gateway in conjunction with communication software platform Oktell and get unlimited IP call routing. <br> <br> Algorithms for routing incoming and outgoing phone calls worked in windows application in a convenient graphical editor. It is available a lot of options, determining the route of the call: the date and time, the state of subscribers and telephone lines, information from databases and web sources, the information introduced by the subscriber in a mode DTMF, waiting time, etc. Using a communication software platform Oktell, you get all the possibilities of modern and intelligent software PBX.]]></item>
+			<item key="HTML_Stat" ver=""><![CDATA[Obtain statistical information on the number and duration of connections Oktell SIP GSM Gateway using communications software platform Oktell <br> <br> Designer accounting documents, the system of customizable control of events and notifications, timelines and operational reports. Get all the necessary information about the telephone customer service in your company, missed calls, lost calls and queues through special tools and communication platforms Oktell.]]></item>
+			<item key="HTML_Trial" ver=""><![CDATA[Beta experid.<br> Visit http://www.sipgsm.com]]></item>
+		</node>
+		<node name="Menu" descr="Пункты меню">
+			<item key="MenuCallCenter" ver=""><![CDATA[Call-centre]]></item>
+			<item key="MenuCallCenterFull" ver=""><![CDATA[Call-centre]]></item>
+			<item key="MenuIVR" ver=""><![CDATA[IVR ]]></item>
+			<item key="MenuIVRFull" ver=""><![CDATA[IVR]]></item>
+			<item key="MenuRecording" ver=""><![CDATA[Record]]></item>
+			<item key="MenuRecordingFull" ver=""><![CDATA[Voice record]]></item>
+			<item key="MenuRouting" ver=""><![CDATA[Routing]]></item>
+			<item key="MenuRoutingFull" ver=""><![CDATA[Routing]]></item>
+			<item key="MenuSetting" ver=""><![CDATA[Settings]]></item>
+			<item key="MenuSettingFull" ver=""><![CDATA[Modems settings]]></item>
+			<item key="MenuSettingFull2" ver=""><![CDATA[Beta version has expired]]></item>
+			<item key="MenuStat" ver=""><![CDATA[Statistics]]></item>
+			<item key="MenuStatFull" ver=""><![CDATA[Statistics]]></item>
+		</node>
+		<node name="Other" descr="Настройки">
+			<item key="Confirm_Caption" ver=""><![CDATA[Alert]]></item>
+			<item key="LocalCaption" ver=""><![CDATA[SIP-GSM Gateway]]></item>
+			<item key="Main_Caption"><![CDATA[Oktell SIP-GSM gateway setup]]></item>
+		</node>
+	</node>
+</languagefile>
