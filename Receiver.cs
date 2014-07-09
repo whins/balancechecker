@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BalanceChecker
 {
-	class Receiver
+	public class Receiver
 	{
 		SerialPort port;
 		public delegate void DAmountReseivedHandler(float amount);

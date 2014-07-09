@@ -13,10 +13,17 @@ namespace BalanceChecker
 		{
 			if (Settings.Default.EnableLogging && !string.IsNullOrEmpty(text))
 			{
-				using (StreamWriter w = File.AppendText(Settings.Default.LogFilePath))
+				try
 				{
-					w.WriteLine("{0} :: {1} ", DateTime.Now.ToString(), text);
+					using (StreamWriter w = File.AppendText(Settings.Default.LogFilePath))
+					{
+						w.WriteLine("{0} :: {1} ", DateTime.Now.ToString(), text);
+					}
 				}
+				catch
+				{
+				}
+				
 			}			
 		}
 	}

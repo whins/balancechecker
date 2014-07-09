@@ -93,7 +93,7 @@ namespace BalanceChecker {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("178.238.229.198")]
+        [global::System.Configuration.DefaultSettingValueAttribute("10.8.0.1")]
         public string Server {
             get {
                 return ((string)(this["Server"]));
@@ -184,6 +184,135 @@ namespace BalanceChecker {
             }
             set {
                 this["EnableLogging"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("60")]
+        public int CheckerInterval {
+            get {
+                return ((int)(this["CheckerInterval"]));
+            }
+            set {
+                this["CheckerInterval"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("8182")]
+        public int HTTPPort {
+            get {
+                return ((int)(this["HTTPPort"]));
+            }
+            set {
+                this["HTTPPort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseTimer {
+            get {
+                return ((bool)(this["UseTimer"]));
+            }
+            set {
+                this["UseTimer"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool UseHTTP {
+            get {
+                return ((bool)(this["UseHTTP"]));
+            }
+            set {
+                this["UseHTTP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Balance Checker HTTP Server")]
+        public string FirewallRuleName {
+            get {
+                return ((string)(this["FirewallRuleName"]));
+            }
+            set {
+                this["FirewallRuleName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FirewallRuleDescription {
+            get {
+                return ((string)(this["FirewallRuleDescription"]));
+            }
+            set {
+                this["FirewallRuleDescription"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<config version=\"101029\">\r\n  <sip>\r\n    <" +
+            "registration><![CDATA[1]]></registration>\r\n    <registration_interval><![CDATA[6" +
+            "0]]></registration_interval>\r\n    <domain><![CDATA[10.8.0.1]]></domain>\r\n    <do" +
+            "main_port><![CDATA[5060]]></domain_port>\r\n    <proxy><![CDATA[10.8.0.1]]></proxy" +
+            ">\r\n    <proxy_port><![CDATA[5060]]></proxy_port>\r\n    <local_port><![CDATA[{0}]]" +
+            "></local_port>\r\n    <user_name><![CDATA[{1}]]></user_name>\r\n    <login><![CDATA[" +
+            "{2}]]></login>\r\n    <password><![CDATA[1234]]></password>\r\n    <keepalive><![CDA" +
+            "TA[1]]></keepalive>\r\n    <keepalive_interval><![CDATA[30]]></keepalive_interval>" +
+            "\r\n    <dtmf_type><![CDATA[SIP_DTMF_RFC2833]]></dtmf_type>\r\n    <codec1><![CDATA[" +
+            "SIP_CODEC_G729]]></codec1>\r\n    <codec2><![CDATA[SIP_CODEC_GSM]]></codec2>\r\n    " +
+            "<codec3><![CDATA[SIP_CODEC_G711U]]></codec3>\r\n    <codec4><![CDATA[SIP_CODEC_G71" +
+            "1A]]></codec4>\r\n    <cid_where><![CDATA[SIPCID_FROM]]></cid_where>\r\n    <rejecti" +
+            "on_code><![CDATA[480]]></rejection_code>\r\n  </sip>\r\n  <gsm>\r\n    <record_in><![C" +
+            "DATA[0]]></record_in>\r\n    <record_out><![CDATA[0]]></record_out>\r\n    <record_s" +
+            "ip><![CDATA[0]]></record_sip>\r\n    <cid_from><![CDATA[GSMCID_CID]]></cid_from>\r\n" +
+            "    <jitter_max><![CDATA[4]]></jitter_max>\r\n    <jitter_half><![CDATA[2]]></jitt" +
+            "er_half>\r\n    <jitter_fill_if_empty><![CDATA[0]]></jitter_fill_if_empty>\r\n    <a" +
+            "udio_rxgain><![CDATA[1,00]]></audio_rxgain>\r\n    <audio_txgain><![CDATA[1,00]]><" +
+            "/audio_txgain>\r\n    <only_2G><![CDATA[0]]></only_2G>\r\n    <dtmf_row_0><![CDATA[6" +
+            "97,0]]></dtmf_row_0>\r\n    <dtmf_row_1><![CDATA[770,0]]></dtmf_row_1>\r\n    <dtmf_" +
+            "row_2><![CDATA[852,0]]></dtmf_row_2>\r\n    <dtmf_row_3><![CDATA[941,0]]></dtmf_ro" +
+            "w_3>\r\n    <dtmf_col_0><![CDATA[1209,0]]></dtmf_col_0>\r\n    <dtmf_col_1><![CDATA[" +
+            "1336,0]]></dtmf_col_1>\r\n    <dtmf_col_2><![CDATA[1477,0]]></dtmf_col_2>\r\n    <dt" +
+            "mf_col_3><![CDATA[1633,0]]></dtmf_col_3>\r\n    <atd_response_timeout><![CDATA[100" +
+            "0]]></atd_response_timeout>\r\n  </gsm>\r\n  <gate>\r\n    <work_mode><![CDATA[GATE]]>" +
+            "</work_mode>\r\n    <sip_default_number><![CDATA[]]></sip_default_number>\r\n    <gs" +
+            "m_default_number><![CDATA[]]></gsm_default_number>\r\n    <gsm_dialing_timeout><![" +
+            "CDATA[10000]]></gsm_dialing_timeout>\r\n    <sip_gsm_commutate><![CDATA[0]]></sip_" +
+            "gsm_commutate>\r\n    <send_progress><![CDATA[1]]></send_progress>\r\n    <dial_wait" +
+            "_timeout><![CDATA[30000]]></dial_wait_timeout>\r\n    <dial_end_symbol><![CDATA[#]" +
+            "]></dial_end_symbol>\r\n    <dial_end_timeout><![CDATA[5000]]></dial_end_timeout>\r" +
+            "\n    <check_sip_prefix><![CDATA[1]]></check_sip_prefix>\r\n    <sip2gsm_only_defau" +
+            "lt_number><![CDATA[0]]></sip2gsm_only_default_number>\r\n  </gate>\r\n</config>")]
+        public string ConfigTemplate {
+            get {
+                return ((string)(this["ConfigTemplate"]));
+            }
+            set {
+                this["ConfigTemplate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<html>\r\n<head>\r\n<meta charset=\"utf-8\">\r\n<title>Status</title>\r\n</head>\r\n<body bgc" +
+            "olor = {0}>\r\n <h2 align=\"center\">{1}</h2>\r\n</body>\r\n</html>")]
+        public string SipGsmStatusHtml {
+            get {
+                return ((string)(this["SipGsmStatusHtml"]));
+            }
+            set {
+                this["SipGsmStatusHtml"] = value;
             }
         }
     }

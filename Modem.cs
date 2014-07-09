@@ -106,6 +106,7 @@ namespace BalanceChecker
 	{
 		Receiver receiver;
 		Sender sender;
+
 		public UsbDevice(string deviceId, string description, string attachedTo, string status)
 		{
 			DeviceId = deviceId;

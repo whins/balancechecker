@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,9 +61,12 @@
       <HintPath>packages\Npgsql.2.1.3\lib\net40\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,19 +74,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Firewall.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Modem.cs" />
     <Compile Include="PduBitPacker.cs" />
     <Compile Include="PostgreSQL.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Receiver.cs" />
     <Compile Include="Sender.cs" />
+    <Compile Include="Service.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service.Designer.cs">
+      <DependentUpon>Service.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SimpleHttpServer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -77,9 +109,189 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="SetupXP\SetupXP.isl" />
+    <None Include="SetupXP\SetupXP.isproj" />
+    <None Include="SetupXP\SetupXP\Express\Interm\regid.1995-09.com.example_70380B03-5476-40CC-9EC0-FB28E114C434.swidtag" />
+    <None Include="Setup\Setup.isl" />
+    <None Include="Setup\Setup.isproj" />
+    <None Include="SipGsm\huawei_driver\Install.log" />
+    <None Include="SipGsm\huawei_driver\Win764\ewdcsc.cat" />
+    <None Include="SipGsm\huawei_driver\Win764\ewdcsc.sys" />
+    <None Include="SipGsm\huawei_driver\Win764\ewmdm2k.cat" />
+    <None Include="SipGsm\huawei_driver\Win764\ewser2k.cat" />
+    <None Include="SipGsm\huawei_driver\Win764\ewusbdev.cat" />
+    <None Include="SipGsm\huawei_driver\Win764\ewusbdev.sys" />
+    <None Include="SipGsm\huawei_driver\Win764\ewusbmdm.sys" />
+    <None Include="SipGsm\huawei_driver\Win764\ewusbnet.cat" />
+    <None Include="SipGsm\huawei_driver\Win764\ewusbnet.sys" />
+    <None Include="SipGsm\huawei_driver\Win7\ewdcsc.cat" />
+    <None Include="SipGsm\huawei_driver\Win7\ewdcsc.sys" />
+    <None Include="SipGsm\huawei_driver\Win7\ewmdm2k.cat" />
+    <None Include="SipGsm\huawei_driver\Win7\ewser2k.cat" />
+    <None Include="SipGsm\huawei_driver\Win7\ewusbdev.cat" />
+    <None Include="SipGsm\huawei_driver\Win7\ewusbdev.sys" />
+    <None Include="SipGsm\huawei_driver\Win7\ewusbmdm.sys" />
+    <None Include="SipGsm\huawei_driver\Win7\ewusbnet.cat" />
+    <None Include="SipGsm\huawei_driver\Win7\ewusbnet.sys" />
+    <None Include="SipGsm\huawei_driver\WinVista64\ewdcsc.cat" />
+    <None Include="SipGsm\huawei_driver\WinVista64\ewdcsc.sys" />
+    <None Include="SipGsm\huawei_driver\WinVista64\ewmdm2k.cat" />
+    <None Include="SipGsm\huawei_driver\WinVista64\ewser2k.cat" />
+    <None Include="SipGsm\huawei_driver\WinVista64\ewusbdev.cat" />
+    <None Include="SipGsm\huawei_driver\WinVista64\ewusbdev.sys" />
+    <None Include="SipGsm\huawei_driver\WinVista64\ewusbmdm.sys" />
+    <None Include="SipGsm\huawei_driver\WinVista64\ewusbnet.cat" />
+    <None Include="SipGsm\huawei_driver\WinVista64\ewusbnet.sys" />
+    <None Include="SipGsm\huawei_driver\WinVista\ewdcsc.cat" />
+    <None Include="SipGsm\huawei_driver\WinVista\ewdcsc.sys" />
+    <None Include="SipGsm\huawei_driver\WinVista\ewmdm2k.cat" />
+    <None Include="SipGsm\huawei_driver\WinVista\ewser2k.cat" />
+    <None Include="SipGsm\huawei_driver\WinVista\ewusbdev.cat" />
+    <None Include="SipGsm\huawei_driver\WinVista\ewusbdev.sys" />
+    <None Include="SipGsm\huawei_driver\WinVista\ewusbmdm.sys" />
+    <None Include="SipGsm\huawei_driver\WinVista\ewusbnet.cat" />
+    <None Include="SipGsm\huawei_driver\WinVista\ewusbnet.sys" />
+    <None Include="SipGsm\huawei_driver\WinXp\ewdcsc.cat" />
+    <None Include="SipGsm\huawei_driver\WinXp\ewdcsc.sys" />
+    <None Include="SipGsm\huawei_driver\WinXp\ewmdm2k.cat" />
+    <None Include="SipGsm\huawei_driver\WinXp\ewser2k.cat" />
+    <None Include="SipGsm\huawei_driver\WinXp\ewusbdev.cat" />
+    <None Include="SipGsm\huawei_driver\WinXp\ewusbdev.sys" />
+    <None Include="SipGsm\huawei_driver\WinXp\ewusbmdm.sys" />
+    <None Include="SipGsm\huawei_driver\WinXp\ewusbnet.cat" />
+    <None Include="SipGsm\huawei_driver\WinXp\ewusbnet.sys" />
+    <None Include="Обновить конфигурацию SipGSM.url">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FirewallAPI.dll" />
+    <Content Include="hnetcfg.dll" />
+    <Content Include="html\settings.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="icon.ico" />
+    <Content Include="SetupXP\SetupXP\Express\Interm\_IsIcoRes.Exe" />
+    <Content Include="SetupXP\SetupXP\Express\SingleImage\DiskImages\DISK1\setup.exe" />
+    <Content Include="SetupXP\SetupXP\Express\SingleImage\LogFiles\6-19-2014 10-41-21.txt" />
+    <Content Include="SetupXP\SetupXP\Express\SingleImage\Reports\6-19-2014 10-41-26.htm" />
+    <Content Include="Setup\Setup\Express\Interm\_IsIcoRes.Exe" />
+    <Content Include="Setup\Setup\Express\SingleImage\DiskImages\DISK1\ISSetupPrerequisites\{2A0CC195-B3AF-4B63-8F5C-1F88A7E28ADF}\wic_x86_enu.exe" />
+    <Content Include="Setup\Setup\Express\SingleImage\DiskImages\DISK1\ISSetupPrerequisites\{3A0C717D-34C1-44e4-BCFA-CA64ABD99DEF}\dotNetFx40_Client_setup.exe" />
+    <Content Include="Setup\Setup\Express\SingleImage\DiskImages\DISK1\ISSetupPrerequisites\{531950bf-fab7-4434-8ca7-b5893ab197f8}\WindowsXP-KB898715-x64-enu.exe" />
+    <Content Include="Setup\Setup\Express\SingleImage\DiskImages\DISK1\ISSetupPrerequisites\{57bcd1d4-2de9-49d9-bc0c-3f4263e9970e}\WindowsInstaller-KB893803-v2-x86.exe" />
+    <Content Include="Setup\Setup\Express\SingleImage\DiskImages\DISK1\ISSetupPrerequisites\{57bcd1d4-2de9-49d9-bc0c-3f4263e9970e}\WindowsServer2003-KB898715-x86-enu.exe" />
+    <Content Include="Setup\Setup\Express\SingleImage\DiskImages\DISK1\ISSetupPrerequisites\{7CF06819-7AA4-4e3e-AC77-07931178671B}\wic_x64_enu.exe" />
+    <Content Include="Setup\Setup\Express\SingleImage\DiskImages\DISK1\ISSetupPrerequisites\{7f53ac5d-d59d-4f72-b8d3-2cc3bb6383ce}\WindowsServer2003-KB898715-x64-enu.exe" />
+    <Content Include="Setup\Setup\Express\SingleImage\DiskImages\DISK1\setup.exe" />
+    <Content Include="Setup\Setup\Express\SingleImage\LogFiles\5-22-2014 12-15-36.txt" />
+    <Content Include="Setup\Setup\Express\SingleImage\Reports\5-22-2014 12-15-41.htm" />
+    <Content Include="SipGsm\huawei_driver\devsetup.dll" />
+    <Content Include="SipGsm\huawei_driver\devsetup.exe" />
+    <Content Include="SipGsm\huawei_driver\devsetup2k.exe" />
+    <Content Include="SipGsm\huawei_driver\devsetup32.exe" />
+    <Content Include="SipGsm\huawei_driver\devsetup64.exe" />
+    <Content Include="SipGsm\huawei_driver\DriverSetup.exe" />
+    <Content Include="SipGsm\huawei_driver\DriverUninstall.exe" />
+    <Content Include="SipGsm\huawei_driver\LocateDevice.dll" />
+    <Content Include="SipGsm\huawei_driver\ReadMe%28ch%29.txt" />
+    <Content Include="SipGsm\huawei_driver\ReadMe%28en%29.txt" />
+    <Content Include="SipGsm\huawei_driver\release notes.txt" />
+    <Content Include="SipGsm\huawei_driver\Win764\ewdcsc.inf" />
+    <Content Include="SipGsm\huawei_driver\Win764\ewmdm2k.inf" />
+    <Content Include="SipGsm\huawei_driver\Win764\ewnet.inf" />
+    <Content Include="SipGsm\huawei_driver\Win764\ewser2k.inf" />
+    <Content Include="SipGsm\huawei_driver\Win764\ewusbdev.inf" />
+    <Content Include="SipGsm\huawei_driver\Win7\ewdcsc.inf" />
+    <Content Include="SipGsm\huawei_driver\Win7\ewmdm2k.inf" />
+    <Content Include="SipGsm\huawei_driver\Win7\ewnet.inf" />
+    <Content Include="SipGsm\huawei_driver\Win7\ewser2k.inf" />
+    <Content Include="SipGsm\huawei_driver\Win7\ewusbdev.inf" />
+    <Content Include="SipGsm\huawei_driver\WinVista64\ewdcsc.inf" />
+    <Content Include="SipGsm\huawei_driver\WinVista64\ewmdm2k.inf" />
+    <Content Include="SipGsm\huawei_driver\WinVista64\ewnet.inf" />
+    <Content Include="SipGsm\huawei_driver\WinVista64\ewser2k.inf" />
+    <Content Include="SipGsm\huawei_driver\WinVista64\ewusbdev.inf" />
+    <Content Include="SipGsm\huawei_driver\WinVista\ewdcsc.inf" />
+    <Content Include="SipGsm\huawei_driver\WinVista\ewmdm2k.inf" />
+    <Content Include="SipGsm\huawei_driver\WinVista\ewnet.inf" />
+    <Content Include="SipGsm\huawei_driver\WinVista\ewser2k.inf" />
+    <Content Include="SipGsm\huawei_driver\WinVista\ewusbdev.inf" />
+    <Content Include="SipGsm\huawei_driver\WinXp\ewdcsc.inf" />
+    <Content Include="SipGsm\huawei_driver\WinXp\ewmdm2k.inf" />
+    <Content Include="SipGsm\huawei_driver\WinXp\ewnet.inf" />
+    <Content Include="SipGsm\huawei_driver\WinXp\ewser2k.inf" />
+    <Content Include="SipGsm\huawei_driver\WinXp\ewusbdev.inf" />
+    <Content Include="SipGsm\Lang\eng.xml" />
+    <Content Include="SipGsm\Lang\rus.xml" />
+    <Content Include="SipGsm\licinfo.xml" />
+    <Content Include="SipGsm\msvcp100.dll" />
+    <Content Include="SipGsm\msvcr100.dll" />
+    <Content Include="SipGsm\oktell.HAL.dll" />
+    <Content Include="SipGsm\SipGsmForm.exe" />
+    <Content Include="SipGsm\SipGsmLib.dll" />
+    <Content Include="SipGsm\SipGsmService.exe" />
+    <Content Include="SipGsm\SipGsmServiceLib.dll" />
+    <Content Include="SipGsm\snd\snd_city.wav" />
+    <Content Include="SipGsm\snd\snd_long.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service.resx">
+      <DependentUpon>Service.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SetupXP\SetupXP\Express\SingleImage\TestTools\" />
+    <Folder Include="Setup\Setup\Express\SingleImage\TestTools\" />
+    <Folder Include="SipGsm\Cfg\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="NETCONLib">
+      <Guid>{43E734CA-043D-4A70-9A2C-A8F254063D91}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="NetFwTypeLib">
+      <Guid>{58FBCF7C-E7A9-467C-80B3-FC65E8FCCA08}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 с пакетом обновления 1 %28SP1%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
