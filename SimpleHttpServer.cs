@@ -24,7 +24,7 @@ namespace HTTP.Util
 
 		public HttpProcessor(TcpClient s, HttpServer srv)
 		{
-			this.socket = s;
+			socket = s;
 			this.srv = srv;
 		}
 
@@ -138,9 +138,9 @@ namespace HTTP.Util
 			Console.WriteLine("get post data start");
 			int content_len = 0;
 			MemoryStream ms = new MemoryStream();
-			if (this.httpHeaders.ContainsKey("Content-Length"))
+			if (httpHeaders.ContainsKey("Content-Length"))
 			{
-				content_len = Convert.ToInt32(this.httpHeaders["Content-Length"]);
+				content_len = Convert.ToInt32(httpHeaders["Content-Length"]);
 				if (content_len > MAX_POST_SIZE)
 				{
 					throw new Exception(
@@ -153,7 +153,7 @@ namespace HTTP.Util
 				{
 					Console.WriteLine("starting Read, to_read={0}", to_read);
 
-					int numread = this.inputStream.Read(buf, 0, Math.Min(BUF_SIZE, to_read));
+					int numread = inputStream.Read(buf, 0, Math.Min(BUF_SIZE, to_read));
 					Console.WriteLine("read finished, numread={0}", numread);
 					if (numread == 0)
 					{

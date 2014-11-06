@@ -8,7 +8,7 @@ using System.Linq;
 namespace BalanceChecker
 {
 	[RunInstaller(true)]
-	public partial class ProjectInstaller : System.Configuration.Install.Installer
+	public partial class ProjectInstaller : Installer
 	{
 		public ProjectInstaller()
 		{

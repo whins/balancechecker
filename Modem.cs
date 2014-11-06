@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO.Ports;
 using System.Linq;
 using System.Management;
@@ -98,7 +99,6 @@ namespace BalanceChecker
 			}
 			return responce;
 		}
-
 	}
 
 	
@@ -125,11 +125,11 @@ namespace BalanceChecker
 		public string ReceivePort { get; set; }
 		public int VID
 		{
-			get { return int.Parse(GetIdentifierPart("VID_"), System.Globalization.NumberStyles.HexNumber); }
+			get { return int.Parse(GetIdentifierPart("VID_"), NumberStyles.HexNumber); }
 		}
 		public int PID
 		{
-			get { return int.Parse(GetIdentifierPart("PID_"), System.Globalization.NumberStyles.HexNumber); }
+			get { return int.Parse(GetIdentifierPart("PID_"), NumberStyles.HexNumber); }
 		}
 
 		#endregion Properties
@@ -149,56 +149,29 @@ namespace BalanceChecker
 
 		public void StartProcesses()
 		{
-			Thread modemReceiver = new Thread(new ThreadStart(this.StartReceiver));
+			Thread modemReceiver = new Thread(new ThreadStart(StartReceiver));
 			modemReceiver.Start();
-			Thread modemSender = new Thread(new ThreadStart(this.StartSender));
+			Thread modemSender = new Thread(new ThreadStart(StartSender));
 			modemSender.Start();
 		}
 
 		private void StartSender()
 		{
-			this.sender = new Sender(this.PortName);
+			sender = new Sender(PortName);
 		}
 
 		private void StartReceiver()
 		{
-			this.receiver = new Receiver(this.ReceivePort);
-			this.receiver.OnReceiveAmount += receiver_OnReceiveAmount;
-			this.receiver.Start();
+			receiver = new Receiver(ReceivePort);
+			receiver.OnReceiveAmount += receiver_OnReceiveAmount;
+			receiver.Start();
 		}
 
-		void receiver_OnReceiveAmount(float amount)
+		void receiver_OnReceiveAmount(float balanceAmount)
 		{
-			InsertAmountIntoPostgreSQL(amount);
+
 		}
 
-		void InsertAmountIntoPostgreSQL(float amount)
-		{
-			Log.Write(string.Format("{0} : {1}", this.IMEI, amount ));
-			using (var connection = PostgreSQL.Get())
-			{
-				try
-				{
-					connection.Open();
-					NpgsqlCommand dbcmd = connection.CreateCommand();
-
-					dbcmd.Parameters.AddWithValue("@balance", amount);
-					dbcmd.Parameters.AddWithValue("@imei", this.IMEI);
-
-					dbcmd.CommandText = "INSERT INTO \"GsmBalance\" ( \"balance\", \"imei\") VALUES ( @balance, @imei)";
-
-					dbcmd.ExecuteNonQuery();
-				}
-				catch (NpgsqlException ex)
-				{
-					Log.Write(ex.Message);
-				}
-				finally 
-				{
-					connection.Close();
-				}
-			}
-		}
 		#endregion Methods
 	}
 }

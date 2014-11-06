@@ -1,4 +1,5 @@
-﻿using HTTP.Util;
+﻿using System.Net.Sockets;
+using HTTP.Util;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -66,7 +67,7 @@ namespace BalanceChecker
 			httpServer.OnHTTPServerStarted += httpServer_OnHTTPServerStarted;
 		}
 
-		void httpServer_OnHTTPServerStarted(System.Net.Sockets.TcpListener listener)
+		void httpServer_OnHTTPServerStarted(TcpListener listener)
 		{
 			Log.Write("Добавление правила в Windows Firewall...");
 			Firewall.AddRule();
@@ -106,19 +107,6 @@ namespace BalanceChecker
 						p.outputStream.WriteLine("<a href=/>main</a><p>");
 					}
 					break;
-				case "/conf":
-					Log.Write("Получение конфигурации с сервера");
-					string postData = inputData.ReadToEnd();
-					try
-					{
-						Log.Write("Запись конфигурации в файл");
-						File.WriteAllText(@"../Cfg/conf.xml", postData);
-					}
-					catch (Exception ex)
-					{
-						Log.Write("[Ошибка] :: " + ex.Message);
-					}
-					break;
 				default:
 					break;
 			}
@@ -137,25 +125,6 @@ namespace BalanceChecker
 @"</head>
 <body>
 <h3>Balance Checker</h3>
-</body>
-</html>
-");
-					}
-					break;
-				case "/reconf":
-					{
-						p.writeSuccess();
-						p.outputStream.WriteLine(@"
-<html>
-<head>" +
-"\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n" +
-@"</head>
-<body>
-<h4>Добавлены конфигурации для IMEI :</h4>
-");
-						UpdateSipGSMConfig(p);
-						p.outputStream.WriteLine(@"
-<h4>Конфигурация обновлена!</h4>
 </body>
 </html>
 ");
@@ -226,8 +195,7 @@ namespace BalanceChecker
 			TimeSpan timeout = TimeSpan.FromMilliseconds(3000);
 			return service.Status.ToString();
 		}
-
-
+		
 		private void OnOff()
 		{
 			var serviceName = Settings.Default.SipGsmServiceName;
@@ -269,8 +237,7 @@ namespace BalanceChecker
 					break;
 			}
 		}
-
-
+		
 		private string SipGSMPath
 		{
 			get
@@ -286,122 +253,6 @@ namespace BalanceChecker
 					p = Environment.GetEnvironmentVariable("ProgramFiles");
 				}
 				return p + @"\SipGSMGateway\Cfg\";
-			}
-		}
-
-		private void UpdateSipGSMConfig(HttpProcessor p)
-		{
-			StopService(Settings.Default.SipGsmServiceName, 1000);
-
-			Log.Write("Обновление списка модемов");
-			modemList = null;
-			modemList = Modem.GetList();
-			int i = 1;
-
-			Log.Write("Найдено модемов :: " + modemList.Count);
-			p.outputStream.WriteLine(string.Format("<h5>Найдено модемов :: {0}</h5>", i));
-			foreach (var item in modemList)
-			{
-				Log.Write(string.Format("{0} ::  {1}", i, item.IMEI));
-				p.outputStream.WriteLine(string.Format("<h5>{0} ::  {1}</h5>", i, item.IMEI));
-				i++;
-			}
-			
-
-
-			DeleteConfigFiles(p);
-
-			Thread.Sleep(5000);
-			i = 1;
-			foreach (UsbDevice item in modemList)
-			{
-				Log.Write("Чтение настроек сервера");
-
-				using (var connection = PostgreSQL.Get())
-				{
-
-					try
-					{
-						Log.Write("Открытие соединения");
-						connection.Open();
-						NpgsqlCommand dbcmd = connection.CreateCommand();
-#if DEBUG
-						string imei = "354183026627980";
-#else		
-					string imei = item.IMEI;
-#endif
-						dbcmd.Parameters.AddWithValue("@imei", imei);
-
-						dbcmd.CommandText = @"
-SELECT
-	id,
-	port
-FROM " + "\"Getaways\"" +
-	@"
-WHERE imei = @imei
-";
-						Log.Write("Чтение данных с сервера");
-						NpgsqlDataReader reader = dbcmd.ExecuteReader();
-						if(reader.Read())
-						{
-							string id = reader[0].ToString();
-							string port = reader[1].ToString();
-							Log.Write(string.Format("Добавление конфигурации для {0} :: p:{1}, id:{2}", imei, port, id));							
-							WriteConfigFile(imei, port, id);
-							p.outputStream.WriteLine(string.Format("<h5>Добавление конфигурации для {0} :: p:{1}, id:{2}<h5>", imei, port, id));
-						}
-					}
-					catch (NpgsqlException ex)
-					{
-						Log.Write(ex.Message);
-					}
-					finally
-					{
-						Log.Write("Закрытие соединения");
-						connection.Close();
-					}
-				}
-				i++;
-			}
-			StartService(Settings.Default.SipGsmServiceName, 1000);			
-		}
-
-		private void DeleteConfigFiles(HttpProcessor p)
-		{
-			Log.Write("Удаление старых файлов конфигурации");
-			int i = 0;
-			if (Directory.Exists(SipGSMPath))
-			{
-				foreach (string path in Directory.GetFiles(SipGSMPath))
-				{
-					try
-					{
-						File.Delete(path);
-						i++;
-					}
-					catch (Exception e)
-					{
-						p.outputStream.WriteLine(string.Format("<h5>{0} ::  {1}</h5>", "Ошибка", e.Message));
-					}
-					
-				}
-			}
-			Log.Write(string.Format("Удалено файлов :: {0} ", i));
-		}
-
-		private void WriteConfigFile(string imei, string port, string id)
-		{
-
-			string configData = string.Format(Settings.Default.ConfigTemplate, port, id, id);
-
-			try
-			{
-				Log.Write("Запись конфигурации в файл");
-				File.WriteAllText(string.Format(SipGSMPath + @"{0}", imei), configData);
-			}
-			catch (Exception ex)
-			{
-				Log.Write("[Ошибка] :: " + ex.Message);
 			}
 		}
 

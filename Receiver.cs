@@ -11,7 +11,7 @@ namespace BalanceChecker
 	public class Receiver
 	{
 		SerialPort port;
-		public delegate void DAmountReseivedHandler(float amount);
+		public delegate void DAmountReseivedHandler(float balanceAmount);
 		public event DAmountReseivedHandler OnReceiveAmount;
 
 		public Receiver(string portName)

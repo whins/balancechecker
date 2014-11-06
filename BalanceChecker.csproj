@@ -78,7 +78,6 @@
     <Compile Include="Log.cs" />
     <Compile Include="Modem.cs" />
     <Compile Include="PduBitPacker.cs" />
-    <Compile Include="PostgreSQL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProjectInstaller.cs">
       <SubType>Component</SubType>
