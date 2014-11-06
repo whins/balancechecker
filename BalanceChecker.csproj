@@ -173,9 +173,6 @@
     <Content Include="html\favicon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="html\sipgsmsettings.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="icon.ico" />
     <Content Include="SetupXP\SetupXP\Express\Interm\_IsIcoRes.Exe" />
     <Content Include="SetupXP\SetupXP\Express\SingleImage\DiskImages\DISK1\setup.exe" />
