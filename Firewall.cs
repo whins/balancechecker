@@ -15,7 +15,7 @@ namespace BalanceChecker
 		{
 			string addScript = @"
 pushd advfirewall firewall
-add rule name=""{0}"" description=""{1}"" remoteip=""{2}"" localport=""{3}""  action=allow protocol=tcp dir=in
+add rule name=""{0}"" description=""{1}"" localport=""{2}""  action=allow protocol=tcp dir=in
 popd
 			";
 
@@ -28,7 +28,7 @@ popd
 			deleteScript = string.Format(deleteScript, Settings.Default.FirewallRuleName);
 
 			addScript = string.Format(addScript, Settings.Default.FirewallRuleName,
-					Settings.Default.FirewallRuleDescription, Settings.Default.Server, Settings.Default.HTTPPort);
+					Settings.Default.FirewallRuleDescription, Settings.Default.HTTPPort);
 
 			string scriptFileName = "frwl.txt";
 			File.WriteAllText(scriptFileName, deleteScript);

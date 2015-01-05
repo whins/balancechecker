@@ -86,8 +86,9 @@ namespace BalanceChecker
 					responce = f.Groups[1].ToString().Trim();
 				}
 			}
-			catch
+			catch(Exception ex)
 			{
+				Log.Write("Modem.GetIMEI", Log.ERROR, string.Format("Порт :: {0} :: {1}", portName, ex.Message));
 				return null;
 			}
 			finally

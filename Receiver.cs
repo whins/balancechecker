@@ -16,6 +16,11 @@ namespace BalanceChecker
 
 		public Receiver(string portName)
 		{
+			if (string.IsNullOrEmpty(portName))
+			{
+				Log.Write("[Receiver]", Log.WARNING, "Не визначений COM-порт для модема"); 
+				return;
+			}
 			port = new SerialPort();
 			port.PortName = portName;
 			port.WriteTimeout = Settings.Default.SerialPortTimeout;
@@ -29,8 +34,9 @@ namespace BalanceChecker
 			{
 				port.Open();
 			}
-			catch (Exception)
+			catch (Exception ex)
 			{
+				Log.Write("[Receiver.Start]", Log.ERROR, ex.Message); 
 				port.Dispose();
 				return;
 			}
@@ -42,32 +48,46 @@ namespace BalanceChecker
 			byte[] buf = new byte[spL.BytesToRead];
 			spL.Read(buf, 0, buf.Length);
 			var result = Encoding.ASCII.GetString(buf);
-			Regex _lineSplitter = new Regex("\\+CUSD: \\d,\"(.*)\",15", RegexOptions.Singleline);
-			if (!_lineSplitter.IsMatch(result))
+			Regex lineSplitter = new Regex("\\+CUSD: \\d,\"(.*)\",15", RegexOptions.Singleline);
+			if (!lineSplitter.IsMatch(result))
 			{
 				return;
 			}
 
-			var f = _lineSplitter.Match(result);
+			var f = lineSplitter.Match(result);
 			var hexString = f.Groups[1].ToString().Trim();
 			result = Encoding.ASCII.GetString(PduBitPacker.UnpackBytes(PduBitPacker.ConvertHexToBytes(hexString)));
-			Log.Write(result);
+
+			//Log.Write("Receiver.port_DataReceived", Log.INFO, string.Format("Відповідь USSD:\n{0}", result));
+
 			foreach (var amountRegExItem in Settings.Default.AmountRegExList)
 			{
-				_lineSplitter = new Regex(amountRegExItem, RegexOptions.Singleline);
-				if (!_lineSplitter.IsMatch(result))
+				lineSplitter = new Regex(amountRegExItem, RegexOptions.Singleline);
+				if (!lineSplitter.IsMatch(result))
 				{
 					continue;
 				}
-				f = _lineSplitter.Match(result);
+				f = lineSplitter.Match(result);
 				result = f.Groups[1].ToString().Trim();
-				var amount = float.Parse(result.Replace('.',','));
+				float amount;
+				try
+				{
+					amount = float.Parse(result.Replace('.',','));
+				}
+				catch (Exception ex)
+				{
+					Log.Write("Receiver.port_DataReceived", Log.ERROR, ex.Message); 
+					continue;
+				}
+				Log.Write("Баланс", Log.INFO, string.Format("{0}", amount));
 				if (null != OnReceiveAmount)
 				{
 					OnReceiveAmount.Invoke(amount);
+
 				}
 				spL.Close();
-			}					
+			}			
+			
 		}
 	}
 }
