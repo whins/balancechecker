@@ -7,10 +7,11 @@ using System.IO;
 using System.Linq;
 using System.ServiceProcess;
 using System.Threading;
-
+using System.Timers;
 using NETCONLib;
 using NetFwTypeLib;
 using Npgsql;
+using Timer = System.Timers.Timer;
 
 namespace BalanceChecker
 {
@@ -18,23 +19,45 @@ namespace BalanceChecker
 	{
 		private List<UsbDevice> modemList;
 		private HttpServer httpServer;
+		private Timer timer;
 		public Service()
 		{
 			InitializeComponent();
-			InitializeHTTPServer();			
-
+			InitializeHTTPServer();
+			InitializeTimer();
+			
 #if (DEBUG)
 			GetModemList();
 			StartHTTPServer();
+			timer.Start();
 #endif
+			
+		}
+
+		private void InitializeTimer()
+		{
+			timer = new Timer();
 			timer.Interval = Settings.Default.CheckerInterval * 1000 * 60 * 60;
-			Log.Write("Service", Log.WARNING, string.Format("Інтервал перевірки балансу: {0} год.", Settings.Default.CheckerInterval));
+			timer.Enabled = true;
+			timer.Elapsed += timer_Elapsed;
 		}
 
 		private void GetModemList()
 		{
 			StopSipGsmService();
 			modemList = Modem.GetList();
+			
+			if (0 == modemList.Count)
+			{
+				Log.Write("Service.GetModemList", Log.WARNING, string.Format("Немає доступних модемів. Службу/програму буде завершено"));
+				Environment.Exit(0);
+			}
+			Log.Write("Service.GetModemList", Log.INFO, string.Format("Знайдено модемів: {0}", modemList.Count));
+			foreach (var modem in modemList)
+			{
+				Log.Write("Service.GetModemList", Log.INFO, string.Format("IMEI: {0} :: Порт {1}", modem.IMEI, modem.PortName));
+			}
+
 			int mCount = (modemList.Where(modem => (modem.ReceivePort == null))).Count();
 
 			if (0 < mCount)
@@ -57,6 +80,7 @@ namespace BalanceChecker
 
 			if (Settings.Default.UseTimer)
 			{
+				Log.Write("Service", Log.WARNING, string.Format("Таймер увімкнено з інтервалом: {0} год.", Settings.Default.CheckerInterval));
 				timer.Start();
 			}
 		}
@@ -290,16 +314,18 @@ namespace BalanceChecker
 			return dataList;
 		}
 
-		private void timer_Tick(object sender, EventArgs e)
+		private void timer_Elapsed(object sender, EventArgs e)
 		{
 			if (DateTime.Now.Date != Settings.Default.LastCheckBalanceDate.Date)
 			{
+				Log.Write("Service.timer_Elapsed", Log.WARNING, string.Format("Планова перевірка балансу за таймером"));
 				StartCheckBalance();
 				Settings.Default.LastCheckBalanceDate = DateTime.Now.Date;
 				Settings.Default.Save();
 			}
 			else
 			{
+				Log.Write("Service.timer_Elapsed", Log.WARNING, string.Format("Плановий перезапуск служби SipGSMSercice"));
 				RestartSipGsmService();
 			}
 		}

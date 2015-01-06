@@ -37,7 +37,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="CheckerInterval" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">2</Value>
+      <Value Profile="(Default)">3</Value>
     </Setting>
     <Setting Name="HTTPPort" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">8182</Value>

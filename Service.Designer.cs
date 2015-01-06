@@ -29,20 +29,13 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Service));
-			this.timer = new System.Windows.Forms.Timer(this.components);
 			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
 			this.notifyIconMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.itemUpdateConfig = new System.Windows.Forms.ToolStripMenuItem();
 			this.notifyIconMenu.SuspendLayout();
 			// 
-			// timer
-			// 
-			this.timer.Tick += new System.EventHandler(this.timer_Tick);
-			// 
 			// notifyIcon
 			// 
-			this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
 			this.notifyIcon.Text = "Balance Checker";
 			this.notifyIcon.Visible = true;
 			// 
@@ -69,7 +62,6 @@
 
 		#endregion
 
-		private System.Windows.Forms.Timer timer;
 		private System.Windows.Forms.NotifyIcon notifyIcon;
 		private System.Windows.Forms.ContextMenuStrip notifyIconMenu;
 		private System.Windows.Forms.ToolStripMenuItem itemUpdateConfig;
