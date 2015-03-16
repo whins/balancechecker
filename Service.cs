@@ -66,8 +66,7 @@ namespace BalanceChecker
 			}
 			if (modemList.Count == mCount)
 			{
-				Log.Write("Service.GetModemList", Log.WARNING, string.Format("Немає доступних модемів. Службу/програму буде завершено"));
-				Environment.Exit(0);
+				Log.Write("Service.GetModemList", Log.WARNING, string.Format("Немає доступних модемів."));
 			}
 			StartSipGsmService();
 		}

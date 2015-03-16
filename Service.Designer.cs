@@ -28,42 +28,15 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-			this.notifyIconMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.itemUpdateConfig = new System.Windows.Forms.ToolStripMenuItem();
-			this.notifyIconMenu.SuspendLayout();
-			// 
-			// notifyIcon
-			// 
-			this.notifyIcon.Text = "Balance Checker";
-			this.notifyIcon.Visible = true;
-			// 
-			// notifyIconMenu
-			// 
-			this.notifyIconMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.itemUpdateConfig});
-			this.notifyIconMenu.Name = "notifyIconMenu";
-			this.notifyIconMenu.Size = new System.Drawing.Size(216, 26);
-			// 
-			// itemUpdateConfig
-			// 
-			this.itemUpdateConfig.Name = "itemUpdateConfig";
-			this.itemUpdateConfig.Size = new System.Drawing.Size(215, 22);
-			this.itemUpdateConfig.Text = "Обновить конфигурацию";
 			// 
 			// Service
 			// 
 			this.CanPauseAndContinue = true;
 			this.ServiceName = "BalanceChecker";
-			this.notifyIconMenu.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.NotifyIcon notifyIcon;
-		private System.Windows.Forms.ContextMenuStrip notifyIconMenu;
-		private System.Windows.Forms.ToolStripMenuItem itemUpdateConfig;
 	}
 }
