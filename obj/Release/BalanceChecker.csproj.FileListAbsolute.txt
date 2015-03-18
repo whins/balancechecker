@@ -24,7 +24,3 @@ C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker__\obj\Releas
 C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker__\obj\Release\BalanceChecker.csproj.GenerateResource.Cache
 C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker__\obj\Release\BalanceChecker.exe
 C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker__\obj\Release\BalanceChecker.pdb
-C:\Users\admin\Documents\Visual Studio 2013\Projects\balancechecker\bin\Release\BalanceChecker.exe.config
-C:\Users\admin\Documents\Visual Studio 2013\Projects\balancechecker\obj\Release\Interop.NETCONLib.dll
-C:\Users\admin\Documents\Visual Studio 2013\Projects\balancechecker\obj\Release\Interop.NetFwTypeLib.dll
-C:\Users\admin\Documents\Visual Studio 2013\Projects\balancechecker\obj\Release\BalanceChecker.csproj.ResolveComReference.cache
