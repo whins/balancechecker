@@ -22,13 +22,15 @@ namespace BalanceChecker
 				port.Open();
 				foreach (var item in Settings.Default.CheckBalanceNumberList)
 				{
+					Log.Write("USSD запит :: " + item); 
 					SendUSSD(item);
-					Thread.Sleep(5000);
+					Thread.Sleep(10000);
 				}
 				port.Close();
 			}
-			catch (Exception)
+			catch (Exception ex)
 			{
+				Log.Write("Sender.SendUSSD", Log.ERROR, string.Format("{0}", ex.Message));
 				port.Dispose();
 				return;
 			}

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -241,7 +242,7 @@ namespace BalanceChecker
 			for (int i = 0; i < array.Length; i++)
 			{
 				string tmp = hexString.Substring(i * 2, 2);
-				array[i] = byte.Parse(tmp, System.Globalization.NumberStyles.HexNumber);
+				array[i] = byte.Parse(tmp, NumberStyles.HexNumber);
 			}
 
 			return array;

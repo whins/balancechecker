@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<style>
+		input {
+			border-radius: 7px;
+		}
+
+		select {
+			border-radius: 7px;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>Balance Checker Settings</h3>
+	<form method=post action="/sipgsmsettings">
+		<table style="width:300px;">
+			<tr><td>domain</td><td><input type="text" name=domain value={0} required="required"></td></tr>
+			<tr><td>domain_port</td><td><input type="number" name=domain_port value={1} required="required"></td></tr>
+			<tr><td>proxy</td><td><input type="text" name=proxy value={2}></td></tr>
+			<tr><td>proxy_port</td><td><input type="number" name=proxy_port value={3}></td></tr>
+			<tr><td>local_port</td><td><input type="number" name=local_port value={4} required="required"></td></tr>
+			<tr><td>user_name</td><td><input type="text" name=user_name value={5} required="required"></td></tr>
+			<tr><td>login</td><td><input type="text" name=login value={7} required="required"></td></tr>
+			<tr><td>password</td><td><input type="text" name=password value={6} required="required"></td></tr>
+			<tr>
+				<td>work_mode</td>
+				<td>
+					<select name="work_mode" required="required">
+						<option value="A">GATE</option>
+						<option value="B">ROUTER</option>
+					</select>
+				</td>
+			</tr>
+			<tr><td>sip_default_number</td><td><input type="text" name=sip_default_number value={8}></td></tr>
+			<tr><td>gsm_default_number</td><td><input type="tel" name=gsm_default_number value={9}></td></tr>
+		</table>
+		<input type=submit name=btnSave value=Save style="width:100px">
+	</form>
+</body>
+</html>

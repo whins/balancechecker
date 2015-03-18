@@ -1,0 +1,26 @@
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\BalanceChecker.exe.config
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\Interop.NETCONLib.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\Interop.NetFwTypeLib.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\BalanceChecker.csproj.ResolveComReference.cache
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\html\settings.html
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\html\favicon.ico
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\Обновить конфигурацию SipGSM.url
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\BalanceChecker.exe
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\BalanceChecker.pdb
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\Mono.Security.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\Npgsql.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\Npgsql.xml
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\de\Npgsql.resources.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\es\Npgsql.resources.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\Interop.NETCONLib.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Debug\Interop.NetFwTypeLib.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\BalanceChecker.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\BalanceChecker.ProjectInstaller.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\BalanceChecker.Service.resources
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\BalanceChecker.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\BalanceChecker.exe
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\BalanceChecker.pdb
