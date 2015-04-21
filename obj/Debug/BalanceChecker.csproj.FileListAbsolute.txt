@@ -24,3 +24,4 @@ C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\Ba
 C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\BalanceChecker.csproj.GenerateResource.Cache
 C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\BalanceChecker.exe
 C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\BalanceChecker.pdb
+C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\obj\Debug\BalanceChecker.exe.manifest
