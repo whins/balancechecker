@@ -1,0 +1,5 @@
+
+pushd advfirewall firewall
+add rule name="Balance Checker HTTP Server" description="" localport="8182"  action=allow protocol=tcp dir=in
+popd
+			
