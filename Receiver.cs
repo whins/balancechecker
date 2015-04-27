@@ -69,21 +69,18 @@ namespace BalanceChecker
 				}
 				f = lineSplitter.Match(result);
 				result = f.Groups[1].ToString().Trim();
-				float amount;
 				try
 				{
-					amount = float.Parse(result.Replace('.',','));
+					float amount = float.Parse(result.Replace('.', ','));
+					if (null != OnReceiveAmount)
+					{
+						OnReceiveAmount.Invoke(amount);
+					}
 				}
 				catch (Exception ex)
 				{
 					Log.Write("Receiver.port_DataReceived", Log.ERROR, ex.Message); 
 					continue;
-				}
-				Log.Write("Баланс", Log.INFO, string.Format("{0}", amount));
-				if (null != OnReceiveAmount)
-				{
-					OnReceiveAmount.Invoke(amount);
-
 				}
 				spL.Close();
 			}			

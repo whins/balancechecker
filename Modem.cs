@@ -170,7 +170,7 @@ namespace BalanceChecker
 
 		void receiver_OnReceiveAmount(float balanceAmount)
 		{
-
+			Log.Write("Баланс", Log.INFO, string.Format("IMEI: {0} :: {1}", this.IMEI, balanceAmount));
 		}
 
 		#endregion Methods

@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("BalanceChecker")]
 [assembly: AssemblyDescription("Check balance via Huawei GSM modem")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("WHINS")]
 [assembly: AssemblyProduct("BalanceChecker")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright ©  WHINS  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Можно задать все значения или принять номера сборки и редакции по умолчанию 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.01.06.1")]
-[assembly: AssemblyFileVersion("2.01.06.1")]
+[assembly: AssemblyVersion("2.04.27.1")]
+[assembly: AssemblyFileVersion("2.04.27.1")]
