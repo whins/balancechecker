@@ -14,19 +14,17 @@ namespace BalanceChecker
 		/// <summary>
 		/// Главная точка входа для приложения.
 		/// </summary>
-		static void Main()
+		private static void Main()
 		{
 #if (DEBUG)
 			new Service();
 			return;
 #endif
-			ServiceBase[] ServicesToRun;
-			ServicesToRun = new ServiceBase[] 
-			{ 
-				new Service()
-			};
-			ServiceBase.Run(ServicesToRun);
-
+		    var servicesToRun = new ServiceBase[] 
+		    { 
+		        new Service()
+		    };
+		    ServiceBase.Run(servicesToRun);
 		}
 	}
 }

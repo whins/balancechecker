@@ -5,253 +5,256 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
-namespace HTTP.Util
+namespace BalanceChecker
 {
-	public class HttpProcessor
-	{
-		public TcpClient socket;
-		public HttpServer srv;
+    public class HttpProcessor
+    {
+        public TcpClient Socket;
+        public HttpServer Srv;
 
-		private Stream inputStream;
-		public StreamWriter outputStream;
+        private Stream _inputStream;
+        public StreamWriter OutputStream;
 
-		public String http_method;
-		public String http_url;
-		public String http_protocol_versionstring;
-		public Hashtable httpHeaders = new Hashtable();
+        public string HttpMethod;
+        public string HttpUrl;
+        public string HttpProtocolVersionString;
 
-		private static int MAX_POST_SIZE = 10 * 1024 * 1024; // 10MB
+        public Hashtable HttpHeaders = new Hashtable();
 
-		public HttpProcessor(TcpClient s, HttpServer srv)
-		{
-			socket = s;
-			this.srv = srv;
-		}
+        private const int MaxPostSize = 10 * 1024 * 1024; // 10MB
 
-		private string streamReadLine(Stream inputStream)
-		{
-			int next_char;
-			string data = "";
-			while (true)
-			{
-				next_char = inputStream.ReadByte();
-				if (next_char == '\n') { break; }
-				if (next_char == '\r') { continue; }
-				if (next_char == -1) { Thread.Sleep(1); continue; };
-				data += Convert.ToChar(next_char);
-			}
-			return data;
-		}
+        public HttpProcessor(TcpClient s, HttpServer srv)
+        {
+            Socket = s;
+            this.Srv = srv;
+        }
 
-		public void process()
-		{
-			// we can't use a StreamReader for input, because it buffers up extra data on us inside it's
-			// "processed" view of the world, and we want the data raw after the headers
-			inputStream = new BufferedStream(socket.GetStream());
+        private string StreamReadLine(Stream inputStream)
+        {
+            var data = "";
+            while (true)
+            {
+                var nextChar = inputStream.ReadByte();
+                if (nextChar != '\n')
+                {
+                    switch (nextChar)
+                    {
+                        case '\r':
+                            continue;
+                        case -1:
+                            Thread.Sleep(1);
+                            continue;
+                    }
+                    data += Convert.ToChar(nextChar);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return data;
+        }
 
-			// we probably shouldn't be using a streamwriter for all output from handlers either
-			outputStream = new StreamWriter(new BufferedStream(socket.GetStream()));
-			try
-			{
-				parseRequest();
-				readHeaders();
-				if (http_method.Equals("GET"))
-				{
-					handleGETRequest();
-				}
-				else if (http_method.Equals("POST"))
-				{
-					handlePOSTRequest();
-				}
-			}
-			catch (Exception e)
-			{
-				Console.WriteLine("Exception: " + e.ToString());
-				writeFailure();
-			}
-			outputStream.Flush();
-			// bs.Flush(); // flush any remaining output
-			inputStream = null; outputStream = null; // bs = null;
-			socket.Close();
-		}
+        public void Process()
+        {
+            // we can't use a StreamReader for input, because it buffers up extra data on us inside it's
+            // "processed" view of the world, and we want the data raw after the headers
+            _inputStream = new BufferedStream(Socket.GetStream());
 
-		public void parseRequest()
-		{
-			String request = streamReadLine(inputStream);
-			string[] tokens = request.Split(' ');
-			if (tokens.Length != 3)
-			{
-				throw new Exception("invalid http request line");
-			}
-			http_method = tokens[0].ToUpper();
-			http_url = tokens[1];
-			http_protocol_versionstring = tokens[2];
+            // we probably shouldn't be using a streamwriter for all output from handlers either
+            OutputStream = new StreamWriter(new BufferedStream(Socket.GetStream()));
+            try
+            {
+                ParseRequest();
+                ReadHeaders();
+                if (HttpMethod.Equals("GET"))
+                {
+                    HandleGetRequest();
+                }
+                else if (HttpMethod.Equals("POST"))
+                {
+                    HandlePostRequest();
+                }
+            }
+            catch (Exception)
+            {
+                WriteFailure();
+            }
+            OutputStream.Flush();
+            _inputStream = null; OutputStream = null;
+            Socket.Close();
+        }
 
-			Console.WriteLine("starting: " + request);
-		}
+        public void ParseRequest()
+        {
+            var request = StreamReadLine(_inputStream);
+            var tokens = request.Split(' ');
+            if (tokens.Length != 3)
+            {
+                throw new Exception("invalid http request line");
+            }
+            HttpMethod = tokens[0].ToUpper();
+            HttpUrl = tokens[1];
+            HttpProtocolVersionString = tokens[2];
 
-		public void readHeaders()
-		{
-			Console.WriteLine("readHeaders()");
-			String line;
-			while ((line = streamReadLine(inputStream)) != null)
-			{
-				if (line.Equals(""))
-				{
-					Console.WriteLine("got headers");
-					return;
-				}
+            Console.WriteLine("starting: " + request);
+        }
 
-				int separator = line.IndexOf(':');
-				if (separator == -1)
-				{
-					throw new Exception("invalid http header line: " + line);
-				}
-				String name = line.Substring(0, separator);
-				int pos = separator + 1;
-				while ((pos < line.Length) && (line[pos] == ' '))
-				{
-					pos++; // strip any spaces
-				}
+        public void ReadHeaders()
+        {
+            Console.WriteLine("readHeaders()");
+            String line;
+            while ((line = StreamReadLine(_inputStream)) != null)
+            {
+                if (line.Equals(""))
+                {
+                    Console.WriteLine("got headers");
+                    return;
+                }
 
-				string value = line.Substring(pos, line.Length - pos);
-				Console.WriteLine("header: {0}:{1}", name, value);
-				httpHeaders[name] = value;
-			}
-		}
+                var separator = line.IndexOf(':');
+                if (separator == -1)
+                {
+                    throw new Exception("invalid http header line: " + line);
+                }
+                var name = line.Substring(0, separator);
+                var pos = separator + 1;
+                while ((pos < line.Length) && (line[pos] == ' '))
+                {
+                    pos++; // strip any spaces
+                }
 
-		public void handleGETRequest()
-		{
-			srv.handleGETRequest(this);
-		}
+                var value = line.Substring(pos, line.Length - pos);
+                Console.WriteLine("header: {0}:{1}", name, value);
+                HttpHeaders[name] = value;
+            }
+        }
 
-		private const int BUF_SIZE = 4096;
+        public void HandleGetRequest()
+        {
+            Srv.HandleGetRequest(this);
+        }
 
-		public void handlePOSTRequest()
-		{
-			// this post data processing just reads everything into a memory stream.
-			// this is fine for smallish things, but for large stuff we should really
-			// hand an input stream to the request processor. However, the input stream
-			// we hand him needs to let him see the "end of the stream" at this content
-			// length, because otherwise he won't know when he's seen it all!
+        private const int BufSize = 4096;
 
-			Console.WriteLine("get post data start");
-			int content_len = 0;
-			MemoryStream ms = new MemoryStream();
-			if (httpHeaders.ContainsKey("Content-Length"))
-			{
-				content_len = Convert.ToInt32(httpHeaders["Content-Length"]);
-				if (content_len > MAX_POST_SIZE)
-				{
-					throw new Exception(
-						String.Format("POST Content-Length({0}) too big for this simple server",
-							content_len));
-				}
-				byte[] buf = new byte[BUF_SIZE];
-				int to_read = content_len;
-				while (to_read > 0)
-				{
-					Console.WriteLine("starting Read, to_read={0}", to_read);
+        public void HandlePostRequest()
+        {
+            // this post data processing just reads everything into a memory stream.
+            // this is fine for smallish things, but for large stuff we should really
+            // hand an input stream to the request processor. However, the input stream
+            // we hand him needs to let him see the "end of the stream" at this content
+            // length, because otherwise he won't know when he's seen it all!
 
-					int numread = inputStream.Read(buf, 0, Math.Min(BUF_SIZE, to_read));
-					Console.WriteLine("read finished, numread={0}", numread);
-					if (numread == 0)
-					{
-						if (to_read == 0)
-						{
-							break;
-						}
-						else
-						{
-							throw new Exception("client disconnected during post");
-						}
-					}
-					to_read -= numread;
-					ms.Write(buf, 0, numread);
-				}
-				ms.Seek(0, SeekOrigin.Begin);
-			}
-			Console.WriteLine("get post data end");
-			srv.handlePOSTRequest(this, new StreamReader(ms));
-		}
+            var memoryStream = new MemoryStream();
+            if (HttpHeaders.ContainsKey("Content-Length"))
+            {
+                var contentLen = Convert.ToInt32(HttpHeaders["Content-Length"]);
+                if (contentLen > MaxPostSize)
+                {
+                    throw new Exception(
+                        $"POST Content-Length({contentLen}) too big for this simple server");
+                }
+                var buf = new byte[BufSize];
+                var toRead = contentLen;
+                while (toRead > 0)
+                {
+                    Console.WriteLine("starting Read, to_read={0}", toRead);
 
-		public void writeSuccess(string content_type = "text/html")
-		{
-			outputStream.WriteLine("HTTP/1.0 200 OK");
-			outputStream.WriteLine("Content-Type: " + content_type);
-			outputStream.WriteLine("Connection: close");
-			outputStream.WriteLine("");
-		}
+                    var numread = _inputStream.Read(buf, 0, Math.Min(BufSize, toRead));
+                    Console.WriteLine("read finished, numread={0}", numread);
+                    if (numread == 0)
+                    {
+                        if (toRead == 0)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            throw new Exception("client disconnected during post");
+                        }
+                    }
+                    toRead -= numread;
+                    memoryStream.Write(buf, 0, numread);
+                }
+                memoryStream.Seek(0, SeekOrigin.Begin);
+            }
 
-		public void writeFailure()
-		{
-			outputStream.WriteLine("HTTP/1.0 404 File not found");
-			outputStream.WriteLine("Connection: close");
-			outputStream.WriteLine("");
-		}
+            Srv.HandlePostRequest(this, new StreamReader(memoryStream));
+        }
 
-		internal void Show(string uri)
-		{
-			using (StreamReader sr = File.OpenText(uri))
-			{
-				writeSuccess();
-				outputStream.Write(sr.ReadToEnd());
-			}
-		}
-	}
+        public void WriteSuccess(string contentType = "text/html")
+        {
+            OutputStream.WriteLine("HTTP/1.0 200 OK");
+            OutputStream.WriteLine("Content-Type: " + contentType);
+            OutputStream.WriteLine("Connection: close");
+            OutputStream.WriteLine("");
+        }
 
-	public abstract class HttpServer
-	{
-		protected int port;
-		private TcpListener listener;
-		private bool is_active = true;
+        public void WriteFailure()
+        {
+            OutputStream.WriteLine("HTTP/1.0 404 File not found");
+            OutputStream.WriteLine("Connection: close");
+            OutputStream.WriteLine("");
+        }
 
-		public delegate void GETRequestHandler(HttpProcessor p);
-		public event GETRequestHandler OnGETRequest;
+        internal void Show(string uri)
+        {
+            using (var sr = File.OpenText(uri))
+            {
+                WriteSuccess();
+                OutputStream.Write(sr.ReadToEnd());
+            }
+        }
+    }
 
-		public delegate void POSTRequestHandler(HttpProcessor p, StreamReader inputData);
-		public event POSTRequestHandler OnPOSTRequest;
+    public abstract class HttpServer
+    {
+        protected int Port;
+        private TcpListener _listener;
+        private readonly bool _isActive = true;
 
-		public delegate void HTTPServerStartedHandler(TcpListener listener);
-		public event HTTPServerStartedHandler OnHTTPServerStarted;
+        public delegate void GetRequestHandler(HttpProcessor p);
 
-		public HttpServer(int port)
-		{
-			this.port = port;
-		}
+        public event GetRequestHandler OnGetRequest;
 
-		public void listen()
-		{
-			listener = new TcpListener(IPAddress.Any, port);
-			listener.Start();
-			if (null != OnHTTPServerStarted)
-			{
-				OnHTTPServerStarted.Invoke(listener);
-			}
-			while (is_active)
-			{
-				TcpClient s = listener.AcceptTcpClient();
-				HttpProcessor processor = new HttpProcessor(s, this);
-				Thread thread = new Thread(new ThreadStart(processor.process));
-				thread.Start();
-				Thread.Sleep(1);
-			}
-		}
+        public delegate void PostRequestHandler(HttpProcessor p, StreamReader inputData);
 
-		public virtual void handleGETRequest(HttpProcessor p)
-		{
-			if (null != OnGETRequest)
-			{
-				OnGETRequest.Invoke(p);
-			}
-		}
+        public event PostRequestHandler OnPostRequest;
 
-		public virtual void handlePOSTRequest(HttpProcessor p, StreamReader inputData)
-		{
-			if (null != OnPOSTRequest)
-			{
-				OnPOSTRequest.Invoke(p, inputData);
-			}
-		}
-	}
+        public delegate void HttpServerStartedHandler(TcpListener listener);
+
+        public event HttpServerStartedHandler OnHttpServerStarted;
+
+        protected HttpServer(int port)
+        {
+            this.Port = port;
+        }
+
+        public void Listen()
+        {
+            _listener = new TcpListener(IPAddress.Any, Port);
+            _listener.Start();
+
+            OnHttpServerStarted?.Invoke(_listener);
+
+            while (_isActive)
+            {
+                var s = _listener.AcceptTcpClient();
+                var processor = new HttpProcessor(s, this);
+                var thread = new Thread(new ThreadStart(processor.Process));
+                thread.Start();
+                Thread.Sleep(1);
+            }
+        }
+
+        public virtual void HandleGetRequest(HttpProcessor p)
+        {
+            OnGetRequest?.Invoke(p);
+        }
+
+        public virtual void HandlePostRequest(HttpProcessor p, StreamReader inputData)
+        {
+            OnPostRequest?.Invoke(p, inputData);
+        }
+    }
 }

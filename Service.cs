@@ -1,164 +1,157 @@
-﻿using System.Net.Sockets;
-using HTTP.Util;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Sockets;
 using System.ServiceProcess;
 using System.Threading;
-using System.Timers;
-using NETCONLib;
-using NetFwTypeLib;
-using Npgsql;
 using Timer = System.Timers.Timer;
 
 namespace BalanceChecker
 {
-	partial class Service : ServiceBase
-	{
-		private List<UsbDevice> modemList;
-		private HttpServer httpServer;
-		private Timer timer;
-		public Service()
-		{
-			InitializeComponent();
-			InitializeHTTPServer();
-			InitializeTimer();
-			
+    partial class Service : ServiceBase
+    {
+        private List<UsbDevice> _modemList;
+        private HttpServer _httpServer;
+        private Timer _timer;
+
+        public Service()
+        {
+            InitializeComponent();
+            InitializeHttpServer();
+            InitializeTimer();
+
 #if (DEBUG)
 			GetModemList();
 			StartHTTPServer();
 			timer.Start();
 #endif
-			
-		}
+        }
 
-		private void InitializeTimer()
-		{
-			timer = new Timer();
-			timer.Interval = Settings.Default.CheckerInterval * 1000 * 60 * 60;
-			timer.Enabled = true;
-			timer.Elapsed += timer_Elapsed;
-		}
+        private void InitializeTimer()
+        {
+            _timer = new Timer
+            {
+                Interval = Settings.Default.CheckerInterval * 1000 * 60 * 60,
+                Enabled = true
+            };
+            _timer.Elapsed += timer_Elapsed;
+        }
 
-		private void GetModemList()
-		{
-			StopSipGsmService();
-			modemList = Modem.GetList();
-			
-			if (0 == modemList.Count)
-			{
-				Log.Write("Service.GetModemList", Log.WARNING, string.Format("Немає доступних модемів. Службу/програму буде завершено"));
-				Environment.Exit(0);
-			}
-			Log.Write("Service.GetModemList", Log.INFO, string.Format("Знайдено модемів: {0}", modemList.Count));
-			foreach (var modem in modemList)
-			{
-				Log.Write("Service.GetModemList", Log.INFO, string.Format("IMEI: {0} :: Порт {1}", modem.IMEI, modem.PortName));
-			}
+        private void GetModemList()
+        {
+            StopSipGsmService();
+            _modemList = Modem.GetList();
 
-			int mCount = (modemList.Where(modem => (modem.ReceivePort == null))).Count();
+            if (0 == _modemList.Count)
+            {
+                Log.Write("Service.GetModemList", Log.Warning, "Немає доступних модемів. Службу/програму буде завершено");
+                Environment.Exit(0);
+            }
+            Log.Write("Service.GetModemList", Log.Info, $"Знайдено модемів: {_modemList.Count}");
+            foreach (var modem in _modemList)
+            {
+                Log.Write("Service.GetModemList", Log.Info, $"IMEI: {modem.Imei} :: Порт {modem.PortName}");
+            }
 
-			if (0 < mCount)
-			{
-				Log.Write("Service.GetModemList", Log.WARNING, string.Format("Не проініціалізовано модемів: {0}", mCount));
-			}
-			if (modemList.Count == mCount)
-			{
-				Log.Write("Service.GetModemList", Log.WARNING, string.Format("Немає доступних модемів."));
-			}
-			StartSipGsmService();
-		}
+            var mCount = (_modemList.Where(modem => (modem.ReceivePort == null))).Count();
 
-		protected override void OnStart(string[] args)
-		{
-			// TODO: Добавьте код для запуска службы.
-			GetModemList();
-			StartHTTPServer();
+            if (0 < mCount)
+            {
+                Log.Write("Service.GetModemList", Log.Warning, $"Не проініціалізовано модемів: {mCount}");
+            }
+            if (_modemList.Count == mCount)
+            {
+                Log.Write("Service.GetModemList", Log.Warning, "Немає доступних модемів.");
+            }
+            StartSipGsmService();
+        }
 
-			if (Settings.Default.UseTimer)
-			{
-				Log.Write("Service", Log.WARNING, string.Format("Таймер увімкнено з інтервалом: {0} год.", Settings.Default.CheckerInterval));
-				timer.Start();
-			}
-		}
+        protected override void OnStart(string[] args)
+        {
+            // TODO: Добавьте код для запуска службы.
+            GetModemList();
+            StartHttpServer();
 
-		protected override void OnStop()
-		{
-			timer.Stop();
-			modemList = null;
-		}
+            if (!Settings.Default.UseTimer) return;
+            Log.Write("Service", Log.Warning, $"Таймер увімкнено з інтервалом: {Settings.Default.CheckerInterval} год.");
+            _timer.Start();
+        }
 
-		private void InitializeHTTPServer()
-		{
-			if (0 < Settings.Default.HTTPPort && 65000 > Settings.Default.HTTPPort)
-			{
-				httpServer = new SimpleHttpServer(Settings.Default.HTTPPort);
-				Log.Write("Service.InitializeHTTPServer", Log.WARNING, string.Format("Порт HTTP-сервера: {0}", Settings.Default.HTTPPort));
-			}
-			else
-			{
-				httpServer = new SimpleHttpServer(8182);
-				Log.Write("Service.InitializeHTTPServer", Log.WARNING, string.Format("Порт HTTP-сервера: {0}", "8080"));
-			}
-			httpServer.OnGETRequest += httpServer_OnGETRequest;
-			httpServer.OnPOSTRequest += httpServer_OnPOSTRequest;
-			httpServer.OnHTTPServerStarted += httpServer_OnHTTPServerStarted;
-		}
+        protected override void OnStop()
+        {
+            _timer.Stop();
+            _modemList = null;
+        }
 
-		void httpServer_OnHTTPServerStarted(TcpListener listener)
-		{
-			Log.Write("Service.httpServer.OnHTTPServerStarted", Log.WARNING, string.Format("Додавання правила в Windows Firewall для HTTP-сервера..."));
-			Firewall.AddRule();
-		}
-		
+        private void InitializeHttpServer()
+        {
+            if (0 < Settings.Default.HTTPPort && 65000 > Settings.Default.HTTPPort)
+            {
+                _httpServer = new SimpleHttpServer(Settings.Default.HTTPPort);
+                Log.Write("Service.InitializeHTTPServer", Log.Warning, $"Порт HTTP-сервера: {Settings.Default.HTTPPort}");
+            }
+            else
+            {
+                _httpServer = new SimpleHttpServer(8182);
+                Log.Write("Service.InitializeHTTPServer", Log.Warning, $"Порт HTTP-сервера: {"8080"}");
+            }
+            _httpServer.OnGetRequest += httpServer_OnGETRequest;
+            _httpServer.OnPostRequest += httpServer_OnPOSTRequest;
+            _httpServer.OnHttpServerStarted += httpServer_OnHTTPServerStarted;
+        }
 
-		private void StartHTTPServer()
-		{
-			if (Settings.Default.UseHTTP)
-			{
-				Thread thread = new Thread(new ThreadStart(httpServer.listen));
-				thread.Start();
-			}
-		}
+        private void httpServer_OnHTTPServerStarted(TcpListener listener)
+        {
+            Log.Write("Service.httpServer.OnHTTPServerStarted", Log.Warning, "Додавання правила в Windows Firewall для HTTP-сервера...");
+            Firewall.AddRule();
+        }
 
-		private void httpServer_OnPOSTRequest(HttpProcessor p, StreamReader inputData)
-		{
-			switch (p.http_url)
-			{
-				case "/settings":
-					{
-						string data = inputData.ReadToEnd();
-						var dataList = GetDataList(data);
-						var command = (from item in dataList where item.Key == "command" select item).SingleOrDefault().Value;
+        private void StartHttpServer()
+        {
+            if (!Settings.Default.UseHTTP) return;
+            var thread = new Thread(new ThreadStart(_httpServer.Listen));
+            thread.Start();
+        }
 
-						p.writeSuccess();
-						Settings.Default.Save();
-						p.outputStream.WriteLine("<html><body><h3>Balance Checker settings saved</h3>");
-						p.outputStream.WriteLine("<a href=/>main</a><p>");
-					}
-					break;
-				case "/sipgsmsettings":
-					{
-						string data = inputData.ReadToEnd();
-						var dataList = GetDataList(data);
-						p.outputStream.WriteLine("<html><body><h3>Balance Checker settings saved</h3>");
-						p.outputStream.WriteLine("<a href=/>main</a><p>");
-					}
-					break;
-				default:
-					break;
-			}
-		}
+        private void httpServer_OnPOSTRequest(HttpProcessor p, StreamReader inputData)
+        {
+            switch (p.HttpUrl)
+            {
+                case "/settings":
+                    {
+                        var data = inputData.ReadToEnd();
+                        var dataList = GetDataList(data);
+                        var command = (from item in dataList where item.Key == "command" select item).SingleOrDefault().Value;
 
-		private void httpServer_OnGETRequest(HttpProcessor p)
-		{
-			switch (p.http_url)
-			{
-				case "/":
-					{
-						p.outputStream.WriteLine(@"
+                        p.WriteSuccess();
+                        Settings.Default.Save();
+                        p.OutputStream.WriteLine("<html><body><h3>Balance Checker settings saved</h3>");
+                        p.OutputStream.WriteLine("<a href=/>main</a><p>");
+                    }
+                    break;
+
+                case "/sipgsmsettings":
+                    {
+                        var data = inputData.ReadToEnd();
+                        var dataList = GetDataList(data);
+                        p.OutputStream.WriteLine("<html><body><h3>Balance Checker settings saved</h3>");
+                        p.OutputStream.WriteLine("<a href=/>main</a><p>");
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        private void httpServer_OnGETRequest(HttpProcessor p)
+        {
+            switch (p.HttpUrl)
+            {
+                case "/":
+                    {
+                        p.OutputStream.WriteLine(@"
 <html>
 <head>" +
 "\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n" +
@@ -168,39 +161,43 @@ namespace BalanceChecker
 </body>
 </html>
 ");
-					}
-					break;
-				case "/settings":
-					{
-						p.Show("html/settings.html");
-					}
-					break;
-				case "/sipgsmsettings":
-					{
-						p.Show("html/sipgsmsettings.html");
-					}
-					break;
-				case "/onoff":
-					{
-						OnOff();
-						var result = CheckSipGsm();
-						string htmlText = string.Format(Settings.Default.SipGsmStatusHtml, "Stopped" == result ? "#CC3300" : "#006600", result);
-						p.writeSuccess();
-						p.outputStream.WriteLine(htmlText);
+                    }
+                    break;
 
-					}
-					break;
-				case "/checksipgsm":
-					{
-						var result = CheckSipGsm();
-						string htmlText = string.Format(Settings.Default.SipGsmStatusHtml, ("Stopped" == result ? "#CC3300" : "#006600"), result);
-						p.writeSuccess();
-						p.outputStream.WriteLine(htmlText);
-					}
-					break;
-				case "/check":
-					p.writeSuccess();
-					p.outputStream.WriteLine(@"
+                case "/settings":
+                    {
+                        p.Show("html/settings.html");
+                    }
+                    break;
+
+                case "/sipgsmsettings":
+                    {
+                        p.Show("html/sipgsmsettings.html");
+                    }
+                    break;
+
+                case "/onoff":
+                    {
+                        OnOff();
+                        var result = CheckSipGsmServiceStatus();
+                        var htmlText = string.Format(Settings.Default.SipGsmStatusHtml, "Stopped" == result ? "#CC3300" : "#006600", result);
+                        p.WriteSuccess();
+                        p.OutputStream.WriteLine(htmlText);
+                    }
+                    break;
+
+                case "/checksipgsm":
+                    {
+                        var result = CheckSipGsmServiceStatus();
+                        var htmlText = string.Format(Settings.Default.SipGsmStatusHtml, ("Stopped" == result ? "#CC3300" : "#006600"), result);
+                        p.WriteSuccess();
+                        p.OutputStream.WriteLine(htmlText);
+                    }
+                    break;
+
+                case "/check":
+                    p.WriteSuccess();
+                    p.OutputStream.WriteLine(@"
 <html>
 <head>" +
 "\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n" +
@@ -209,187 +206,187 @@ namespace BalanceChecker
 <body>
 <h3>Перевірка балансу...</h3>
 ");
-					p.outputStream.WriteLine(@"
+                    p.OutputStream.WriteLine(@"
 </body>
 </html>
 ");
-					StartCheckBalance();
-					break;
-				case "/favicon.ico" :
-					Stream fs = File.Open("html/favicon.ico", FileMode.Open);
-					p.writeSuccess("image/x-icon");
-					fs.CopyTo (p.outputStream.BaseStream);
-					p.outputStream.BaseStream.Flush ();
-					break;
-				default:
-					p.writeSuccess();
-					p.outputStream.WriteLine("<html><body><h5>Command \"" + p.http_url + "\" not founded</h5>");
-					break;
-			}
-		}
+                    StartCheckBalance();
+                    break;
 
-		private string CheckSipGsm()
-		{
-			var serviceName = Settings.Default.SipGsmServiceName;
-			ServiceController service = new ServiceController(serviceName);
-			TimeSpan timeout = TimeSpan.FromMilliseconds(3000);
-			return service.Status.ToString();
-		}
-		
-		private void OnOff()
-		{
-			var serviceName = Settings.Default.SipGsmServiceName;
-			ServiceController service = new ServiceController(serviceName);
-			TimeSpan timeout = TimeSpan.FromMilliseconds(1000);
-			switch (service.Status)
-			{
-				case ServiceControllerStatus.Running:
-					try
-					{
-						service.Stop();						
-					}
-					catch
-					{
-						Log.Write("Error " + serviceName + " service stopping :( Exit...");
-					}
-					finally
-					{
-						service.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
-						Log.Write(serviceName + " " + service.Status.ToString());
-					}
-					break;
-				case ServiceControllerStatus.Stopped:
-					try
-					{
-						service.Start();
-					}
-					catch
-					{
-						Log.Write("Error " + serviceName + " service running :( Exit...");
-					}
-					finally
-					{
-						service.WaitForStatus(ServiceControllerStatus.Running, timeout);
-						Log.Write(serviceName + " " + service.Status.ToString());
-					}
-					break;
-				default :
-					break;
-			}
-		}
-		
-		private string SipGSMPath
-		{
-			get
-			{
-				string p = "";
-				if (8 == IntPtr.Size
-					|| (!String.IsNullOrEmpty(Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432"))))
-				{
-					p = Environment.GetEnvironmentVariable("ProgramFiles(x86)");
-				}
-				else
-				{
-					p = Environment.GetEnvironmentVariable("ProgramFiles");
-				}
-				return p + @"\SipGSMGateway\Cfg\";
-			}
-		}
+                case "/favicon.ico":
+                    Stream fs = File.Open("html/favicon.ico", FileMode.Open);
+                    p.WriteSuccess("image/x-icon");
+                    fs.CopyTo(p.OutputStream.BaseStream);
+                    p.OutputStream.BaseStream.Flush();
+                    break;
 
-		private Dictionary<string, string> GetDataList(string data)
-		{
-			Dictionary<string, string> dataList = new Dictionary<string, string>();
-			if (string.IsNullOrEmpty(data))
-			{
-				return dataList;
-			}
+                default:
+                    p.WriteSuccess();
+                    p.OutputStream.WriteLine("<html><body><h5>Command \"" + p.HttpUrl + "\" not founded</h5>");
+                    break;
+            }
+        }
 
-			foreach (var item in data.Split('&'))
-			{
-				var s = item.Split('=');
-				dataList.Add(s[0], s[1]);
-			}
+        private static string CheckSipGsmServiceStatus()
+        {
+            var serviceName = Settings.Default.SipGsmServiceName;
+            var service = new ServiceController(serviceName);
+            var timeout = TimeSpan.FromMilliseconds(3000);
+            return service.Status.ToString();
+        }
 
-			return dataList;
-		}
+        private static void OnOff()
+        {
+            var serviceName = Settings.Default.SipGsmServiceName;
+            var service = new ServiceController(serviceName);
+            var timeout = TimeSpan.FromMilliseconds(1000);
+            switch (service.Status)
+            {
+                case ServiceControllerStatus.Running:
+                    try
+                    {
+                        service.Stop();
+                    }
+                    catch
+                    {
+                        Log.Write("Error " + serviceName + " service stopping :( Exit...");
+                    }
+                    finally
+                    {
+                        service.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+                        Log.Write(serviceName + " " + service.Status.ToString());
+                    }
+                    break;
 
-		private void timer_Elapsed(object sender, EventArgs e)
-		{
-			if (DateTime.Now.Date != Settings.Default.LastCheckBalanceDate.Date)
-			{
-				Log.Write("Service.timer_Elapsed", Log.WARNING, string.Format("Планова перевірка балансу за таймером"));
-				StartCheckBalance();
-				Settings.Default.LastCheckBalanceDate = DateTime.Now.Date;
-				Settings.Default.Save();
-			}
-			else
-			{
-				Log.Write("Service.timer_Elapsed", Log.WARNING, string.Format("Плановий перезапуск служби SipGSMSercice"));
-				RestartSipGsmService();
-			}
-		}
+                case ServiceControllerStatus.Stopped:
+                    try
+                    {
+                        service.Start();
+                    }
+                    catch
+                    {
+                        Log.Write("Error " + serviceName + " service running :( Exit...");
+                    }
+                    finally
+                    {
+                        service.WaitForStatus(ServiceControllerStatus.Running, timeout);
+                        Log.Write(serviceName + " " + service.Status.ToString());
+                    }
+                    break;
+            }
+        }
 
-		private void RestartSipGsmService()
-		{
-			StopSipGsmService();
-			Thread.Sleep(Settings.Default.ServiceStopTime * 1000);
-			StartSipGsmService();
-		}
+        private string SipGsmPath
+        {
+            get
+            {
+                var p = "";
+                if (8 == IntPtr.Size
+                    || (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432"))))
+                {
+                    p = Environment.GetEnvironmentVariable("ProgramFiles(x86)");
+                }
+                else
+                {
+                    p = Environment.GetEnvironmentVariable("ProgramFiles");
+                }
+                return p + @"\SipGSMGateway\Cfg\";
+            }
+        }
 
-		private void StartCheckBalance()
-		{
-			Log.Write("Service.StartCheckBalance", Log.WARNING, string.Format("Перевірка балансу"));
-			StopSipGsmService();
-			foreach (UsbDevice item in modemList)
-			{
-				item.StartProcesses();
-			}
-			Thread.Sleep(Settings.Default.ServiceStopTime * 1000);
-			StartSipGsmService();
-		}
+        private Dictionary<string, string> GetDataList(string data)
+        {
+            var dataList = new Dictionary<string, string>();
+            if (string.IsNullOrEmpty(data))
+            {
+                return dataList;
+            }
 
-		public static void StartSipGsmService()
-		{
-			Log.Write("Service.StartService", Log.WARNING, string.Format("Запуск служби :: {0}", Settings.Default.SipGsmServiceName));
-			ServiceController service = new ServiceController(Settings.Default.SipGsmServiceName);
-			try
-			{
-				TimeSpan timeout = TimeSpan.FromMilliseconds(Settings.Default.WaitForStatusTimeout);
+            foreach (var s in data.Split('&').Select(item => item.Split('=')))
+            {
+                dataList.Add(s[0], s[1]);
+            }
 
-				service.Start();
-				service.WaitForStatus(ServiceControllerStatus.Running, timeout);
-				Log.Write("Service.StartService", Log.INFO, string.Format("Службу запущено :: {0}", Settings.Default.SipGsmServiceName)); 
-			}
-			catch (Exception ex)
-			{
-				Log.Write("Service.StartService", Log.ERROR, string.Format("{0} :: {1}", Settings.Default.SipGsmServiceName, ex.Message)); 
-			}
-		}
+            return dataList;
+        }
 
-		public static void StopSipGsmService()
-		{
-			Log.Write("Service.StopService", Log.WARNING, string.Format("Зупинка служби :: {0}", Settings.Default.SipGsmServiceName)); 
-			ServiceController service = new ServiceController(Settings.Default.SipGsmServiceName);
-			try
-			{
-				TimeSpan timeout = TimeSpan.FromMilliseconds(Settings.Default.WaitForStatusTimeout);
-				if (service.Status != ServiceControllerStatus.Stopped)
-					service.Stop();
-				service.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
-				Log.Write("Service.StopService", Log.INFO, string.Format("Службу зупинено :: {0}", Settings.Default.SipGsmServiceName)); 
-			}
-			catch (Exception ex)
-			{
-				Log.Write("Service.StopService", Log.ERROR, string.Format("{0} :: {1}", Settings.Default.SipGsmServiceName, ex.Message)); 
-			}
-		}
+        private void timer_Elapsed(object sender, EventArgs e)
+        {
+            if (DateTime.Now.Date != Settings.Default.LastCheckBalanceDate.Date)
+            {
+                Log.Write("Service.timer_Elapsed", Log.Warning, "Планова перевірка балансу за таймером");
+                StartCheckBalance();
+                Settings.Default.LastCheckBalanceDate = DateTime.Now.Date;
+                Settings.Default.Save();
+            }
+            else
+            {
+                Log.Write("Service.timer_Elapsed", Log.Warning, "Плановий перезапуск служби SipGSMSercice");
+                RestartSipGsmService();
+            }
+        }
 
-		public class SimpleHttpServer : HttpServer
-		{
-			public SimpleHttpServer(int port)
-				: base(port)
-			{
-			}
-		}
-	}
+        private void RestartSipGsmService()
+        {
+            StopSipGsmService();
+            Thread.Sleep(Settings.Default.ServiceStopTime * 1000);
+            StartSipGsmService();
+        }
+
+        private void StartCheckBalance()
+        {
+            Log.Write("Service.StartCheckBalance", Log.Warning, "Перевірка балансу");
+            StopSipGsmService();
+            foreach (var item in _modemList)
+            {
+                item.StartProcesses();
+            }
+            Thread.Sleep(Settings.Default.ServiceStopTime * 1000);
+            StartSipGsmService();
+        }
+
+        public static void StartSipGsmService()
+        {
+            Log.Write("Service.StartService", Log.Warning, $"Запуск служби :: {Settings.Default.SipGsmServiceName}");
+            var service = new ServiceController(Settings.Default.SipGsmServiceName);
+            try
+            {
+                var timeout = TimeSpan.FromMilliseconds(Settings.Default.WaitForStatusTimeout);
+
+                service.Start();
+                service.WaitForStatus(ServiceControllerStatus.Running, timeout);
+                Log.Write("Service.StartService", Log.Info, $"Службу запущено :: {Settings.Default.SipGsmServiceName}");
+            }
+            catch (Exception ex)
+            {
+                Log.Write("Service.StartService", Log.Error, $"{Settings.Default.SipGsmServiceName} :: {ex.Message}");
+            }
+        }
+
+        public static void StopSipGsmService()
+        {
+            Log.Write("Service.StopService", Log.Warning, $"Зупинка служби :: {Settings.Default.SipGsmServiceName}");
+            var service = new ServiceController(Settings.Default.SipGsmServiceName);
+            try
+            {
+                var timeout = TimeSpan.FromMilliseconds(Settings.Default.WaitForStatusTimeout);
+                if (service.Status != ServiceControllerStatus.Stopped)
+                    service.Stop();
+                service.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+                Log.Write("Service.StopService", Log.Info, $"Службу зупинено :: {Settings.Default.SipGsmServiceName}");
+            }
+            catch (Exception ex)
+            {
+                Log.Write("Service.StopService", Log.Error, $"{Settings.Default.SipGsmServiceName} :: {ex.Message}");
+            }
+        }
+
+        public class SimpleHttpServer : HttpServer
+        {
+            public SimpleHttpServer(int port)
+                : base(port)
+            {
+            }
+        }
+    }
 }

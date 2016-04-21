@@ -339,9 +339,9 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>BalanceChecker.exe</td><td>{4288DAE7-036A-45E8-AB09-6DD0D9264D7F}</td><td>BALANCECHECKER</td><td>2</td><td/><td>balancechecker.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DriverSetup.exe</td><td>{A0FE31DF-9F56-4E3B-82A5-6FDACEB91741}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>driversetup.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DriverUninstall.exe</td><td>{E9439DC0-8034-4A6A-9F41-05FF820484BC}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>driveruninstall.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>BalanceChecker.exe</td><td>{7CF4E7CC-D903-4736-8E09-AAC6F31EB543}</td><td>BALANCECHECKER</td><td>2</td><td/><td>balancechecker.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DriverSetup.exe</td><td>{88B082FA-0CBC-4B39-9B63-0AD97FA41FE2}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>driversetup.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DriverUninstall.exe</td><td>{DB039EC7-5AFB-4BE9-A65A-48A23318B9D2}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>driveruninstall.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISO19770_LocalTag</td><td>{321BB6A9-1A0E-4426-918B-A6B75FE9D0A5}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISO19770_SystemTag</td><td>{0A6E58CC-FD7C-439B-93EF-B1B1D25F3E6C}</td><td>CommonAppDataFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{21D732A1-FD88-4118-B5B0-D6B7853B0443}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -357,23 +357,23 @@
 		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{156F9F38-A43F-471C-8E2D-C39FF4AFF75D}</td><td>WINXP</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{0D0C1EC9-A8A7-41ED-8CA6-F3E965D22F4A}</td><td>LANG</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{8B69EDF9-F87A-4AB2-8C0E-FC4004DC756C}</td><td>SND</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Interop.NETCONLib.dll</td><td>{BDD3A385-6D89-4F76-9B30-68E280DBEA50}</td><td>BALANCECHECKER</td><td>2</td><td/><td>interop.netconlib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Interop.NetFwTypeLib.dll</td><td>{47437D45-D9A0-4558-9163-B72BBD936889}</td><td>BALANCECHECKER</td><td>2</td><td/><td>interop.netfwtypelib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>LocateDevice.dll</td><td>{B9BDF716-D87A-4FD6-A135-3EFED0241214}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>locatedevice.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Mono.Security.dll</td><td>{4CF93C8C-DED5-43D3-B237-3C967D32F38B}</td><td>BALANCECHECKER</td><td>2</td><td/><td>mono.security.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Npgsql.dll</td><td>{A7FE8255-4653-4C64-9347-998FF47BF157}</td><td>BALANCECHECKER</td><td>2</td><td/><td>npgsql.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SipGsmForm.exe</td><td>{8FEBFA0B-CB04-4012-A940-7EDC5D7CC9BA}</td><td>INSTALLDIR</td><td>2</td><td/><td>sipgsmform.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SipGsmLib.dll</td><td>{CB323C9B-FA14-4AB8-A5CF-09B88784CE0F}</td><td>INSTALLDIR</td><td>2</td><td/><td>sipgsmlib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SipGsmService.exe</td><td>{945F27AB-2991-48DB-A68B-2E93A52C2651}</td><td>INSTALLDIR</td><td>2</td><td/><td>sipgsmservice.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SipGsmServiceLib.dll</td><td>{B55809A8-A1A5-4CF8-85E7-8C54FBD56CB5}</td><td>INSTALLDIR</td><td>2</td><td/><td>sipgsmservicelib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>devsetup.dll</td><td>{7548DE0E-405B-42FB-A379-11EF6433A0A8}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>devsetup.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>devsetup.exe</td><td>{3D27F0E2-7544-4FF9-98AE-608B3879482C}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>devsetup.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>devsetup2k.exe</td><td>{2EA52E33-A6E3-4773-BD7B-A2EFD9B36E14}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>devsetup2k.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>devsetup32.exe</td><td>{8BDAE585-6147-4466-AAF8-036082CDF70A}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>devsetup32.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>devsetup64.exe</td><td>{62790FD0-1D9F-41AF-8802-6FECADFC9507}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>devsetup64.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>msvcp100.dll</td><td>{DFDE127C-573A-4D7C-A3BE-54B9A94A740E}</td><td>INSTALLDIR</td><td>2</td><td/><td>msvcp100.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>msvcr100.dll</td><td>{77D2E3FC-88D9-4AC2-B866-B9964FE87518}</td><td>INSTALLDIR</td><td>2</td><td/><td>msvcr100.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>oktell.HAL.dll</td><td>{FE4B5C13-0FEB-4674-B8EB-F8BD409F9E47}</td><td>INSTALLDIR</td><td>2</td><td/><td>oktell.hal.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Interop.NETCONLib.dll</td><td>{FA7D0120-E991-4A2F-B762-28CAAC0EE7C1}</td><td>BALANCECHECKER</td><td>2</td><td/><td>interop.netconlib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Interop.NetFwTypeLib.dll</td><td>{C46E9B05-76EB-4BEA-BE2A-A8EAC890BD35}</td><td>BALANCECHECKER</td><td>2</td><td/><td>interop.netfwtypelib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LocateDevice.dll</td><td>{4DEFAB4F-FBE8-4F87-A2C7-7A8A83D0E060}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>locatedevice.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Mono.Security.dll</td><td>{ECBFCDF7-EFD4-47C9-8A80-595A018D7948}</td><td>BALANCECHECKER</td><td>2</td><td/><td>mono.security.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Npgsql.dll</td><td>{32AAD7D0-6B49-4D23-BB57-5559630EB72F}</td><td>BALANCECHECKER</td><td>2</td><td/><td>npgsql.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SipGsmForm.exe</td><td>{EF7FEE99-067F-480C-A5B9-99927E9F9484}</td><td>INSTALLDIR</td><td>2</td><td/><td>sipgsmform.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SipGsmLib.dll</td><td>{CBF408CC-A0FB-432B-8922-4F4AAF553CC8}</td><td>INSTALLDIR</td><td>2</td><td/><td>sipgsmlib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SipGsmService.exe</td><td>{3D4D2B30-328B-4C10-9890-505D371BFE57}</td><td>INSTALLDIR</td><td>2</td><td/><td>sipgsmservice.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SipGsmServiceLib.dll</td><td>{3C013DE7-E10F-4E07-B294-D0A6E2771383}</td><td>INSTALLDIR</td><td>2</td><td/><td>sipgsmservicelib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>devsetup.dll</td><td>{6C8C9C57-E49D-4AF9-B88C-15BDF323EE97}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>devsetup.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>devsetup.exe</td><td>{F4867276-4BFC-4DA6-A248-A971C4BBD94B}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>devsetup.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>devsetup2k.exe</td><td>{1735D870-9F88-4DD2-A764-3D9B0DF63D88}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>devsetup2k.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>devsetup32.exe</td><td>{D349AA66-4C8D-413C-B791-ABFD9D5E97C7}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>devsetup32.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>devsetup64.exe</td><td>{22D3B1F8-5ED5-4B2B-ACB8-019BA680BA20}</td><td>HUAWEI_DRIVER</td><td>2</td><td/><td>devsetup64.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>msvcp100.dll</td><td>{3C478E66-192D-4474-BE75-24FC39408F88}</td><td>INSTALLDIR</td><td>2</td><td/><td>msvcp100.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>msvcr100.dll</td><td>{B2110FF4-F3D7-4821-BE79-50085942F59F}</td><td>INSTALLDIR</td><td>2</td><td/><td>msvcr100.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>oktell.HAL.dll</td><td>{A4C53D68-FAEA-420F-AB36-802F6C7AC0D9}</td><td>INSTALLDIR</td><td>2</td><td/><td>oktell.hal.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1083,9 +1083,42 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>BALANCECHECKER</td><td>BalanceChecker.exe</td></row>
+		<row><td>BALANCECHECKER</td><td>Interop.NETCONLib.dll</td></row>
+		<row><td>BALANCECHECKER</td><td>Interop.NetFwTypeLib.dll</td></row>
+		<row><td>BALANCECHECKER</td><td>Mono.Security.dll</td></row>
+		<row><td>BALANCECHECKER</td><td>Npgsql.dll</td></row>
 		<row><td>CFG</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>CommonAppDataFolder</td><td>ISO19770_SystemTag</td></row>
+		<row><td>HUAWEI_DRIVER</td><td>DriverSetup.exe</td></row>
+		<row><td>HUAWEI_DRIVER</td><td>DriverUninstall.exe</td></row>
+		<row><td>HUAWEI_DRIVER</td><td>LocateDevice.dll</td></row>
+		<row><td>HUAWEI_DRIVER</td><td>devsetup.dll</td></row>
+		<row><td>HUAWEI_DRIVER</td><td>devsetup.exe</td></row>
+		<row><td>HUAWEI_DRIVER</td><td>devsetup2k.exe</td></row>
+		<row><td>HUAWEI_DRIVER</td><td>devsetup32.exe</td></row>
+		<row><td>HUAWEI_DRIVER</td><td>devsetup64.exe</td></row>
+		<row><td>INSTALLDIR</td><td>BalanceChecker.exe</td></row>
+		<row><td>INSTALLDIR</td><td>DriverSetup.exe</td></row>
+		<row><td>INSTALLDIR</td><td>DriverUninstall.exe</td></row>
 		<row><td>INSTALLDIR</td><td>ISO19770_LocalTag</td></row>
+		<row><td>INSTALLDIR</td><td>Interop.NETCONLib.dll</td></row>
+		<row><td>INSTALLDIR</td><td>Interop.NetFwTypeLib.dll</td></row>
+		<row><td>INSTALLDIR</td><td>LocateDevice.dll</td></row>
+		<row><td>INSTALLDIR</td><td>Mono.Security.dll</td></row>
+		<row><td>INSTALLDIR</td><td>Npgsql.dll</td></row>
+		<row><td>INSTALLDIR</td><td>SipGsmForm.exe</td></row>
+		<row><td>INSTALLDIR</td><td>SipGsmLib.dll</td></row>
+		<row><td>INSTALLDIR</td><td>SipGsmService.exe</td></row>
+		<row><td>INSTALLDIR</td><td>SipGsmServiceLib.dll</td></row>
+		<row><td>INSTALLDIR</td><td>devsetup.dll</td></row>
+		<row><td>INSTALLDIR</td><td>devsetup.exe</td></row>
+		<row><td>INSTALLDIR</td><td>devsetup2k.exe</td></row>
+		<row><td>INSTALLDIR</td><td>devsetup32.exe</td></row>
+		<row><td>INSTALLDIR</td><td>devsetup64.exe</td></row>
+		<row><td>INSTALLDIR</td><td>msvcp100.dll</td></row>
+		<row><td>INSTALLDIR</td><td>msvcr100.dll</td></row>
+		<row><td>INSTALLDIR</td><td>oktell.HAL.dll</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1956,112 +1989,112 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>File</td><td>ISX_DEFAULTCOMPONENT12</td><td>SIPGSM~1.URL|Обновить конфигурацию SipGSM.url</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Release\Обновить конфигурацию SipGSM.url</td><td>1</td><td/></row>
-		<row><td>File1</td><td>ISX_DEFAULTCOMPONENT10</td><td>SIPGSM~1.URL|Обновить конфигурацию SipGSM.url</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Release\Обновить конфигурацию SipGSM.url</td><td>1</td><td/></row>
-		<row><td>balancechecker.exe</td><td>BalanceChecker.exe</td><td>BALANC~1.EXE|BalanceChecker.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Release\BalanceChecker.exe</td><td>1</td><td/></row>
-		<row><td>balancechecker.exe.config</td><td>ISX_DEFAULTCOMPONENT10</td><td>BALANC~1.CON|BalanceChecker.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Release\BalanceChecker.exe.config</td><td>1</td><td/></row>
-		<row><td>balancechecker.pdb</td><td>ISX_DEFAULTCOMPONENT10</td><td>BALANC~1.PDB|BalanceChecker.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Release\BalanceChecker.pdb</td><td>1</td><td/></row>
-		<row><td>devsetup.dll</td><td>devsetup.dll</td><td>devsetup.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\devsetup.dll</td><td>1</td><td/></row>
-		<row><td>devsetup.exe</td><td>devsetup.exe</td><td>devsetup.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\devsetup.exe</td><td>1</td><td/></row>
-		<row><td>devsetup2k.exe</td><td>devsetup2k.exe</td><td>DEVSET~1.EXE|devsetup2k.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\devsetup2k.exe</td><td>1</td><td/></row>
-		<row><td>devsetup32.exe</td><td>devsetup32.exe</td><td>DEVSET~1.EXE|devsetup32.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\devsetup32.exe</td><td>1</td><td/></row>
-		<row><td>devsetup64.exe</td><td>devsetup64.exe</td><td>DEVSET~1.EXE|devsetup64.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\devsetup64.exe</td><td>1</td><td/></row>
-		<row><td>driversetup.exe</td><td>DriverSetup.exe</td><td>DRIVER~1.EXE|DriverSetup.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\DriverSetup.exe</td><td>1</td><td/></row>
-		<row><td>driveruninstall.exe</td><td>DriverUninstall.exe</td><td>DRIVER~1.EXE|DriverUninstall.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\DriverUninstall.exe</td><td>1</td><td/></row>
-		<row><td>eng.xml</td><td>ISX_DEFAULTCOMPONENT8</td><td>eng.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\Lang\eng.xml</td><td>1</td><td/></row>
-		<row><td>ewdcsc.cat</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewdcsc.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewdcsc.cat</td><td>1</td><td/></row>
-		<row><td>ewdcsc.cat1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewdcsc.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewdcsc.cat</td><td>1</td><td/></row>
-		<row><td>ewdcsc.cat2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewdcsc.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewdcsc.cat</td><td>1</td><td/></row>
-		<row><td>ewdcsc.cat3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewdcsc.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewdcsc.cat</td><td>1</td><td/></row>
-		<row><td>ewdcsc.cat4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewdcsc.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewdcsc.cat</td><td>1</td><td/></row>
-		<row><td>ewdcsc.inf</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewdcsc.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewdcsc.inf</td><td>1</td><td/></row>
-		<row><td>ewdcsc.inf1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewdcsc.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewdcsc.inf</td><td>1</td><td/></row>
-		<row><td>ewdcsc.inf2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewdcsc.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewdcsc.inf</td><td>1</td><td/></row>
-		<row><td>ewdcsc.inf3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewdcsc.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewdcsc.inf</td><td>1</td><td/></row>
-		<row><td>ewdcsc.inf4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewdcsc.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewdcsc.inf</td><td>1</td><td/></row>
-		<row><td>ewdcsc.sys</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewdcsc.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewdcsc.sys</td><td>1</td><td/></row>
-		<row><td>ewdcsc.sys1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewdcsc.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewdcsc.sys</td><td>1</td><td/></row>
-		<row><td>ewdcsc.sys2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewdcsc.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewdcsc.sys</td><td>1</td><td/></row>
-		<row><td>ewdcsc.sys3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewdcsc.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewdcsc.sys</td><td>1</td><td/></row>
-		<row><td>ewdcsc.sys4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewdcsc.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewdcsc.sys</td><td>1</td><td/></row>
-		<row><td>ewmdm2k.cat</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewmdm2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewmdm2k.cat</td><td>1</td><td/></row>
-		<row><td>ewmdm2k.cat1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewmdm2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewmdm2k.cat</td><td>1</td><td/></row>
-		<row><td>ewmdm2k.cat2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewmdm2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewmdm2k.cat</td><td>1</td><td/></row>
-		<row><td>ewmdm2k.cat3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewmdm2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewmdm2k.cat</td><td>1</td><td/></row>
-		<row><td>ewmdm2k.cat4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewmdm2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewmdm2k.cat</td><td>1</td><td/></row>
-		<row><td>ewmdm2k.inf</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewmdm2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewmdm2k.inf</td><td>1</td><td/></row>
-		<row><td>ewmdm2k.inf1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewmdm2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewmdm2k.inf</td><td>1</td><td/></row>
-		<row><td>ewmdm2k.inf2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewmdm2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewmdm2k.inf</td><td>1</td><td/></row>
-		<row><td>ewmdm2k.inf3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewmdm2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewmdm2k.inf</td><td>1</td><td/></row>
-		<row><td>ewmdm2k.inf4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewmdm2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewmdm2k.inf</td><td>1</td><td/></row>
-		<row><td>ewnet.inf</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewnet.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewnet.inf</td><td>1</td><td/></row>
-		<row><td>ewnet.inf1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewnet.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewnet.inf</td><td>1</td><td/></row>
-		<row><td>ewnet.inf2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewnet.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewnet.inf</td><td>1</td><td/></row>
-		<row><td>ewnet.inf3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewnet.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewnet.inf</td><td>1</td><td/></row>
-		<row><td>ewnet.inf4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewnet.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewnet.inf</td><td>1</td><td/></row>
-		<row><td>ewser2k.cat</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewser2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewser2k.cat</td><td>1</td><td/></row>
-		<row><td>ewser2k.cat1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewser2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewser2k.cat</td><td>1</td><td/></row>
-		<row><td>ewser2k.cat2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewser2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewser2k.cat</td><td>1</td><td/></row>
-		<row><td>ewser2k.cat3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewser2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewser2k.cat</td><td>1</td><td/></row>
-		<row><td>ewser2k.cat4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewser2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewser2k.cat</td><td>1</td><td/></row>
-		<row><td>ewser2k.inf</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewser2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewser2k.inf</td><td>1</td><td/></row>
-		<row><td>ewser2k.inf1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewser2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewser2k.inf</td><td>1</td><td/></row>
-		<row><td>ewser2k.inf2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewser2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewser2k.inf</td><td>1</td><td/></row>
-		<row><td>ewser2k.inf3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewser2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewser2k.inf</td><td>1</td><td/></row>
-		<row><td>ewser2k.inf4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewser2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewser2k.inf</td><td>1</td><td/></row>
-		<row><td>ewusbdev.cat</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewusbdev.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewusbdev.cat</td><td>1</td><td/></row>
-		<row><td>ewusbdev.cat1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewusbdev.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewusbdev.cat</td><td>1</td><td/></row>
-		<row><td>ewusbdev.cat2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewusbdev.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewusbdev.cat</td><td>1</td><td/></row>
-		<row><td>ewusbdev.cat3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewusbdev.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewusbdev.cat</td><td>1</td><td/></row>
-		<row><td>ewusbdev.cat4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewusbdev.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewusbdev.cat</td><td>1</td><td/></row>
-		<row><td>ewusbdev.inf</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewusbdev.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewusbdev.inf</td><td>1</td><td/></row>
-		<row><td>ewusbdev.inf1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewusbdev.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewusbdev.inf</td><td>1</td><td/></row>
-		<row><td>ewusbdev.inf2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewusbdev.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewusbdev.inf</td><td>1</td><td/></row>
-		<row><td>ewusbdev.inf3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewusbdev.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewusbdev.inf</td><td>1</td><td/></row>
-		<row><td>ewusbdev.inf4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewusbdev.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewusbdev.inf</td><td>1</td><td/></row>
-		<row><td>ewusbdev.sys</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewusbdev.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewusbdev.sys</td><td>1</td><td/></row>
-		<row><td>ewusbdev.sys1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewusbdev.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewusbdev.sys</td><td>1</td><td/></row>
-		<row><td>ewusbdev.sys2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewusbdev.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewusbdev.sys</td><td>1</td><td/></row>
-		<row><td>ewusbdev.sys3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewusbdev.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewusbdev.sys</td><td>1</td><td/></row>
-		<row><td>ewusbdev.sys4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewusbdev.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewusbdev.sys</td><td>1</td><td/></row>
-		<row><td>ewusbmdm.sys</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewusbmdm.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewusbmdm.sys</td><td>1</td><td/></row>
-		<row><td>ewusbmdm.sys1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewusbmdm.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewusbmdm.sys</td><td>1</td><td/></row>
-		<row><td>ewusbmdm.sys2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewusbmdm.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewusbmdm.sys</td><td>1</td><td/></row>
-		<row><td>ewusbmdm.sys3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewusbmdm.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewusbmdm.sys</td><td>1</td><td/></row>
-		<row><td>ewusbmdm.sys4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewusbmdm.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewusbmdm.sys</td><td>1</td><td/></row>
-		<row><td>ewusbnet.cat</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewusbnet.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewusbnet.cat</td><td>1</td><td/></row>
-		<row><td>ewusbnet.cat1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewusbnet.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewusbnet.cat</td><td>1</td><td/></row>
-		<row><td>ewusbnet.cat2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewusbnet.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewusbnet.cat</td><td>1</td><td/></row>
-		<row><td>ewusbnet.cat3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewusbnet.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewusbnet.cat</td><td>1</td><td/></row>
-		<row><td>ewusbnet.cat4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewusbnet.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewusbnet.cat</td><td>1</td><td/></row>
-		<row><td>ewusbnet.sys</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewusbnet.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win7\ewusbnet.sys</td><td>1</td><td/></row>
-		<row><td>ewusbnet.sys1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewusbnet.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Win764\ewusbnet.sys</td><td>1</td><td/></row>
-		<row><td>ewusbnet.sys2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewusbnet.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista\ewusbnet.sys</td><td>1</td><td/></row>
-		<row><td>ewusbnet.sys3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewusbnet.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinVista64\ewusbnet.sys</td><td>1</td><td/></row>
-		<row><td>ewusbnet.sys4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewusbnet.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\WinXp\ewusbnet.sys</td><td>1</td><td/></row>
-		<row><td>install.log</td><td>ISX_DEFAULTCOMPONENT2</td><td>Install.log</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\Install.log</td><td>1</td><td/></row>
-		<row><td>interop.netconlib.dll</td><td>Interop.NETCONLib.dll</td><td>INTERO~1.DLL|Interop.NETCONLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Release\Interop.NETCONLib.dll</td><td>1</td><td/></row>
-		<row><td>interop.netfwtypelib.dll</td><td>Interop.NetFwTypeLib.dll</td><td>INTERO~1.DLL|Interop.NetFwTypeLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Release\Interop.NetFwTypeLib.dll</td><td>1</td><td/></row>
-		<row><td>licinfo.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>licinfo.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\licinfo.xml</td><td>1</td><td/></row>
-		<row><td>locatedevice.dll</td><td>LocateDevice.dll</td><td>LOCATE~1.DLL|LocateDevice.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\LocateDevice.dll</td><td>1</td><td/></row>
-		<row><td>mono.security.dll</td><td>Mono.Security.dll</td><td>MONOSE~1.DLL|Mono.Security.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Release\Mono.Security.dll</td><td>1</td><td/></row>
-		<row><td>msvcp100.dll</td><td>msvcp100.dll</td><td>msvcp100.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\msvcp100.dll</td><td>1</td><td/></row>
-		<row><td>msvcr100.dll</td><td>msvcr100.dll</td><td>msvcr100.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\msvcr100.dll</td><td>1</td><td/></row>
-		<row><td>npgsql.dll</td><td>Npgsql.dll</td><td>Npgsql.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Release\Npgsql.dll</td><td>1</td><td/></row>
-		<row><td>npgsql.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>Npgsql.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Release\Npgsql.xml</td><td>1</td><td/></row>
-		<row><td>oktell.hal.dll</td><td>oktell.HAL.dll</td><td>OKTELL~1.DLL|oktell.HAL.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\oktell.HAL.dll</td><td>1</td><td/></row>
-		<row><td>oktell.lic</td><td>ISX_DEFAULTCOMPONENT</td><td>oktell.lic</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\oktell.lic</td><td>1</td><td/></row>
-		<row><td>readme_ch_.txt</td><td>ISX_DEFAULTCOMPONENT2</td><td>README~1.TXT|ReadMe(ch).txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\ReadMe(ch).txt</td><td>1</td><td/></row>
-		<row><td>readme_en_.txt</td><td>ISX_DEFAULTCOMPONENT2</td><td>README~1.TXT|ReadMe(en).txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\ReadMe(en).txt</td><td>1</td><td/></row>
-		<row><td>release_notes.txt</td><td>ISX_DEFAULTCOMPONENT2</td><td>RELEAS~1.TXT|release notes.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\huawei_driver\release notes.txt</td><td>1</td><td/></row>
-		<row><td>rus.xml</td><td>ISX_DEFAULTCOMPONENT8</td><td>rus.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\Lang\rus.xml</td><td>1</td><td/></row>
-		<row><td>settings.html</td><td>ISX_DEFAULTCOMPONENT11</td><td>SETTIN~1.HTM|settings.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\bin\Release\html\settings.html</td><td>1</td><td/></row>
-		<row><td>sipgsmform.exe</td><td>SipGsmForm.exe</td><td>SIPGSM~1.EXE|SipGsmForm.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\SipGsmForm.exe</td><td>1</td><td/></row>
-		<row><td>sipgsmlib.dll</td><td>SipGsmLib.dll</td><td>SIPGSM~1.DLL|SipGsmLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\SipGsmLib.dll</td><td>1</td><td/></row>
-		<row><td>sipgsmservice.exe</td><td>SipGsmService.exe</td><td>SIPGSM~1.EXE|SipGsmService.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\SipGsmService.exe</td><td>1</td><td/></row>
-		<row><td>sipgsmservicelib.dll</td><td>SipGsmServiceLib.dll</td><td>SIPGSM~1.DLL|SipGsmServiceLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\SipGsmServiceLib.dll</td><td>1</td><td/></row>
-		<row><td>snd_city.wav</td><td>ISX_DEFAULTCOMPONENT9</td><td>snd_city.wav</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\snd\snd_city.wav</td><td>1</td><td/></row>
-		<row><td>snd_long.wav</td><td>ISX_DEFAULTCOMPONENT9</td><td>snd_long.wav</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\snd\snd_long.wav</td><td>1</td><td/></row>
+		<row><td>File</td><td>ISX_DEFAULTCOMPONENT12</td><td>SIPGSM~1.URL|Обновить конфигурацию SipGSM.url</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\bin\Release\Обновить конфигурацию SipGSM.url</td><td>1</td><td/></row>
+		<row><td>balancechecker.exe</td><td>BalanceChecker.exe</td><td>BALANC~1.EXE|BalanceChecker.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\bin\Release\BalanceChecker.exe</td><td>1</td><td/></row>
+		<row><td>balancechecker.exe.config</td><td>ISX_DEFAULTCOMPONENT10</td><td>BALANC~1.CON|BalanceChecker.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\bin\Release\BalanceChecker.exe.config</td><td>1</td><td/></row>
+		<row><td>balancechecker.pdb</td><td>ISX_DEFAULTCOMPONENT10</td><td>BALANC~1.PDB|BalanceChecker.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\bin\Release\BalanceChecker.pdb</td><td>1</td><td/></row>
+		<row><td>devsetup.dll</td><td>devsetup.dll</td><td>devsetup.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\devsetup.dll</td><td>1</td><td/></row>
+		<row><td>devsetup.exe</td><td>devsetup.exe</td><td>devsetup.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\devsetup.exe</td><td>1</td><td/></row>
+		<row><td>devsetup2k.exe</td><td>devsetup2k.exe</td><td>DEVSET~1.EXE|devsetup2k.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\devsetup2k.exe</td><td>1</td><td/></row>
+		<row><td>devsetup32.exe</td><td>devsetup32.exe</td><td>DEVSET~1.EXE|devsetup32.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\devsetup32.exe</td><td>1</td><td/></row>
+		<row><td>devsetup64.exe</td><td>devsetup64.exe</td><td>DEVSET~1.EXE|devsetup64.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\devsetup64.exe</td><td>1</td><td/></row>
+		<row><td>driversetup.exe</td><td>DriverSetup.exe</td><td>DRIVER~1.EXE|DriverSetup.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\DriverSetup.exe</td><td>1</td><td/></row>
+		<row><td>driveruninstall.exe</td><td>DriverUninstall.exe</td><td>DRIVER~1.EXE|DriverUninstall.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\DriverUninstall.exe</td><td>1</td><td/></row>
+		<row><td>eng.xml</td><td>ISX_DEFAULTCOMPONENT8</td><td>eng.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\Lang\eng.xml</td><td>1</td><td/></row>
+		<row><td>ewdcsc.cat</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewdcsc.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewdcsc.cat</td><td>1</td><td/></row>
+		<row><td>ewdcsc.cat1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewdcsc.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewdcsc.cat</td><td>1</td><td/></row>
+		<row><td>ewdcsc.cat2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewdcsc.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewdcsc.cat</td><td>1</td><td/></row>
+		<row><td>ewdcsc.cat3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewdcsc.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewdcsc.cat</td><td>1</td><td/></row>
+		<row><td>ewdcsc.cat4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewdcsc.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewdcsc.cat</td><td>1</td><td/></row>
+		<row><td>ewdcsc.inf</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewdcsc.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewdcsc.inf</td><td>1</td><td/></row>
+		<row><td>ewdcsc.inf1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewdcsc.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewdcsc.inf</td><td>1</td><td/></row>
+		<row><td>ewdcsc.inf2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewdcsc.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewdcsc.inf</td><td>1</td><td/></row>
+		<row><td>ewdcsc.inf3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewdcsc.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewdcsc.inf</td><td>1</td><td/></row>
+		<row><td>ewdcsc.inf4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewdcsc.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewdcsc.inf</td><td>1</td><td/></row>
+		<row><td>ewdcsc.sys</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewdcsc.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewdcsc.sys</td><td>1</td><td/></row>
+		<row><td>ewdcsc.sys1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewdcsc.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewdcsc.sys</td><td>1</td><td/></row>
+		<row><td>ewdcsc.sys2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewdcsc.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewdcsc.sys</td><td>1</td><td/></row>
+		<row><td>ewdcsc.sys3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewdcsc.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewdcsc.sys</td><td>1</td><td/></row>
+		<row><td>ewdcsc.sys4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewdcsc.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewdcsc.sys</td><td>1</td><td/></row>
+		<row><td>ewmdm2k.cat</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewmdm2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewmdm2k.cat</td><td>1</td><td/></row>
+		<row><td>ewmdm2k.cat1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewmdm2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewmdm2k.cat</td><td>1</td><td/></row>
+		<row><td>ewmdm2k.cat2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewmdm2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewmdm2k.cat</td><td>1</td><td/></row>
+		<row><td>ewmdm2k.cat3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewmdm2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewmdm2k.cat</td><td>1</td><td/></row>
+		<row><td>ewmdm2k.cat4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewmdm2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewmdm2k.cat</td><td>1</td><td/></row>
+		<row><td>ewmdm2k.inf</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewmdm2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewmdm2k.inf</td><td>1</td><td/></row>
+		<row><td>ewmdm2k.inf1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewmdm2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewmdm2k.inf</td><td>1</td><td/></row>
+		<row><td>ewmdm2k.inf2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewmdm2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewmdm2k.inf</td><td>1</td><td/></row>
+		<row><td>ewmdm2k.inf3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewmdm2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewmdm2k.inf</td><td>1</td><td/></row>
+		<row><td>ewmdm2k.inf4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewmdm2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewmdm2k.inf</td><td>1</td><td/></row>
+		<row><td>ewnet.inf</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewnet.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewnet.inf</td><td>1</td><td/></row>
+		<row><td>ewnet.inf1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewnet.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewnet.inf</td><td>1</td><td/></row>
+		<row><td>ewnet.inf2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewnet.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewnet.inf</td><td>1</td><td/></row>
+		<row><td>ewnet.inf3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewnet.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewnet.inf</td><td>1</td><td/></row>
+		<row><td>ewnet.inf4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewnet.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewnet.inf</td><td>1</td><td/></row>
+		<row><td>ewser2k.cat</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewser2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewser2k.cat</td><td>1</td><td/></row>
+		<row><td>ewser2k.cat1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewser2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewser2k.cat</td><td>1</td><td/></row>
+		<row><td>ewser2k.cat2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewser2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewser2k.cat</td><td>1</td><td/></row>
+		<row><td>ewser2k.cat3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewser2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewser2k.cat</td><td>1</td><td/></row>
+		<row><td>ewser2k.cat4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewser2k.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewser2k.cat</td><td>1</td><td/></row>
+		<row><td>ewser2k.inf</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewser2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewser2k.inf</td><td>1</td><td/></row>
+		<row><td>ewser2k.inf1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewser2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewser2k.inf</td><td>1</td><td/></row>
+		<row><td>ewser2k.inf2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewser2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewser2k.inf</td><td>1</td><td/></row>
+		<row><td>ewser2k.inf3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewser2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewser2k.inf</td><td>1</td><td/></row>
+		<row><td>ewser2k.inf4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewser2k.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewser2k.inf</td><td>1</td><td/></row>
+		<row><td>ewusbdev.cat</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewusbdev.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewusbdev.cat</td><td>1</td><td/></row>
+		<row><td>ewusbdev.cat1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewusbdev.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewusbdev.cat</td><td>1</td><td/></row>
+		<row><td>ewusbdev.cat2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewusbdev.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewusbdev.cat</td><td>1</td><td/></row>
+		<row><td>ewusbdev.cat3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewusbdev.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewusbdev.cat</td><td>1</td><td/></row>
+		<row><td>ewusbdev.cat4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewusbdev.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewusbdev.cat</td><td>1</td><td/></row>
+		<row><td>ewusbdev.inf</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewusbdev.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewusbdev.inf</td><td>1</td><td/></row>
+		<row><td>ewusbdev.inf1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewusbdev.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewusbdev.inf</td><td>1</td><td/></row>
+		<row><td>ewusbdev.inf2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewusbdev.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewusbdev.inf</td><td>1</td><td/></row>
+		<row><td>ewusbdev.inf3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewusbdev.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewusbdev.inf</td><td>1</td><td/></row>
+		<row><td>ewusbdev.inf4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewusbdev.inf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewusbdev.inf</td><td>1</td><td/></row>
+		<row><td>ewusbdev.sys</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewusbdev.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewusbdev.sys</td><td>1</td><td/></row>
+		<row><td>ewusbdev.sys1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewusbdev.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewusbdev.sys</td><td>1</td><td/></row>
+		<row><td>ewusbdev.sys2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewusbdev.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewusbdev.sys</td><td>1</td><td/></row>
+		<row><td>ewusbdev.sys3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewusbdev.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewusbdev.sys</td><td>1</td><td/></row>
+		<row><td>ewusbdev.sys4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewusbdev.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewusbdev.sys</td><td>1</td><td/></row>
+		<row><td>ewusbmdm.sys</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewusbmdm.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewusbmdm.sys</td><td>1</td><td/></row>
+		<row><td>ewusbmdm.sys1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewusbmdm.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewusbmdm.sys</td><td>1</td><td/></row>
+		<row><td>ewusbmdm.sys2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewusbmdm.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewusbmdm.sys</td><td>1</td><td/></row>
+		<row><td>ewusbmdm.sys3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewusbmdm.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewusbmdm.sys</td><td>1</td><td/></row>
+		<row><td>ewusbmdm.sys4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewusbmdm.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewusbmdm.sys</td><td>1</td><td/></row>
+		<row><td>ewusbnet.cat</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewusbnet.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewusbnet.cat</td><td>1</td><td/></row>
+		<row><td>ewusbnet.cat1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewusbnet.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewusbnet.cat</td><td>1</td><td/></row>
+		<row><td>ewusbnet.cat2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewusbnet.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewusbnet.cat</td><td>1</td><td/></row>
+		<row><td>ewusbnet.cat3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewusbnet.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewusbnet.cat</td><td>1</td><td/></row>
+		<row><td>ewusbnet.cat4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewusbnet.cat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewusbnet.cat</td><td>1</td><td/></row>
+		<row><td>ewusbnet.sys</td><td>ISX_DEFAULTCOMPONENT3</td><td>ewusbnet.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win7\ewusbnet.sys</td><td>1</td><td/></row>
+		<row><td>ewusbnet.sys1</td><td>ISX_DEFAULTCOMPONENT4</td><td>ewusbnet.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Win764\ewusbnet.sys</td><td>1</td><td/></row>
+		<row><td>ewusbnet.sys2</td><td>ISX_DEFAULTCOMPONENT5</td><td>ewusbnet.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista\ewusbnet.sys</td><td>1</td><td/></row>
+		<row><td>ewusbnet.sys3</td><td>ISX_DEFAULTCOMPONENT6</td><td>ewusbnet.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinVista64\ewusbnet.sys</td><td>1</td><td/></row>
+		<row><td>ewusbnet.sys4</td><td>ISX_DEFAULTCOMPONENT7</td><td>ewusbnet.sys</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\WinXp\ewusbnet.sys</td><td>1</td><td/></row>
+		<row><td>favicon.ico</td><td>ISX_DEFAULTCOMPONENT11</td><td>favicon.ico</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\bin\Release\html\favicon.ico</td><td>1</td><td/></row>
+		<row><td>install.log</td><td>ISX_DEFAULTCOMPONENT2</td><td>Install.log</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\Install.log</td><td>1</td><td/></row>
+		<row><td>interop.netconlib.dll</td><td>Interop.NETCONLib.dll</td><td>INTERO~1.DLL|Interop.NETCONLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\bin\Release\Interop.NETCONLib.dll</td><td>1</td><td/></row>
+		<row><td>interop.netfwtypelib.dll</td><td>Interop.NetFwTypeLib.dll</td><td>INTERO~1.DLL|Interop.NetFwTypeLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\bin\Release\Interop.NetFwTypeLib.dll</td><td>1</td><td/></row>
+		<row><td>licinfo.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>licinfo.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\licinfo.xml</td><td>1</td><td/></row>
+		<row><td>locatedevice.dll</td><td>LocateDevice.dll</td><td>LOCATE~1.DLL|LocateDevice.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\LocateDevice.dll</td><td>1</td><td/></row>
+		<row><td>mono.security.dll</td><td>Mono.Security.dll</td><td>MONOSE~1.DLL|Mono.Security.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\bin\Release\Mono.Security.dll</td><td>1</td><td/></row>
+		<row><td>msvcp100.dll</td><td>msvcp100.dll</td><td>msvcp100.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\msvcp100.dll</td><td>1</td><td/></row>
+		<row><td>msvcr100.dll</td><td>msvcr100.dll</td><td>msvcr100.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\msvcr100.dll</td><td>1</td><td/></row>
+		<row><td>npgsql.dll</td><td>Npgsql.dll</td><td>Npgsql.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\bin\Release\Npgsql.dll</td><td>1</td><td/></row>
+		<row><td>npgsql.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>Npgsql.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\bin\Release\Npgsql.xml</td><td>1</td><td/></row>
+		<row><td>oktell.hal.dll</td><td>oktell.HAL.dll</td><td>OKTELL~1.DLL|oktell.HAL.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\oktell.HAL.dll</td><td>1</td><td/></row>
+		<row><td>oktell.lic</td><td>ISX_DEFAULTCOMPONENT</td><td>oktell.lic</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\oktell.lic</td><td>1</td><td/></row>
+		<row><td>readme_ch_.txt</td><td>ISX_DEFAULTCOMPONENT2</td><td>README~1.TXT|ReadMe(ch).txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\ReadMe(ch).txt</td><td>1</td><td/></row>
+		<row><td>readme_en_.txt</td><td>ISX_DEFAULTCOMPONENT2</td><td>README~1.TXT|ReadMe(en).txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\ReadMe(en).txt</td><td>1</td><td/></row>
+		<row><td>release_notes.txt</td><td>ISX_DEFAULTCOMPONENT2</td><td>RELEAS~1.TXT|release notes.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\huawei_driver\release notes.txt</td><td>1</td><td/></row>
+		<row><td>rus.xml</td><td>ISX_DEFAULTCOMPONENT8</td><td>rus.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\Lang\rus.xml</td><td>1</td><td/></row>
+		<row><td>settings.html</td><td>ISX_DEFAULTCOMPONENT11</td><td>SETTIN~1.HTM|settings.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\bin\Release\html\settings.html</td><td>1</td><td/></row>
+		<row><td>sipgsmform.exe</td><td>SipGsmForm.exe</td><td>SIPGSM~1.EXE|SipGsmForm.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\SipGsmForm.exe</td><td>1</td><td/></row>
+		<row><td>sipgsmlib.dll</td><td>SipGsmLib.dll</td><td>SIPGSM~1.DLL|SipGsmLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\SipGsmLib.dll</td><td>1</td><td/></row>
+		<row><td>sipgsmservice.exe</td><td>SipGsmService.exe</td><td>SIPGSM~1.EXE|SipGsmService.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\SipGsmService.exe</td><td>1</td><td/></row>
+		<row><td>sipgsmservicelib.dll</td><td>SipGsmServiceLib.dll</td><td>SIPGSM~1.DLL|SipGsmServiceLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\SipGsmServiceLib.dll</td><td>1</td><td/></row>
+		<row><td>snd_city.wav</td><td>ISX_DEFAULTCOMPONENT9</td><td>snd_city.wav</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\snd\snd_city.wav</td><td>1</td><td/></row>
+		<row><td>snd_long.wav</td><td>ISX_DEFAULTCOMPONENT9</td><td>snd_long.wav</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\snd\snd_long.wav</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2205,9 +2238,9 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>BalanceChecker.exe</td><td/><td/><td>_E3061C1E_A469_4F51_AAE4_E2EBEB865281_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DriverSetup.exe</td><td/><td/><td>_C3004C89_7190_41E1_A798_44CD07E70111_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DriverUninstall.exe</td><td/><td/><td>_2B40CEA5_08BE_427D_B5B1_25AF8C85E91F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>BalanceChecker.exe</td><td/><td/><td>_67633ED4_270A_438B_8D05_CE3497535A96_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DriverSetup.exe</td><td/><td/><td>_C113550E_E4E2_4EEA_8EE7_0BB081EDDDC6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DriverUninstall.exe</td><td/><td/><td>_AB04B9CF_6FE3_4419_981A_DEC60BEE7A5E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISO19770_LocalTag</td><td/><td/><td>_CB60B099_25FD_4F63_81EA_582B031137F6_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISO19770_SystemTag</td><td/><td/><td>_93568D35_424D_470D_8A4B_9DDCDA6687CD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_EB05D336_F8FE_4723_9C5A_3BA8E23CE737_FILTER</td><td/><td/><td/><td/></row>
@@ -2223,23 +2256,23 @@
 		<row><td>ISX_DEFAULTCOMPONENT7</td><td/><td/><td>_9CEC7C40_84F6_4EF0_95A3_86F00E34FA61_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_C136FDB7_76D9_4B0B_A83B_E434C21AB185_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_594F985D_C1EC_48BA_A518_CF36D5580989_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Interop.NETCONLib.dll</td><td/><td/><td>_71474FB5_75E5_4957_BACF_E236FEEA00DB_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Interop.NetFwTypeLib.dll</td><td/><td/><td>_C4301BFF_0783_4F59_9F53_496EF9D0C214_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>LocateDevice.dll</td><td/><td/><td>_BC5AA8FB_6F9A_4C9C_92A9_1C529B421F9A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Mono.Security.dll</td><td/><td/><td>_AC5C0C0D_1267_4E9D_A2C6_45A8675DB1A4_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Npgsql.dll</td><td/><td/><td>_298FF210_193F_48BE_A0A4_5323D525629A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SipGsmForm.exe</td><td/><td/><td>_4125D219_A9B8_421C_8638_F4CBC26C66C5_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SipGsmLib.dll</td><td/><td/><td>_94000FAD_7D27_4977_BA61_035CA610E1A4_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SipGsmService.exe</td><td/><td/><td>_9925EBE1_F94D_405A_8527_795CD3CD6E4B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SipGsmServiceLib.dll</td><td/><td/><td>_2A2DCE4C_2E42_4F2B_8188_A352553FD334_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>devsetup.dll</td><td/><td/><td>_8AA3380C_B14F_40A5_8778_B3666FA3AA8E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>devsetup.exe</td><td/><td/><td>_1FA122B6_513D_4EE0_9802_4934E3B9AAC2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>devsetup2k.exe</td><td/><td/><td>_BE1CB940_7D99_45E0_AA3A_2724C4998E41_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>devsetup32.exe</td><td/><td/><td>_5F395013_4CD2_439B_B1C1_E053AEF776A2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>devsetup64.exe</td><td/><td/><td>_B3D36476_51BC_48C2_9DA5_3E534C7DF883_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>msvcp100.dll</td><td/><td/><td>_A2AAFA0D_5C86_4DF2_9036_72E5EED18958_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>msvcr100.dll</td><td/><td/><td>_0DC097E2_A4D9_4600_8B29_6CC41A9EB0BC_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>oktell.HAL.dll</td><td/><td/><td>_DB71158A_19BF_4FD3_9599_34876B18C4C7_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Interop.NETCONLib.dll</td><td/><td/><td>_23407467_6CC0_4828_A13F_42D7239EB0D0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Interop.NetFwTypeLib.dll</td><td/><td/><td>_3D42147F_1A7D_4B6F_8B85_4CC4D66B4969_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LocateDevice.dll</td><td/><td/><td>_05F783ED_1330_4558_A068_637DAAB407A6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Mono.Security.dll</td><td/><td/><td>_60724EA4_13CF_4A20_9BAB_09857F4CF1A8_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Npgsql.dll</td><td/><td/><td>_875D8AA4_D2D1_4AFD_990C_D33C858C672C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SipGsmForm.exe</td><td/><td/><td>_8A649717_4BC9_4541_BD85_16E0E8DA4E18_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SipGsmLib.dll</td><td/><td/><td>_8E76C8E4_A969_4242_95BF_6E773E2BC5EA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SipGsmService.exe</td><td/><td/><td>_531A6D65_0E98_415A_B0EA_4FF93A1295CC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SipGsmServiceLib.dll</td><td/><td/><td>_CBA658D6_5410_41C3_86E9_6DABD8FBDAE6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>devsetup.dll</td><td/><td/><td>_EAEF6C95_73AC_493F_B676_5C3D142A7FAF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>devsetup.exe</td><td/><td/><td>_73F233E7_4C6A_44D8_B824_DBC822146BD6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>devsetup2k.exe</td><td/><td/><td>_9EFEE398_FE33_4B1A_9204_E037CF477D13_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>devsetup32.exe</td><td/><td/><td>_40BC023F_A02C_497B_9B7B_22A9EC12CE57_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>devsetup64.exe</td><td/><td/><td>_66E8730D_982E_4D8A_A91C_8F8F4E76271A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>msvcp100.dll</td><td/><td/><td>_8718BF63_81EA_4C8D_9C40_C8590F608F73_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>msvcr100.dll</td><td/><td/><td>_4DA6F19E_4086_4BA2_8100_4122C2AC44FC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>oktell.HAL.dll</td><td/><td/><td>_2DD7B80F_AB6B_4273_94B2_53C78B91EFF9_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2552,12 +2585,6 @@
 		<row><td>WindowsFolder</td><td/><td/><td>1</td></row>
 	</table>
 
-	<table name="ISPowerShellWrap">
-		<col key="yes" def="s72">Action_</col>
-		<col key="yes" def="s72">Name</col>
-		<col def="S0">Value</col>
-	</table>
-
 	<table name="ISProductConfiguration">
 		<col key="yes" def="s72">ISProductConfiguration</col>
 		<col def="S255">ProductConfigurationFlags</col>
@@ -2827,7 +2854,6 @@
 		<col def="I2">Order</col>
 		<col def="I2">ISSetupLocation</col>
 		<col def="S255">ISReleaseFlags</col>
-		<row><td>_10E2E678_1098_4383_B1A4_2933D32561C6_</td><td>Microsoft .NET Framework 4.0 Full (Web Download).prq</td><td/><td/><td/></row>
 	</table>
 
 	<table name="ISSetupType">
@@ -3962,6 +3988,10 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1049</td><td>Объем памяти ОЗУ не достаточен для работы [ProductName].</td><td>0</td><td/><td>-1297982261</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1049</td><td>Разрешение экрана не подходит для работы [ProductName].</td><td>0</td><td/><td>-1297982261</td></row>
 		<row><td>ID_STRING1</td><td>1049</td><td/><td>0</td><td/><td>-1297982261</td></row>
+		<row><td>ID_STRING10</td><td>1033</td><td>NEWSHO~1|NewShortcut1</td><td>0</td><td/><td>-1574662537</td></row>
+		<row><td>ID_STRING10</td><td>1049</td><td>SipGsm</td><td>0</td><td/><td>-1574652297</td></row>
+		<row><td>ID_STRING11</td><td>1033</td><td>NEWSHO~1|NewShortcut2</td><td>0</td><td/><td>-1574652233</td></row>
+		<row><td>ID_STRING11</td><td>1049</td><td>SIPGSM~1|Обновить конфигурацию SipGSM</td><td>0</td><td/><td>-1574650185</td></row>
 		<row><td>ID_STRING2</td><td>1033</td><td/><td>0</td><td/><td>-1692219543</td></row>
 		<row><td>ID_STRING2</td><td>1049</td><td/><td>0</td><td/><td>-1692219543</td></row>
 		<row><td>ID_STRING3</td><td>1049</td><td>ITS</td><td>0</td><td/><td>-1298001294</td></row>
@@ -4046,6 +4076,12 @@
 		<col def="s255">Value</col>
 	</table>
 
+	<table name="ISWSEWrap">
+		<col key="yes" def="s72">Action_</col>
+		<col key="yes" def="s72">Name</col>
+		<col def="S0">Value</col>
+	</table>
+
 	<table name="ISXmlElement">
 		<col key="yes" def="s72">ISXmlElement</col>
 		<col def="s72">ISXmlFile_</col>
@@ -4088,7 +4124,8 @@
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
 		<row><td>NewShortcut1_AA09FECCE06D4820A572F41C54381E99.exe</td><td/><td>C:\Program Files (x86)\SipGsmGateway\SipGsmForm.exe</td><td>0</td></row>
-		<row><td>NewShortcut2_6762BBCC05ED4E9980A8A780EB8F9F00.exe</td><td/><td>C:\Users\admin\Documents\Visual Studio 2013\Projects\BalanceChecker\SipGsm\SipGsmForm.exe</td><td>0</td></row>
+		<row><td>NewShortcut1_C9B29C5210B84E23A5A2EDFD54C681AD.exe</td><td/><td>C:\Users\admin\Source\Repos\balancechecker\SipGsm\SipGsmForm.exe</td><td>0</td></row>
+		<row><td>NewShortcut2_F3EA085110DD4B4DA579537139970BC4.exe</td><td/><td>&lt;VSSolutionFolder&gt;\SipGsm\SipGsmForm.exe</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -4233,7 +4270,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SaveAsSchema</td><td/></row>
 		<row><td>SccEnabled</td><td>0</td></row>
 		<row><td>SccPath</td><td/></row>
-		<row><td>SchemaVersion</td><td>774</td></row>
+		<row><td>SchemaVersion</td><td>776</td></row>
 		<row><td>SwidtagLocalComponent</td><td>ISO19770_LocalTag</td></row>
 		<row><td>SwidtagSystemComponent</td><td>ISO19770_SystemTag</td></row>
 		<row><td>Type</td><td>MSIE</td></row>
@@ -4762,7 +4799,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>NewShortcut2</td><td>DesktopFolder</td><td>##ID_STRING6##</td><td>SipGsmForm.exe</td><td>[INSTALLDIR]SipGsmForm.exe</td><td/><td/><td/><td>NewShortcut2_6762BBCC05ED4E9980A8A780EB8F9F00.exe</td><td>1</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut1</td><td>DesktopFolder</td><td>##ID_STRING10##</td><td>SipGsmForm.exe</td><td>[INSTALLDIR]SipGsmForm.exe</td><td/><td/><td/><td>NewShortcut1_C9B29C5210B84E23A5A2EDFD54C681AD.exe</td><td>1</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
@@ -5368,9 +5405,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISPathVariable</td><td>TestValue</td><td>Y</td><td/><td/><td/><td/><td>Text</td><td/><td>The test value of the path variable.</td></row>
 		<row><td>ISPathVariable</td><td>Type</td><td>N</td><td/><td/><td/><td/><td/><td>1;2;4;8</td><td>The type of the path variable.</td></row>
 		<row><td>ISPathVariable</td><td>Value</td><td>Y</td><td/><td/><td/><td/><td>Text</td><td/><td>The value of the path variable.</td></row>
-		<row><td>ISPowerShellWrap</td><td>Action_</td><td>N</td><td/><td/><td>CustomAction</td><td>1</td><td>Identifier</td><td/><td>Foreign key into CustomAction table</td></row>
-		<row><td>ISPowerShellWrap</td><td>Name</td><td>N</td><td/><td/><td/><td/><td>Text</td><td/><td>Property associated with this Action</td></row>
-		<row><td>ISPowerShellWrap</td><td>Value</td><td>Y</td><td/><td/><td/><td/><td>Text</td><td/><td>Value associated with this Property</td></row>
 		<row><td>ISProductConfiguration</td><td>GeneratePackageCode</td><td>Y</td><td/><td/><td/><td/><td>Number</td><td>0;1</td><td>Indicates whether or not to generate a package code.</td></row>
 		<row><td>ISProductConfiguration</td><td>ISProductConfiguration</td><td>N</td><td/><td/><td/><td/><td>Text</td><td/><td>The name of the product configuration.</td></row>
 		<row><td>ISProductConfiguration</td><td>ProductConfigurationFlags</td><td>Y</td><td/><td/><td/><td/><td>Text</td><td/><td>Product configuration (release) flags.</td></row>
@@ -5608,6 +5642,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISVirtualShortcut</td><td>Name</td><td>N</td><td/><td/><td/><td/><td>Identifier</td><td/><td>Property name</td></row>
 		<row><td>ISVirtualShortcut</td><td>Shortcut_</td><td>N</td><td/><td/><td>Shortcut</td><td>1</td><td>Identifier</td><td/><td>Foreign key into Shortcut table.</td></row>
 		<row><td>ISVirtualShortcut</td><td>Value</td><td>N</td><td/><td/><td/><td/><td/><td/><td>Property value</td></row>
+		<row><td>ISWSEWrap</td><td>Action_</td><td>N</td><td/><td/><td>CustomAction</td><td>1</td><td>Identifier</td><td/><td>Foreign key into CustomAction table</td></row>
+		<row><td>ISWSEWrap</td><td>Name</td><td>N</td><td/><td/><td/><td/><td>Text</td><td/><td>Property associated with this Action</td></row>
+		<row><td>ISWSEWrap</td><td>Value</td><td>Y</td><td/><td/><td/><td/><td>Text</td><td/><td>Value associated with this Property</td></row>
 		<row><td>ISXmlElement</td><td>Content</td><td>Y</td><td/><td/><td/><td/><td>Text</td><td/><td>Element contents</td></row>
 		<row><td>ISXmlElement</td><td>ISAttributes</td><td>Y</td><td/><td/><td/><td/><td>Number</td><td/><td>Internal XML element attributes</td></row>
 		<row><td>ISXmlElement</td><td>ISXmlElement</td><td>N</td><td/><td/><td/><td/><td>Identifier</td><td/><td>Primary key, non-localized, internal token for Xml element</td></row>
